@@ -22,25 +22,23 @@ function IntroSection() {
         />
         <defs>
           <radialGradient id='759c1415-0410-454c-8f7c-9a820de03641'>
-            <stop stopColor='#7775D6' />
-            <stop offset='1' stopColor='#E935C1' />
+            <stop stopColor='#74C28A' />
+            <stop offset='1' stopColor='#127D30' />
           </radialGradient>
         </defs>
       </svg>
       <div className='container flex max-w-[64rem] flex-col items-center text-center gap-4'>
         <span className='rounded-2xl bg-muted px-4 py-1.5 text-sm font-medium flex items-center'>
-          📅 Incscrições encerradas.
+          Glazing Design.
           <ModeToggle />
         </span>
         <h1 className='font-heading text-4xl md:text-6xl lg:text-7xl'>
-          The Next Dev
+        Vidros e espelhos
           <br />
-          Full-stack <span className='text-primary'>Next.js 14</span>
+          Para todas as <span className='text-primary'>necessidades</span>
         </h1>
         <p className='max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8'>
-          Invista na sua carreira e aprenda a desenvolver aplicações que as
-          grandes empresas estão utilizando. Faça parte da próxima turma da
-          formação mais completa de Next.js 14.
+        Conheça nossa linha completa de vidros e espelhos para a sua obra.
         </p>
         <div className='space-x-4'>
           <a
@@ -50,7 +48,7 @@ function IntroSection() {
               track('enrollment', { location: 'intro' });
             }}
           >
-            Quero fazer parte
+            CONHEÇA OS PRODUTOS 
           </a>
           <a
             href='#feature'
@@ -59,7 +57,7 @@ function IntroSection() {
               track('features');
             }}
           >
-            Saiba mais
+            SOLICITAR ORÇAMENTO 
           </a>
         </div>
       </div>

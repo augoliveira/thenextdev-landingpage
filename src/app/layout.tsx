@@ -1,8 +1,13 @@
 import { Analytics } from '@vercel/analytics/react';
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Inter as FontSans } from 'next/font/google';
 import localFont from 'next/font/local';
 import { cn } from '@/lib/utils';
+import { siteConfig } from '../config';
+import { WEBSITE_HOST_URL } from '@/lib/constants';
+import { GoogleTagManager } from '@next/third-parties/google'
+
+import Navbar from '../components/Navbar/Navbar';
 
 import { ThemeProvider } from './_components/theme-provider';
 
@@ -19,20 +24,75 @@ const fontHeading = localFont({
 });
 
 export const metadata: Metadata = {
-  title: 'The Next Dev - Full-stack Next.js 14',
-  description: 'Curso Full-stack Next.js 14',
+  title: {
+    default: siteConfig.name,
+		template: `%s - ${siteConfig.name}`,
+  },
+  description: 'A Glazing Design é uma empresa especializada na concepção e instalação de projetos inteligentes e modernos. Vidro temperado, laminado, box, espelhos. | (61) 9 8669-2775',
+  verification: {
+    google: 'google',
+    yandex: 'yandex',
+    yahoo: 'yahoo',
+    other: {
+      me: ['my-email', 'my-link'],
+    },
+  },
+  manifest: '/manifest.json',
+  authors: [{ name: 'AGÊNCIA UP.EXPERT' }],
+  metadataBase: new URL(`${siteConfig.url}`),
+  openGraph: {
+    type: 'website',
+    url: `${siteConfig.url}/cover.jpg`,
+    title: siteConfig.title,
+    description: siteConfig.description,
+    siteName: 'UP.EXPERT',
+    images: [
+      {
+        url: `${siteConfig.url}/cover.jpg`
+      }
+    ]
+  },
+  robots: {
+    index: false,
+    follow: true,
+    nocache: true,
+    googleBot: {
+      index: true,
+      follow: false,
+      noimageindex: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: siteConfig.title,
+    description: siteConfig.description,
+    images: [`${siteConfig.url}/cover.jpg`]
+  },
+  alternates: {
+    canonical: WEBSITE_HOST_URL
+  },
   keywords: [
-    'Next.js',
-    'Next.js 14',
-    'React.js',
-    'Lucas Nhimi',
-    'Curso Next.js',
-    'JavaScript',
-    'TypeScript',
-    'Full-stack',
-    'Tailwind CSS',
+    'Vidro temperdo',
+    'Vidro laminado',
+    'Box para banheiro',
+    'Espelho',
+    'Guarda corpo de vidro',
+    'Pergolado',
+    'Vidro para varanda',
+    'Glazing design',
+    'Pele de vidro',
   ],
 };
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: 'cyan' },
+    { media: '(prefers-color-scheme: dark)', color: 'black' },
+  ],
+}
 
 export default function RootLayout({
   children,
@@ -48,10 +108,14 @@ export default function RootLayout({
           fontHeading.variable
         )}
       >
+        <div className="max-w-8xl mx-auto px-2 lg:p-8">
         <ThemeProvider attribute='class' defaultTheme='system' enableSystem>
+        <Navbar/>
           {children}
           <Analytics />
+          <GoogleTagManager gtmId='GTM-NQ43J9D' />
         </ThemeProvider>
+        </div>
       </body>
     </html>
   );

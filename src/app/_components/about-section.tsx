@@ -1,3 +1,4 @@
+import { CloudArrowUpIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/20/solid'
 import Image from 'next/image';
 import Link from 'next/link';
 import {
@@ -15,17 +16,36 @@ function SocialLink({ icon: Icon, ...props }: any) {
   );
 }
 
+const features = [
+  {
+    name: 'QUEM SOMOS.',
+    description:
+      'A Glazing Design é uma empresa especializada na concepção e instalação de projetos inteligentes e modernos. Hoje em dia são virtualmente impossíveis não olhar ao redor e perceber a importância que o vidro tem em nossas vidas. Nossa missão é ajudar você quando o assunto é este material tão presente e arrojado. Adicione beleza e praticidade aos seus projetos de engenharia ou decoração!',
+    icon: CloudArrowUpIcon,
+  },
+  {
+    name: ' MISSÃO.',
+    description: 'Oferecer soluções inovadoras em produtos e serviços que atenda as expectativas de qualidade Designer e praticidade a um preço justo, buscando sempre um relacionamento de longo prazo. Focado na ética, profissionalismo e comprometimento com nossos clientes, colaboradores, parceiro e fornecedores.',
+    icon: LockClosedIcon,
+  },
+  {
+    name: 'VALORES.',
+    description: 'O rumo de nossa empresa é calcado em valores que são preponderantes para um relacionamento em longo prazo com nossos colaboradores, clientes e fornecedores. Pois entendemos que sem eles não temos condições de construir um futuro solido e atingível.   Nosso sucesso depende disso.',
+    icon: ServerIcon,
+  },
+]
+
 function AboutSection() {
   return (
     <section
       id='about'
-      className='container flex flex-col md:max-w-[64rem] md:py-12 lg:py-24'
+      className='container flex flex-col md:max-w-[80rem] md:py-12 lg:py-24'
     >
       <div className='grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:gap-y-12 lg:grid-rows-[auto-1fr]'>
         <div className='lg:pl-20 flex justify-center'>
           <div className='max-w-xs px-2.5 lg:max-w-none'>
             <Image
-              src='/avatar.jpg'
+              src='/Tecnologia.png'
               alt='Lucas Nhimi'
               width={800}
               height={800}
@@ -36,21 +56,18 @@ function AboutSection() {
           </div>
         </div>
         <div className='lg:order-first lg:row-span-2 text-center md:text-start'>
-          <h1 className='font-heading text-3xl md:text-4xl lg:text-5xl'>
-            @lucasnhimi
-          </h1>
-          <p className='mt-6 text-base text-muted-foreground'>
-            CTO durante o dia, entusiasta de conteúdo digital à noite! Com mais
-            de 16 anos de experiência no mundo da tecnologia, já desempenhei
-            vários papéis como engenheiro de software, gerente de projetos e
-            inovador estratégico. Sou totalmente a favor de fomentar a
-            colaboração e inspirar equipes a criar soluções revolucionárias para
-            o sucesso dos negócios. Fora do escritório, você pode me encontrar
-            criando apaixonadamente conteúdo digital para inspirar, educar e
-            entreter. Sempre atento para aprender e me manter à frente das
-            tendências do mercado. Estou constantemente desafiando os limites da
-            tecnologia e da criatividade. Vivo e respiro tecnologia 24/7...
-          </p>
+        <div className='pl-4 flex text-base font-semibold leading-7 text-[#fbb33f] border-b border-slate-300/30'><span className="-mb-px py-2 border-b border-b-current">SOBRE O QUE FAZEMOS</span></div>
+          <dl className="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
+                {features.map((feature) => (
+                  <div key={feature.name} className="relative pl-9">
+                    <dt className="inline font-semibold text-gray-400">
+                      <feature.icon className="absolute left-1 top-1 h-5 w-5 text-indigo-600" aria-hidden="true" />
+                      {feature.name}
+                    </dt>{' '}
+                    <dd className="inline">{feature.description}</dd>
+                  </div>
+                ))}
+              </dl>
           <div className='mt-6 flex justify-center md:justify-start gap-6'>
             <SocialLink
               href='https://instagram.com/lucasnhimi'
