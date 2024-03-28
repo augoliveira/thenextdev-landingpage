@@ -1,11 +1,10 @@
 import React from "react";
 import Image from 'next/image'
-import MainButton from "../../common/MainButton";
-import { roboto } from "#/lib/util";
+import MainButton from "../../app/common/MainButton";
+import { roboto } from "@/lib/util";
 import feature_1 from "../../../public/Vidraçaria.jpg";
 import rectangular from "../../../public/rectangular.png";
 import Logo from "../../../public/woo_reduced_opacity.png";
-import { CardStackDemo } from "../../components/sections/CardStackDemo";
 
 
 function SecondFeatureSection() {
