@@ -42,7 +42,7 @@ export function AnimatedText({ text }: Props) {
       <div className='mx-auto flex w-full items-start justify-start overflow-hidden text-start lg:py-2'>
         <motion.h1
           className={
-            '${}className} pl-4 flex text-4xl font-extrabold leading-7 text-[#085F20] border-b border-slate-600/30'
+            '${}className} pl-8 flex text-4xl font-extrabold leading-7 text-slate-900 border-b border-slate-600/30'
           }
           variants={quote}
           initial='initial'
