@@ -1,6 +1,7 @@
 import { CloudArrowUpIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/20/solid'
 import Image from 'next/image';
 import Link from 'next/link';
+import Sobre from '/public/Tecnologia.png'
 import {
   GitHubIcon,
   InstagramIcon,
@@ -45,12 +46,17 @@ function AboutSection() {
         <div className='lg:pl-20 flex justify-center'>
           <div className='max-w-xs px-2.5 lg:max-w-none'>
             <Image
-              src='/Tecnologia.png'
+              src={Sobre}
               alt='Lucas Nhimi'
+              placeholder="blur"
               width={800}
               height={800}
               quality='95'
               priority={true}
+              style={{
+                maxWidth: "100%",
+                height: "auto",
+              }}
               className='aspect-square rotate-3 rounded-lg bg-zinc-100 dark:bg-zinc-800 object-cover'
             />
           </div>
