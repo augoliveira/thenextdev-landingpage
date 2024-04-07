@@ -1,12 +1,16 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
+import Link from "next/link";
 import { useState } from "react";
+
 import { AnimatePresence, motion } from "framer-motion";
-import Nav from "./nav";
-import { TextReveal, Transition } from "./ui";
-import { useMediaQuery } from "@/utils/useMediaQuery";
+
 import { menu } from "@/utils/anim";
 import { SocialHandle } from "@/utils/interfaces";
-import Link from "next/link";
+import { useMediaQuery } from "@/utils/useMediaQuery";
+
+import Nav from "./nav";
+import { TextReveal, Transition } from "./ui";
 
 interface HeaderProps {
   social: SocialHandle[];

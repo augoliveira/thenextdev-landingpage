@@ -1,6 +1,13 @@
 "use client";
 
+import Link from "next/link";
+import { ReactNode } from "react";
+
 import { motion } from "framer-motion";
+
+import { cn } from "@/utils/cn";
+import { About, SocialHandle } from "@/utils/interfaces";
+
 import {
   Input,
   SectionHeading,
@@ -9,10 +16,7 @@ import {
   TextReveal,
   Transition,
 } from "./ui";
-import { ReactNode } from "react";
-import { cn } from "@/utils/cn";
-import { About, SocialHandle } from "@/utils/interfaces";
-import Link from "next/link";
+
 
 interface ContactProps {
   email: string;

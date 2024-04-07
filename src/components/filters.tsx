@@ -1,9 +1,13 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 
-import { cn } from "@/utils/cn";
 import { motion } from "framer-motion";
-import { Button, TextReveal, Transition } from "./ui";
+
+import { cn } from "@/utils/cn";
 import { useProjects } from "@/utils/project-context";
+
+import { Button, TextReveal, Transition } from "./ui";
+
 
 const Filters = () => {
   const { projects, setAppliedFilter, appliedFilter, sort, setSort } =

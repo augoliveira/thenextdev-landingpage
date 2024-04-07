@@ -1,12 +1,15 @@
 "use client";
 
 import Link from "next/link";
-import { motion } from "framer-motion";
-import { perspective, slideIn } from "@/utils/anim";
-import { TextReveal } from "./ui";
-import { ArrowRight } from "lucide-react";
 import { Dispatch, SetStateAction } from "react";
+
+import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
+
+import { perspective, slideIn } from "@/utils/anim";
 import { SocialHandle } from "@/utils/interfaces";
+
+import { TextReveal } from "./ui";
 
 interface NavProps {
   setIsActive: Dispatch<SetStateAction<boolean>>;

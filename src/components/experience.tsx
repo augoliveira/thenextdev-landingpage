@@ -1,9 +1,12 @@
 "use client";
 
+import { useState } from "react";
+
+import { motion } from "framer-motion";
+
 import { formatDate } from "@/utils";
 import { Timeline } from "@/utils/interfaces";
-import { motion } from "framer-motion";
-import { useState } from "react";
+
 import { SectionHeading, PerspectiveText, SlideIn, Transition } from "./ui";
 
 interface ExperienceProps {

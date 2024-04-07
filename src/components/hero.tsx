@@ -1,11 +1,14 @@
 "use client";
 
 import Image from "next/image";
-import { SlideIn, TextReveal, Transition } from "./ui";
-import { About } from "@/utils/interfaces";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
 import { useState } from "react";
+
+import { ArrowRight } from "lucide-react";
+
+import { About } from "@/utils/interfaces";
+
+import { SlideIn, TextReveal, Transition } from "./ui";
 import { PageLoad } from "./ui/page-load";
 
 export const Hero = ({ about }: { about: About }) => {

@@ -1,17 +1,21 @@
 "use client";
 
-import { Project } from "@/utils/interfaces";
 import Image from "next/image";
+import { useState } from "react";
+
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
-import { useState } from "react";
+
+import { useCursorVariants } from "@/utils/context";
+import { Project } from "@/utils/interfaces";
+import { ProjectsProvider, useProjects } from "@/utils/project-context";
+import { useMediaQuery } from "@/utils/useMediaQuery";
+
 import Filters from "./filters";
 import { SectionHeading, SlideIn, TextReveal, Transition } from "./ui";
-import { useMediaQuery } from "@/utils/useMediaQuery";
 import { Button } from "./ui/button";
-import { useCursorVariants } from "@/utils/context";
 import { Dialog } from "./ui/dialog";
-import { ProjectsProvider, useProjects } from "@/utils/project-context";
+
 
 interface ProjectProps {
   data: Project[];
