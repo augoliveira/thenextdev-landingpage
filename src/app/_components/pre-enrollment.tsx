@@ -1,20 +1,16 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 'use client';
-import { track } from '@vercel/analytics';
-import InputMask from 'react-input-mask';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { useForm } from 'react-hook-form';
-import * as z from 'zod';
+import { useState } from 'react';
 import Confetti from 'react-dom-confetti';
+import { useForm } from 'react-hook-form';
+import InputMask from 'react-input-mask';
+
+import { zodResolver } from '@hookform/resolvers/zod';
+import { track } from '@vercel/analytics';
+import * as z from 'zod';
+
+
 import { Button } from '@/components/ui/button';
-import {
-  Form,
-  FormControl,
-  FormDescription,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from '@/components/ui/form';
 import {
   Dialog,
   DialogContent,
@@ -24,8 +20,17 @@ import {
   DialogTrigger,
   DialogClose,
 } from '@/components/ui/dialog';
+import {
+  Form,
+  FormControl,
+  FormDescription,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
-import { useState } from 'react';
+
 
 import { saveLead } from '../actions';
 
@@ -79,7 +84,7 @@ function PreEnrollment() {
           }}
           className='text-md bg-primary hover:bg-primary text-white font-bold py-2 px-4 rounded shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105'
         >
-          Lista de espera
+          Solicitar cotação
         </Button>
       </DialogTrigger>
       <DialogContent className='sm:max-w[425px]'>
@@ -100,15 +105,15 @@ function PreEnrollment() {
                   que entraremos em contato.
                 </p>
                 <p>
-                  Entre para o grupo no WhatsApp clicando{' '}
+                  Fale conosco no WhatsApp clicando{' '}
                   <a
                     className='text-bold text-primary underline'
                     target='_blank'
-                    href='https://api.whatsapp.com/send?phone=5561986692775'
+                    href='https://api.whatsapp.com/send?phone=5561995251946'
                   >
                     aqui
                   </a>{' '}
-                  para receber novidades sobre o curso.
+                  para mais informações.
                 </p>
               </DialogDescription>
             </DialogHeader>
@@ -127,10 +132,9 @@ function PreEnrollment() {
         ) : (
           <>
             <DialogHeader>
-              <DialogTitle>Entrar para lista de espera</DialogTitle>
+              <DialogTitle>Faça sua solicitação</DialogTitle>
               <DialogDescription>
-                Informe aqui seu email para ser notificado quando abrirá uma
-                nova turma para o curso The Next Dev - Full-stack Next.js 14.
+              Estamos ansiosos para ajudá-lo a transformar sua visão em realidade com soluções em vidro de alta qualidade e confiança.
               </DialogDescription>
             </DialogHeader>
             <Form {...form}>

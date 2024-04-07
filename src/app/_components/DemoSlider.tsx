@@ -1,14 +1,18 @@
+/* eslint-disable import-helpers/order-imports */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client"; // <===== REQUIRED
 
-import React from "react";
 import Image from "next/image";
+import React from "react";
 
 import { motion } from 'framer-motion';
-import Img from '/public/banner1.png';
+
 
 // Swiper components, modules and styles
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+
+import Img from '/public/banner1.png';
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";

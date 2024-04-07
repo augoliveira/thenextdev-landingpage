@@ -1,7 +1,15 @@
-import { CloudArrowUpIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/20/solid'
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable jsx-a11y/alt-text */
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
+import { useState } from 'react';
+
+import { CloudArrowUpIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/20/solid'
+
 import Sobre from '/public/Tecnologia.png'
+
 import {
   GitHubIcon,
   InstagramIcon,
@@ -37,6 +45,7 @@ const features = [
 ]
 
 function AboutSection() {
+  const [loading, setLoading] = useState(true);
   return (
     <section
       id='about'
@@ -47,17 +56,16 @@ function AboutSection() {
           <div className='max-w-xs px-2.5 lg:max-w-none'>
             <Image
               src={Sobre}
-              alt='Lucas Nhimi'
-              placeholder="blur"
-              width={800}
-              height={800}
-              quality='95'
-              priority={true}
-              style={{
-                maxWidth: "100%",
-                height: "auto",
-              }}
-              className='aspect-square rotate-3 rounded-lg bg-zinc-100 dark:bg-zinc-800 object-cover'
+              alt="sobre"
+              width={500}
+              height={500}
+              loading="eager"
+              className={`aspect-square rotate-3 w-full h-full object-cover group-hover:scale-110 duration-500 transition-all ${
+                loading
+                  ? 'scale-110 blur-2xl grayscale'
+                  : 'scale-100 blur-0 grayscale-0'
+              }}`}
+              onLoadingComplete={() => setLoading(false)}
             />
           </div>
         </div>
@@ -66,11 +74,11 @@ function AboutSection() {
           <dl className="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
                 {features.map((feature) => (
                   <div key={feature.name} className="relative pl-9">
-                    <dt className="inline font-semibold text-gray-400">
+                    <dt className="inline font-semibold text-gray-300">
                       <feature.icon className="absolute left-1 top-1 h-5 w-5 text-indigo-600" aria-hidden="true" />
                       {feature.name}
                     </dt>{' '}
-                    <dd className="inline">{feature.description}</dd>
+                    <dd className="inline text-slate-500">{feature.description}</dd>
                   </div>
                 ))}
               </dl>

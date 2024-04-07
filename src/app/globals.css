@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -124,6 +125,15 @@ body {
   background-color: --background-start-rgb;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.blob {
+  background: conic-gradient(from 2.35rad, #c76000, rgba(7, 29, 228, 0.5));
+}
+
+.linkContainer {
+  perspective: 120px;
+  perspective-origin: bottom;
 }
 
 .swiper {

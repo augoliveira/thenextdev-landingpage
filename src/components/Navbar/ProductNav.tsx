@@ -1,12 +1,18 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 'use client'
-import React, { useState } from 'react'
-import Navlist from './NavUtils/Navlist'
-import Navlist2 from './NavUtils/Navlist2'
-import { demos, type Item } from '@/lib/demos';
-import { useSelectedLayoutSegment } from 'next/navigation';
 import Link from 'next/link';
+import { useSelectedLayoutSegment } from 'next/navigation';
+import React, { useState } from 'react'
+
 import clsx from 'clsx';
 
+import { demos, type Item } from '@/lib/demos';
+
+import Navlist from './NavUtils/Navlist'
+import Navlist2 from './NavUtils/Navlist2'
+
+
+// eslint-disable-next-line @typescript-eslint/ban-types
 type Props = {
 }
 

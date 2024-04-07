@@ -1,7 +1,10 @@
-import { roboto } from "@/lib/util";
-import { ChevronRight } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+
+import { ChevronRight } from "lucide-react";
+
+import { roboto } from "@/lib/util";
 
 interface IProps {
   image: string;
@@ -11,7 +14,7 @@ interface IProps {
   link: string;
 }
 
-function FirstFeatureCard({
+function Card({
   image,
   title,
   description,
@@ -21,7 +24,7 @@ function FirstFeatureCard({
   return (
     <div className="flex flex-col">
       <div className="mb-4">
-        <img src={image} alt="fetaure image" />
+        <Image src={image} alt="fetaure image" />
       </div>
       <p className="text-[2.25rem] font-[700] text-lightGray text-center">
         {title}
@@ -45,4 +48,4 @@ function FirstFeatureCard({
   );
 }
 
-export default FirstFeatureCard;
+export default Card;

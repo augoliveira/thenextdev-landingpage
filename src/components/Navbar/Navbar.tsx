@@ -1,18 +1,22 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 'use client'
-import Container from '../Container'
-import { Phone, X } from "lucide-react";
-import { Button } from '../../components/button'
-import ProductNav from './ProductNav'
-import Navlist2 from './NavUtils/Navlist2'
-import SolutionNav from './SolutionNav'
-import OpenSourceNav from './OpenSourceNav'
-import { useState } from 'react'
 import Link from 'next/link'
-import { Logo } from '../ui/logo'
+import { useState } from 'react'
 import { HiArrowNarrowRight } from 'react-icons/hi'
-import { motion } from 'framer-motion'
-import { ModeToggle } from '../../app/_components/mode-toggle';
 
+import { motion } from 'framer-motion'
+import { Phone, X } from "lucide-react";
+
+import { ModeToggle } from '../../app/_components/mode-toggle';
+import { Button } from '../../components/button'
+import Container from '../Container'
+import { Logo } from '../ui/logo'
+import Navlist2 from './NavUtils/Navlist2'
+import OpenSourceNav from './OpenSourceNav'
+import ProductNav from './ProductNav'
+import SolutionNav from './SolutionNav'
+
+// eslint-disable-next-line @typescript-eslint/ban-types
 type Props = {}
 
 const Navbar = (props: Props) => {

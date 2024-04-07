@@ -1,6 +1,7 @@
 'use client';
-import { track } from '@vercel/analytics';
 import Link from 'next/link';
+
+import { track } from '@vercel/analytics';
 
 function Enrollment() {
   return (

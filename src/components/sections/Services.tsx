@@ -1,8 +1,11 @@
 'use client';
 
 import Image from 'next/image';
+
 import { motion } from "framer-motion";
+
 import { fadeUpAnimation } from '@/lib/animations'
+
 import SliderButtons from "./SliderButtons";
 
 export interface ServiceProp {

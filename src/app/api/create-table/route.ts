@@ -1,5 +1,7 @@
-import { sql } from '@vercel/postgres';
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { NextResponse } from 'next/server';
+
+import { sql } from '@vercel/postgres';
 
 export async function GET(request: Request) {
   try {

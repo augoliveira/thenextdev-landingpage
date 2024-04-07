@@ -1,10 +1,13 @@
-import React from "react";
 import Image from 'next/image'
-import MainButton from "../../app/common/MainButton";
+import React from "react";
+
+
 import { roboto } from "@/lib/util";
-import feature_1 from "../../../public/Vidraçaria.jpg";
+
 import rectangular from "../../../public/rectangular.png";
+import feature_1 from "../../../public/Vidraçaria.jpg";
 import Logo from "../../../public/woo_reduced_opacity.png";
+import MainButton from "../../app/common/MainButton";
 
 
 function SecondFeatureSection() {

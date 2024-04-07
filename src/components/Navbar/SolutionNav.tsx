@@ -1,10 +1,11 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 'use client'
 import React, { useState } from 'react'
+
 import Navlist from './NavUtils/Navlist'
 import Navlist2 from './NavUtils/Navlist2'
 
-type Props = {
-}
+type Props = unknown
 
 const SolutionNav = (props: Props) => {
     const [show,setShow] = useState(false)

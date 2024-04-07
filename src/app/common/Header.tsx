@@ -1,5 +1,6 @@
-import { roboto } from "@/lib/util";
 import React from "react";
+
+import { roboto } from "@/lib/util";
 
 interface IProps {
   title: string;

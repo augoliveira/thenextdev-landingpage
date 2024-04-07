@@ -18,6 +18,7 @@ function FaqSection() {
       </div>
       <div className='mx-auto text-center md:max-w-[58rem]'>
         <Accordion type='single' collapsible className='w-full'>
+          
           <AccordionItem value='item-5'>
             <AccordionTrigger>Como comprar o curso?</AccordionTrigger>
             <AccordionContent className='text-left'>

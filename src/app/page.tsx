@@ -1,16 +1,18 @@
-import Image from 'next/image';
 
-import DemoSlider from "./_components/DemoSlider";
-import dataSlider from "./_data/slider-data.json";
-import Services, { ServiceProp } from "../components/sections/Services";
 import { data } from "@/lib/_data";
-import IntroSection from './_components/intro-section';
-import AboutSection from './_components/about-section';
+  
 import Portifolio from '../components/Portifolio/Projects';
 import SecondFeatureSection from "../components/sections/SecondFeatureSection";
-import FeatureSection from './_components/feature-section';
+import Services, { ServiceProp } from "../components/sections/Services";
+import Categoria from '../components/Slider/Categoria';
+import FifthSection from "../components/ui/fifth-section";
+import AboutSection from './_components/about-section';
+import Archive from "./_components/Archive";
+import DemoSlider from "./_components/DemoSlider";
+import IntroSection from './_components/intro-section';
 import InvestmentSection from './_components/investment-section';
-import FaqSection from './_components/faq-section';
+import dataSlider from "./_data/slider-data.json";
+import FAQ from './../components/ui/faq';
 
 export default function Home() {
   return (
@@ -26,7 +28,7 @@ export default function Home() {
           .
         </p>
       </div> */}
-      <main className='pt-6 md:pt-18'>
+      <main className='pt-8 md:pt-18'>
       <DemoSlider data={dataSlider} />
       <section id="product-marketing-sections" className="max-w-container z-40 py-16 px-4 sm:mt-4 sm:px-6 lg:px-8 xl:-mt-32 grid grid-cols-1 sm:grid-cols-[repeat(auto-fit,minmax(350px,1fr))] gap-x-4 gap-y-6">
         {data.map((item: ServiceProp, index) => (
@@ -35,11 +37,15 @@ export default function Home() {
       </section>
         <IntroSection />
         <AboutSection />
+        <div className="w-full backdrop-blur-xl bg-bodyColor">
+          <FifthSection />
+        </div>
         <Portifolio />
         <SecondFeatureSection />
-        <FeatureSection />
+        <Categoria />
         <InvestmentSection />
-        <FaqSection />
+        <Archive />
+        <FAQ />
       </main>
     </>
   );

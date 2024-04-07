@@ -1,5 +1,8 @@
+import Image from "next/image";
 import { forwardRef, ReactElement } from "react";
+
 import { Loader2 } from "lucide-react";
+
 import { Button } from "../../components/ui/buttons";
 
 type MainButtonProps = {
@@ -68,7 +71,7 @@ const MainButton = forwardRef<HTMLButtonElement, MainButtonProps>(
         disabled={disabled}
       >
         {iconRoute && (
-          <img
+          <Image
             src={iconRoute}
             alt="left button icon"
             className="w-[24px] h-[24px]"
@@ -80,7 +83,7 @@ const MainButton = forwardRef<HTMLButtonElement, MainButtonProps>(
         {text}
         {rightIconRoute && <span>&nbsp;</span>}
         {rightIconRoute && (
-          <img
+          <Image
             src={rightIconRoute}
             alt="right button icon"
             className={rightIconClass}

@@ -1,17 +1,24 @@
-import { Analytics } from '@vercel/analytics/react';
+/* eslint-disable import-helpers/order-imports */
 import type { Metadata, Viewport } from 'next';
 import { Inter as FontSans } from 'next/font/google';
 import localFont from 'next/font/local';
-import { cn } from '@/lib/utils';
-import { siteConfig } from '../config';
-import { WEBSITE_HOST_URL } from '@/lib/constants';
+
 import { GoogleTagManager } from '@next/third-parties/google'
+import { Analytics } from '@vercel/analytics/react';
+
+import { cn } from '@/lib/utils';
+
+import { WEBSITE_HOST_URL } from '@/lib/constants';
 
 import Navbar from '../components/Navbar/Navbar';
-
+import { siteConfig } from '../config';
 import { ThemeProvider } from './_components/theme-provider';
 
 import './globals.css';
+import { Footer } from './../components/ui/footer';
+import StyledComponentsRegistry from './registry';
+import GlobalStyle from './../styles/GlobalStyle';
+import { Providers } from './../components/providers';
 
 const fontSans = FontSans({
   subsets: ['latin'],
@@ -108,12 +115,16 @@ export default function RootLayout({
           fontHeading.variable
         )}
       >
-        <div className="max-w-8xl mx-auto px-2 lg:p-8">
+        <div className="max-w-8xl mx-auto space-y-8 px-2 lg:p-8">
         <ThemeProvider attribute='class' defaultTheme='system' enableSystem>
         <Navbar/>
-          {children}
+        <StyledComponentsRegistry>
+        <Providers>{children}</Providers>
+            </StyledComponentsRegistry>
+            <GlobalStyle />
           <Analytics />
           <GoogleTagManager gtmId='GTM-NQ43J9D' />
+          <Footer />
         </ThemeProvider>
         </div>
       </body>

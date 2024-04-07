@@ -1,4 +1,11 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable import-helpers/order-imports */
+/* eslint-disable @typescript-eslint/no-var-requires */
+/* eslint-disable no-dupe-keys */
 const { fontFamily } = require('tailwindcss/defaultTheme');
+
+
 import colors from 'tailwindcss/colors';
 
 /** @type {import('tailwindcss').Config} */
@@ -18,8 +25,28 @@ module.exports = {
         '2xl': '1400px',
       },
     },
+    fontFamily: {
+      sans: ['var(--font-inter)', 'sans-serif'],
+    },
     extend: {
+      backgroundImage: {
+        'hero-image': "url('/title-area-pattern-2.png')",
+        'hero-card': "url('/bg-box.png')",
+        'hero-image': "url('/5.jpg')",
+        'hero-page': "url('/bg-vidracaria-2.jpg')",
+      },
+      fontFamily: {
+        mono: ['var(--font-plex-mono)', 'monospace'],
+      },
+      boxShadow: {
+        button: '0px 0px 68px 7px rgba(5, 150, 105, 0.4)',
+      },
       colors: {
+        bodyColor: "#0A192F",
+        textGreen: "#64ffda",
+        textLight: "#ccd6f6",
+        textDark: "#8892b0",
+        hoverColor: "rgba(100,255,218,0.1)",
         brown: {
           50: '#fdf8f6',
           100: '#f2e8e5',
@@ -128,6 +155,11 @@ module.exports = {
           from: { height: 0 },
           to: { height: 'var(--radix-accordion-content-height)' },
         },
+        scroll: {
+          to: {
+            transform: "translate(calc(-50% - 0.5rem))",
+          },
+        },
         'accordion-up': {
           from: { height: 'var(--radix-accordion-content-height)' },
           to: { height: 0 },
@@ -136,12 +168,16 @@ module.exports = {
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
+        scroll:
+        "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
       },
     },
   },
   plugins: [
-    require('tailwindcss-animate'),
     require('@tailwindcss/typography'),
-    require('@tailwindcss/aspect-ratio'),
+    require('@tailwindcss/forms'),
+    require('tailwind-scrollbar-hide'),
+    require("tailwindcss-animate"),
+    require('tailwindcss-radix')()
   ],
 };

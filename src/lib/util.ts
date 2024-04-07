@@ -1,6 +1,7 @@
+import { Roboto } from "next/font/google";
+
 import { type ClassValue, clsx } from "clsx"
 import { twMerge } from "tailwind-merge"
-import { Roboto } from "next/font/google";
 
 export const roboto = Roboto({
   subsets: ["latin"],

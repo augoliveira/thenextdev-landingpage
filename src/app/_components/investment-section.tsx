@@ -1,4 +1,6 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { Check } from 'lucide-react';
+
 import Enrollment from './enrollment';
 import PreEnrollment from './pre-enrollment';
 
@@ -10,34 +12,31 @@ function InvestmentSection() {
     >
       <div className='mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center'>
         <h2 className='font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl'>
-          Investimento
+          Faça uma contação
         </h2>
         <p className='max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7'>
-          Faça o melhor investimento da sua carreira. Veja os benefícios e
-          vantagens de ser um aluno do curso Full-stack Next.js 14.
+          Faça o investimento de sua obra com quem Intende com mão de obra especializada.
         </p>
       </div>
 
       <div className='grid w-full border rounded-lg items-start gap-10 p-10 md:grid-cols-[1fr_200px]'>
         <div className='grid gap-6'>
-          <h3 className='text-xl font-bold sm:text-2xl'>O que está incluído</h3>
+          <h3 className='text-xl font-bold sm:text-2xl'>Temos vidros para todas necessidades para seu projeto</h3>
           <ul className='grid gap-3 text-sm text-muted-foreground sm:grid-cols-2'>
             <li className='flex items-center'>
-              <Check className='mr-2 h-4 w-4' /> Aulas gravadas para assistir
-              quando quiser
+              <Check className='mr-2 h-4 w-4' /> Vidro para box de banheiro
             </li>
             <li className='flex items-center'>
-              <Check className='mr-2 h-4 w-4' /> Aulas ao vivo
+              <Check className='mr-2 h-4 w-4' /> Vidro para porta/janela
             </li>
             <li className='flex items-center'>
-              <Check className='mr-2 h-4 w-4' /> 15 dias de garantia
+              <Check className='mr-2 h-4 w-4' /> Vidro laminado para fachada
             </li>
             <li className='flex items-center'>
-              <Check className='mr-2 h-4 w-4' /> Acesso ao código fonte do
-              projeto
+              <Check className='mr-2 h-4 w-4' /> Vidro para corberturas
             </li>
             <li className='flex items-center'>
-              <Check className='mr-2 h-4 w-4' /> Grupo exclusivo no WhatsApp
+              <Check className='mr-2 h-4 w-4' /> preecha o formulário e solicite sua cotação
             </li>
             <li className='flex items-center'>
               <Check className='mr-2 h-4 w-4' /> Suporte via WhatsApp
