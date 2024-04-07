@@ -1,8 +1,11 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 
-import { cn } from "@/utils/cn";
-import { motion, HTMLMotionProps } from "framer-motion";
 import { ReactNode, useState } from "react";
+
+import { motion, HTMLMotionProps } from "framer-motion";
+
+import { cn } from "@/utils/cn";
 
 interface SectionHeadingProps extends HTMLMotionProps<"h3"> {}
 

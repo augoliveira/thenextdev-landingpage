@@ -1,9 +1,10 @@
+import Link from 'next/link';
+
 import { GitFork, Star } from 'lucide-react';
 
-import { nFormatter } from '#/lib/utils';
+import { nFormatter } from '@/lib/utils1';
 
 import { Github } from './icons';
-import Link from 'next/link';
 
 export interface GithubRepoProps {
   url: string;

@@ -1,9 +1,10 @@
 "use client";
 
-import { useMotionValue, motion, useSpring, useTransform } from "framer-motion";
 import Link from "next/link";
-
 import { useRef } from "react";
+
+import { useMotionValue, motion, useSpring, useTransform } from "framer-motion";
+
 import { TextReveal } from "./typography";
 
 interface LinkProps {

@@ -1,6 +1,7 @@
 "use client";
 
 import { ReactNode, useRef } from "react";
+
 import {
   motion,
   useScroll,
@@ -10,6 +11,7 @@ import {
   useVelocity,
   useAnimationFrame,
 } from "framer-motion";
+
 import { cn } from "@/utils/cn";
 
 const wrap = (min: number, max: number, v: number) => {

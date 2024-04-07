@@ -18,7 +18,6 @@ import './globals.css';
 import { Footer } from './../components/ui/footer';
 import StyledComponentsRegistry from './registry';
 import GlobalStyle from './../styles/GlobalStyle';
-import { Providers } from './../components/providers';
 
 const fontSans = FontSans({
   subsets: ['latin'],
@@ -119,7 +118,7 @@ export default function RootLayout({
         <ThemeProvider attribute='class' defaultTheme='system' enableSystem>
         <Navbar/>
         <StyledComponentsRegistry>
-        <Providers>{children}</Providers>
+        <>{children}</>
             </StyledComponentsRegistry>
             <GlobalStyle />
           <Analytics />

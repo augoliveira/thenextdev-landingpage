@@ -1,7 +1,8 @@
 "use client";
 
-import { cn } from "@/utils/cn";
 import { HTMLMotionProps, motion } from "framer-motion";
+
+import { cn } from "@/utils/cn";
 
 interface Props extends HTMLMotionProps<"span"> {}
 

@@ -1,6 +1,8 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 
 import { ReactNode, useEffect, useRef, useState } from "react";
+
 import { cn } from "@/utils/cn";
 
 interface TestimonialProps {
