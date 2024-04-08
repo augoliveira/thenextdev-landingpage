@@ -114,14 +114,14 @@ const FifthSection = () => {
               src={activeTab.image}
               width={1025}
               height={500}
-              priority
               alt="logo"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="shadow-2xl object-cover
                 w-full
-             border
-             p-20
-             xl:p-20
-             rounded-xl
+                border
+                p-10
+                xl:p-10
+                rounded-xl
                 "
             />
           </div>
