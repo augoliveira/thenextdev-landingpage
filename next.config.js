@@ -1,10 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    ppr: true,
+  compress: false,
+  httpAgentOptions: {
+    keepAlive: false,
   },
-  images: {
-    domains: ['images.unsplash.com'],
+  experimental: {
+    optimizePackageImports: ['package-name'],
   },
 };
 

@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 
 import React, {
@@ -8,6 +9,7 @@ import React, {
   Dispatch,
   SetStateAction,
 } from "react";
+
 import { Project } from "./interfaces";
 
 interface ProjectContextProps {
