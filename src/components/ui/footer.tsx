@@ -14,8 +14,7 @@ import {
 
 import { Wave } from '@/components/ui/wave';
 
-import Logo from "../../../public/logo.svg";
-import { LogoFooter } from "../ui/logoFooter";
+import Logo from "../../../public/logo-campanha.png";
 
 export function Footer() {
   return (
@@ -27,8 +26,9 @@ export function Footer() {
             width={300}
             height={30}
             src={Logo}
-            alt="Logo GB Dev"
+            alt="Logo Glazing Design"
             priority
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
           <p className='text-gray-400 pb-1'>Fique por dentro das novidades!!</p>
           <input
