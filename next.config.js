@@ -6,6 +6,10 @@ const nextConfig = {
   },
   experimental: {
     optimizePackageImports: ['package-name'],
+    staleTimes: {
+      dynamic: 30,
+      static: 180,
+    },
   },
 };
 

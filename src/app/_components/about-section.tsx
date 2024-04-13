@@ -60,6 +60,7 @@ function AboutSection() {
               width={500}
               height={500}
               loading="eager"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className={`aspect-square rotate-3 w-full h-full object-cover group-hover:scale-110 duration-500 transition-all ${
                 loading
                   ? 'scale-110 blur-2xl grayscale'

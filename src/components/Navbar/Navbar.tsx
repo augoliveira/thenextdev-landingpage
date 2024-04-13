@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 'use client'
+import Image from 'next/image';
 import Link from 'next/link'
 import { useState } from 'react'
 import { HiArrowNarrowRight } from 'react-icons/hi'
@@ -7,10 +8,11 @@ import { HiArrowNarrowRight } from 'react-icons/hi'
 import { motion } from 'framer-motion'
 import { Phone, X } from "lucide-react";
 
+
+import Logo from '../../../public/logo-campanha.png'
 import { ModeToggle } from '../../app/_components/mode-toggle';
 import { Button } from '../../components/button'
 import Container from '../Container'
-import { Logo } from '../ui/logo'
 import Navlist2 from './NavUtils/Navlist2'
 import OpenSourceNav from './OpenSourceNav'
 import ProductNav from './ProductNav'
@@ -20,6 +22,7 @@ import SolutionNav from './SolutionNav'
 type Props = {}
 
 const Navbar = (props: Props) => {
+    const [loading, setLoading] = useState(true);
     const [showNav, setShowNav] = useState(false)
     const close = () => setIsOpen(false);
     const handleContact = () => {
@@ -46,7 +49,20 @@ const Navbar = (props: Props) => {
                   href="/"
                   onClick={close}
                 >
-                  <Logo />
+                  <Image
+              src={Logo}
+              alt="Logo"
+              width={100}
+              height={30}
+              loading="eager"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              className={`w-full h-full object-cover group-hover:scale-110 duration-500 transition-all ${
+                loading
+                  ? 'scale-110 blur-2xl grayscale'
+                  : 'scale-100 blur-0 grayscale-0'
+              }}`}
+              onLoadingComplete={() => setLoading(false)}
+            />
                 </Link>
                 <button type='button' onClick={() => setShowNav(!showNav)} className='lg:hidden cursor-pointer'>
                     <div className={`w-[23px] h-[2px] transition ease-in duration-150  bg-white ${showNav ? "rotate-45 mb-0  translate-y-[1px]" : "rotate-0 mb-1"} `}></div>
