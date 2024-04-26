@@ -2,9 +2,12 @@
 import type { Metadata, Viewport } from 'next';
 import { Inter as FontSans } from 'next/font/google';
 import localFont from 'next/font/local';
+import { ReactNode, Suspense } from 'react';
 
 import { GoogleTagManager } from '@next/third-parties/google'
 import { Analytics } from '@vercel/analytics/react';
+import Byline from './../components/ui/byline';
+import { AddressBar } from './../components/ui/address-bar';
 
 import { cn } from '@/lib/utils';
 
@@ -106,25 +109,39 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang='en'>
+    <html suppressHydrationWarning lang="Pt-BR" className="[color-scheme:dark]">
       <body
         className={cn(
-          'min-h-screen bg-background font-sans antialiased',
+          'bg-gray-1100 overflow-y-scroll bg-background font-sans antialiased',
           fontSans.variable,
           fontHeading.variable
         )}
       >
-        <div className="max-w-8xl mx-auto space-y-8 px-2 lg:p-8">
+        <div className="mx-auto max-w-8xl space-y-8 px-2 pt-20 lg:py-8 lg:px-8">
+          <div className="rounded-lg bg-vc-border-gradient p-px shadow-lg shadow-black/20">
         <ThemeProvider attribute='class' defaultTheme='system' enableSystem>
         <Navbar/>
-        <StyledComponentsRegistry>
-        <>{children}</>
-            </StyledComponentsRegistry>
+          <StyledComponentsRegistry>
+            <Suspense>
+            <div className="mx-auto max-w-8xl space-y-8 px-2 pt-20 lg:py-8 lg:px-8">
+          <div className="rounded-lg bg-vc-border-gradient p-px shadow-lg shadow-black/20">
+          <div className="rounded-t-lg bg-vc-border-gradient p-px shadow-lg shadow-black/20">
+                                <div className="rounded-t-lg bg-[#4c087b]">
+                                    <AddressBar />
+                                </div>
+                            </div>
+                {children}
+                <Footer />
+                </div>
+            </div>
+            </Suspense>
+          </StyledComponentsRegistry>
             <GlobalStyle />
           <Analytics />
           <GoogleTagManager gtmId='GTM-NQ43J9D' />
-          <Footer />
+          
         </ThemeProvider>
+        </div>
         </div>
       </body>
     </html>

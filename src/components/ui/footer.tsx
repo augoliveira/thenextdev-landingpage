@@ -3,7 +3,7 @@
 
 import Image from "next/image";
 import Link from 'next/link';
-
+import { Github, LinkedIn, Twitter } from '@/components/shared/icons';
 
 import {
   FacebookLogo,
@@ -12,6 +12,8 @@ import {
   YoutubeLogo
 } from 'phosphor-react'
 
+import payment from "/public/Forma-de-pagamento.webp";
+
 import { Wave } from '@/components/ui/wave';
 
 import Logo from "../../../public/logo-campanha.png";
@@ -19,9 +21,8 @@ import Logo from "../../../public/logo-campanha.png";
 export function Footer() {
   return (
     <div className="lg:pt-3 flex flex-wrap flex-col justify-center w-full">
-      <Wave />
-      <div className="container flex flex-col sm:flex-row justify-around bg-[#1a1c20] min-w-full pb-5 ">
-        <div className="flex flex-col px-2 items-start"> 
+      <div className="container flex flex-col sm:flex-row justify-around bg-[#1a1c20] min-w-full pb-5">
+        <div className="flex flex-col px-2 mt-8 items-start"> 
         <Image
             width={300}
             height={30}
@@ -41,39 +42,47 @@ export function Footer() {
           </button>
         </div>
 
-        <div className="flex flex-col m-5 justify-center ">
-          <p className="yt ">
-            <Link
-              href="https://www.youtube.com/"
-              className=" text-white px-4 py-2 font-semibold  inline-flex items-center space-x-2 rounded"
-            >
-              <YoutubeLogo size={32} weight="bold" />
-            </Link>
-
-            <Link
-              href="https://www.facebook.com/"
-              className=" text-white  px-4 py-2 font-semibold inline-flex items-center space-x-2 rounded"
-            >
-              <FacebookLogo size={32} weight="bold" />
-            </Link>
-
-            <Link
-              href="http://www.instagram.com/"
-              className="text-white px-4 py-2 font-semibold  inline-flex items-center space-x-2 rounded"
-            >
-              <InstagramLogo size={32} weight="bold" />
-            </Link>
-
-            <Link
-              href="https://wwww.twitter.com"
-              className="text-white px-4 py-2 font-semibold  inline-flex items-center space-x-2 rounded"
-            >
-              <TwitterLogo size={32} weight="bold" />
-            </Link>
-          </p>
+        <div className='flex items-center space-x-2'>
+              <Link
+                href='https://twitter.com/dubdotsh'
+                target='_blank'
+                rel='noreferrer'
+                className='rounded-md p-2 transition-colors hover:bg-gray-100 active:bg-gray-200'
+              >
+                <span className='sr-only'>Twitter</span>
+                <Twitter className='h-5 w-5 text-[#035D26]' />
+              </Link>
+              <div className='h-8 border-l border-gray-200' />
+              <Link
+                href='https://github.com/steven-tey/dub'
+                target='_blank'
+                rel='noreferrer'
+                className='rounded-md p-2 transition-colors hover:bg-gray-100 active:bg-gray-200'
+              >
+                <span className='sr-only'>Github</span>
+                <Github className='h-5 w-5 text-[#035D26]' />
+              </Link>
+              <div className='h-8 border-l border-gray-200' />
+              <Link
+                href='https://www.linkedin.com/company/dubhq/'
+                target='_blank'
+                rel='noreferrer'
+                className='rounded-md p-2 transition-colors hover:bg-gray-100 active:bg-gray-200'
+              >
+                <span className='sr-only'>LinkedIn</span>
+                <LinkedIn className='h-5 w-5' fill='#035D26' />
+              </Link>
+            </div>
+        <div className="flex flex-col m-5 justify-center">
+          <p className="text-lg mb-2">Pague-nos com seus serviços confiáveis.</p>
+          <Image
+            src={payment}
+            alt="payment banner image"
+            className="w-full h-10 object-cover"
+          />
         </div>
       </div>
-      <div className="text-center py-1 text-gray-400 bg-[#111214] w-full">
+      <div className="text-center py-1 text-gray-400 bg-[#09245b] w-full">
       © 2018 – 2020 <strong>GlAZING DESIGN, VIDROS TEMPERADO</strong>. Todos Direitos Reservado.
       </div>
     </div>

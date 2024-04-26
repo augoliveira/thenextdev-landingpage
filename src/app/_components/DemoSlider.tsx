@@ -68,11 +68,11 @@ const DemoSlider: React.FC<DemoSliderProps> = ({ data }) => {
                     alt="Mountains"
                     src={image}
                     className="image-layer"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     placeholder='blur'
                     blurDataURL='data:image/png;base64,[IMAGE_CODE_FROM_PNG_PIXEL]'
                     quality={100}
                     fill
-                    sizes="100vw"
                     style={{
                       objectFit: "cover",
                     }}
@@ -81,7 +81,7 @@ const DemoSlider: React.FC<DemoSliderProps> = ({ data }) => {
                 
           
                 <div className="absolute left-0 top-0 h-full w-full bg-black/20 opacity-20"></div>
-                <div className="space-y-5 title-content absolute py-[8%] sm:py-[8rem] left-3">
+                <div className="space-y-5 title-content absolute py-[8%] px-16 sm:py-[8rem] left-3">
                   <div className="flex flex-col gap-y-5 px-8 lg:px-8 md:flex-row md:gap-x-16">
                   <div className="mr-auto place-self-center lg:col-span-7">
                   <div className="text-left backdrop-brightness-50 bg-black/50 py-16 px-16 rounded-md">

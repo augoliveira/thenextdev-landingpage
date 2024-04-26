@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import Image from "next/image";
 
 import { CloudArrowUpIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/20/solid'
@@ -65,29 +66,19 @@ export default function BoxProduto() {
                 <li className="flex gap-x-3">
                   <CloudArrowUpIcon className="mt-1 h-5 w-5 flex-none text-indigo-600" aria-hidden="true" />
                   <span>
-                    <strong className="font-semibold text-gray-900">Box com vidro temperado.</strong> Renove seu banheiro com elegância e segurança com nosso Box Temperado de Vidro Incolor de 8mm. Combinando durabilidade e estilo, nosso box frontal oferece o equilíbrio perfeito entre qualidade e preço acessível. Transforme seu espaço com um toque de sofisticação sem comprometer seu orçamento. Descubra a beleza e a funcionalidade do nosso box temperado hoje mesmo!
+                    <strong className="font-semibold text-gray-900">Box com vidro temperado.</strong> Promove seu banheiro com elegância e segurança com nosso Box Temperado de Vidro Incolor de 8mm. Combinando durabilidade e estilo, nosso box frontal oferece o equilíbrio perfeito entre qualidade e preço acessível. Transforme seu espaço com um toque de sofisticação sem comprometer seu orçamento. Descubra a beleza e a funcionalidade do nosso box temperado hoje mesmo!
                   </span>
                 </li>
                 <li className="flex gap-x-3">
                   <LockClosedIcon className="mt-1 h-5 w-5 flex-none text-indigo-600" aria-hidden="true" />
                   <span>
-                    <strong className="font-semibold text-gray-900">Box com pelicula de segurança.</strong> Anim aute id magna aliqua
-                    ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.
-                  </span>
-                </li>
-                <li className="flex gap-x-3">
-                  <ServerIcon className="mt-1 h-5 w-5 flex-none text-indigo-600" aria-hidden="true" />
-                  <span>
-                    <strong className="font-semibold text-gray-900">Box com kit personalizado.</strong> Ac tincidunt sapien
-                    vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.
+                    <strong className="font-semibold text-gray-900">Box com pelicula de segurança.</strong> Nos dias de hoje, ter box de vidro no banheiro é praticamente indispensável para qualquer ambiente residencial. Seja para evitar que o banheiro fique molhado ou até prevenir possíveis acidentes. Ao instalar uma película para box de banheiro, feita de polímero, evita que o vidro seja riscado e segura os estilhaços caso haja quebra, evitando problemas adicionais.
+
+Porém, a película para box de banheiro também pode gerar alguns problemas caso não for aplicada de forma adequada por um profissional. Por exemplo, após a instalação, o box só pode ser utilizado após 6 horas. Além disso, se faz necessário a manutenção preventiva deste material a cada doze meses, de preferência.
                   </span>
                 </li>
               </ul>
-              <p className="mt-8">
-                Et vitae blandit facilisi magna lacus commodo. Vitae sapien duis odio id et. Id blandit molestie auctor
-                fermentum dignissim. Lacus diam tincidunt ac cursus in vel. Mauris varius vulputate et ultrices hac
-                adipiscing egestas. Iaculis convallis ac tempor et ut. Ac lorem vel integer orci.
-              </p>
+              
               <h2 className="mt-16 text-2xl font-bold tracking-tight text-gray-900">A Glazing Design.</h2>
               <p className="mt-6">
               disponibiliza inúmeros modelos que se adequam a diferentes projetos, como o box de correr, o de abrir e o de canto. Além de bonitos, os boxes de vidro são mais seguros e podem durar a vida toda.

@@ -2,7 +2,7 @@
 'use client'
 import Image from 'next/image';
 import Link from 'next/link'
-import { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { HiArrowNarrowRight } from 'react-icons/hi'
 
 import { motion } from 'framer-motion'
@@ -21,6 +21,8 @@ import SolutionNav from './SolutionNav'
 // eslint-disable-next-line @typescript-eslint/ban-types
 type Props = {}
 
+type Props = object
+
 const Navbar = (props: Props) => {
     const [loading, setLoading] = useState(true);
     const [showNav, setShowNav] = useState(false)
@@ -30,6 +32,24 @@ const Navbar = (props: Props) => {
       if (contactSection) {
         contactSection.scrollIntoView({ behavior: 'smooth' })
       }
+    }
+    const [show,setShow] = useState(false)
+    const handleOnclick = () => {
+        if (window.innerWidth < 1024 ) {
+                setShow(!show)
+        }
+    }
+
+    const handleMouseEnter = () => {
+        if(window.innerWidth > 1024){
+            setShow(true)
+        }
+    }
+
+    const handleMouseLeave = () => {
+        if(window.innerWidth > 1024){
+            setShow(false)
+        }
     }
     
   return (
@@ -77,11 +97,16 @@ const Navbar = (props: Props) => {
                             <OpenSourceNav/>
                             <ProductNav/>
                             <SolutionNav/>
-                            <li>
-                                <a className='max-lg:font-semibold  flex items-center p-1 hover:text-neutral-300'>
-                                    Contato
-                                </a>
-                            </li>
+                            
+                            <li id='myLi'  onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} >
+            <button onClick={handleOnclick} type='button' className={`flex items-center p-1 transition ease-in duration-150 max-lg:justify-between max-lg:font-semibold max-lg:w-full ${show ? "lg:text-neutral-300": ""}`}>
+            <Link
+              href="/contato"
+            >
+                Contato
+            </Link>
+            </button>
+        </li>
                             <li><ModeToggle /></li>
                         </ul>
                     </nav>

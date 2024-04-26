@@ -34,6 +34,7 @@ module.exports = {
         'hero-card': "url('/bg-box.png')",
         'hero-image': "url('/5.jpg')",
         'hero-page': "url('/bg-vidracaria-2.jpg')",
+        'contato-page': "url('/Bg-contato.jpg')",
       },
       fontFamily: {
         mono: ['var(--font-plex-mono)', 'monospace'],
