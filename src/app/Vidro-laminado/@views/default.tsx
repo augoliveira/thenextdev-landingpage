@@ -1,5 +1,5 @@
 import { CurrentRoute } from '@/app/Vidro-laminado/_ui/current-route';
-import { Boundary } from '@/ui/boundary';
+import { Boundary } from '../../../components/ui/boundary';
 import Link from 'next/link';
 
 export default function Default() {
