@@ -19,8 +19,6 @@ import ProductNav from './ProductNav'
 import SolutionNav from './SolutionNav'
 
 // eslint-disable-next-line @typescript-eslint/ban-types
-type Props = {}
-
 type Props = object
 
 const Navbar = (props: Props) => {

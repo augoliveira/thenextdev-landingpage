@@ -8,7 +8,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { At, ChatText, TelegramLogo, User } from 'phosphor-react';
 import { z } from 'zod';
 
-import { sendContactMail } from '../../../services/sendMail.ts';
+import { sendContactMail } from '../../../services/sendMail';
 import { ButtonSecondary } from '../../style/styles';
 import { FormContent } from './styles';
 

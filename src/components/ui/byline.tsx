@@ -1,6 +1,5 @@
 import Link from 'next/link';
 
-import { VercelLogo } from './VercelLogo';
 
 export default function Byline() {
     return (
