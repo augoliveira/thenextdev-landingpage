@@ -13,6 +13,7 @@ import IntroSection from './_components/intro-section';
 import InvestmentSection from './_components/investment-section';
 import dataSlider from "./_data/slider-data.json";
 import FAQ from './../components/ui/faq';
+import { CardContact } from './../components/CardContact/index';
 
 export default function Home() {
   return (
@@ -46,6 +47,7 @@ export default function Home() {
         <InvestmentSection />
         <Archive />
         <FAQ />
+        <CardContact />
       </main>
     </>
   );
