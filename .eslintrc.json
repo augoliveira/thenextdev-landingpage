@@ -8,6 +8,7 @@
         "plugin:@typescript-eslint/recommended",
         "plugin:react/recommended",
         "next",
+        "@rocketseat/eslint-config/next", 
         "next/core-web-vitals"
     ],
     "parser": "@typescript-eslint/parser",
@@ -34,7 +35,8 @@
       "@typescript-eslint",
       "react-hooks",
       "import-helpers",
-      "sonarjs"
+      "sonarjs",
+      "simple-import-sort"
     ],
     "rules": {
       "react-hooks/rules-of-hooks": "error",

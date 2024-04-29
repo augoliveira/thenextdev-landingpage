@@ -14,9 +14,9 @@ export const demos: { name: string; items: Item[] }[] = [
         description: 'Box para Banheiro',
       },
       {
-        name: 'Grouped Layouts',
-        slug: 'route-groups',
-        description: 'Organize routes without affecting URL paths',
+        name: 'Portas e Janelas',
+        slug: 'portas-e-janelas',
+        description: 'Portas e janelas de vidro temperado',
       },
       {
         name: 'Vidro Lamindo',

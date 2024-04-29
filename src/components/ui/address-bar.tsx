@@ -56,7 +56,7 @@ export function AddressBar() {
       </div>
       <div className="flex gap-x-1 text-sm font-medium">
         <div>
-          <span className="px-2 text-gray-400">upexpert.com.br</span>
+          <span className="px-2 text-gray-400">glazingdesign.com.br</span>
         </div>
         {pathname ? (
           <>

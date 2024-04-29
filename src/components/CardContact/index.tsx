@@ -31,7 +31,7 @@ export function CardContact() {
           </div>
         </CardContactContent>
 
-        <Link href={'/contact'}>
+        <Link href={'/contato'}>
           <ButtonAlt>
             Entre em contato{' '}
             <TelegramLogo

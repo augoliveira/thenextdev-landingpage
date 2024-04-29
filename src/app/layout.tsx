@@ -33,6 +33,7 @@ const fontHeading = localFont({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://glazingdesign.com.br/"),
   title: {
     default: siteConfig.name,
 		template: `%s - ${siteConfig.name}`,
@@ -47,14 +48,14 @@ export const metadata: Metadata = {
     },
   },
   manifest: '/manifest.json',
-  authors: [{ name: 'AGÊNCIA UP.EXPERT' }],
+  authors: [{ name: 'Glazing Design' }],
   metadataBase: new URL(`${siteConfig.url}`),
   openGraph: {
     type: 'website',
     url: `${siteConfig.url}/cover.jpg`,
     title: siteConfig.title,
     description: siteConfig.description,
-    siteName: 'UP.EXPERT',
+    siteName: 'Glazing Design',
     images: [
       {
         url: `${siteConfig.url}/cover.jpg`
@@ -126,12 +127,16 @@ export default function RootLayout({
             <div className="mx-auto max-w-8xl space-y-8 px-2 pt-20 lg:py-8 lg:px-8">
           <div className="rounded-lg bg-vc-border-gradient p-px shadow-lg shadow-black/20">
           <div className="rounded-t-lg bg-vc-border-gradient p-px shadow-lg shadow-black/20">
-                                <div className="rounded-t-lg bg-[#4c087b]">
+                                <div className="rounded-t-lg bg-gradient-to-r from-bodyColor to-[#66a900]">
                                     <AddressBar />
                                 </div>
                             </div>
                 {children}
+                <div className="rounded-lg bg-vc-border-gradient p-px shadow-lg shadow-black/20">
+                            <div className="rounded-lg bg-black/30 backdrop-blur-xl">
                 <Footer />
+                </div> 
+                        </div> 
                 </div>
             </div>
             </Suspense>
