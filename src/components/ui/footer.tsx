@@ -12,7 +12,7 @@ import {
   YoutubeLogo
 } from 'phosphor-react'
 
-import payment from "/public/Forma-de-pagamento.webp";
+import payment from "../../../public/Forma-de-pagamento.webp";
 
 import { Wave } from '@/components/ui/wave';
 
