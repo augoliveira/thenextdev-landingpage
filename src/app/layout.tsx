@@ -33,7 +33,6 @@ const fontHeading = localFont({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://glazingdesign.com.br/"),
   title: {
     default: siteConfig.name,
 		template: `%s - ${siteConfig.name}`,
