@@ -4,6 +4,9 @@ const nextConfig = {
   httpAgentOptions: {
     keepAlive: false,
   },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   images: {
     formats: ["image/avif", "image/webp"],
     remotePatterns: [
@@ -26,5 +29,9 @@ const nextConfig = {
     },
   },
 };
+
+const withBundleAnalyzer = require("@next/bundle-analyzer")({
+  enabled: process.env.ANALYZE === "true",
+});
 
 module.exports = nextConfig;

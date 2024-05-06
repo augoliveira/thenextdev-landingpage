@@ -1,4 +1,5 @@
 import React from 'react';
+import { Card } from '@/components/Cards'
 
 import { AnimatedText } from './AnimatedText/index';
 import { projectOne, guardaCorpo, box, cortina, projectTwo, projectThree } from './index';
@@ -11,16 +12,11 @@ const Portifolio = () => {
       className='w-full border-b-[1px] border-b-black bg-slate-100 py-20'
     >
       <div className='mx-auto mt-24 min-h-screen max-w-7xl px-8 xl:px-0'>
-        <div className='lg:pr-4'>
-          <div className='lg:max-w-lg'>
-            <p className='text-base font-semibold leading-7 text-indigo-600'>
-              O que fazemos
-            </p>
-            <AnimatedText text='NOSSOS SERVIÇOS' />
-          </div>
-        </div>
-
-        <div className='grid grid-cols-1 gap-6 py-4 md:grid-cols-2 xl:grid-cols-3 xl:gap-14'>
+          <Card />
+        <h1 className="mt-14 text-5xl font-bold text-gray-900 text-center">
+          Nossos <span className="text-violet-500">Destaques</span>
+        </h1>
+        <div className='grid grid-cols-1 gap-6 py-16 md:grid-cols-2 xl:grid-cols-3 xl:gap-14'>
           <ProjectsCard
             title='TELHADO DE VIDRO'
             des=' Acabar com a luminosidade na entrada da sua casa não é legal né? A cobertura de vidro te protege da chuva e ainda garante a luminosidade para sua fachada.'

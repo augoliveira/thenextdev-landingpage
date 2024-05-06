@@ -1,10 +1,18 @@
+"use client";
+
 import { ExternalLink } from '@/components/ui/external-link';
-import Image from 'next/image'
 import Img1 from '../../../public/beach-house.9b9ee168.jpg'
 import Img2 from '../../../public/beach-house-interior-1.f151eb56.jpg'
 import Img3 from '../../../public/beach-house-interior-2.3672af98.jpg'
+import { useRef, useState } from "react";
+import Image from "next/image";
+import { AnimatePresence, motion } from "framer-motion";
+import { cn } from "@/utils/cn";
+import { DirectionAwareHover } from "@/components/ui/direction-aware-hover";
 
 export default function Page() {
+  const imageUrl =
+    "/public/beach-house-interior-1.f151eb56.jpg";
   return (  
   <div className="py-6 px-4 sm:p-6 md:py-10 md:px-8">
   <div className="max-w-4xl mx-auto grid grid-cols-1 lg:max-w-5xl lg:gap-x-20 lg:grid-cols-2">
@@ -63,6 +71,12 @@ export default function Page() {
     Uma empresa especializada na concepção e instalação de projetos inteligentes e modernos. Hoje em dia são virtualmente impossíveis não olhar ao redor e perceber a importância que o vidro tem em nossas vidas. Nossa missão é ajudar você quando o assunto é este material tão presente e arrojado. Adicione beleza e praticidade aos seus projetos de engenharia ou decoração! Glazing Design está aqui para você! É uma empresa que atua no mercado de vidros desde o ano 2000, atendendo todo DF e  entorno. Com experiência e tradição, a Start Vidros vem se destacando em seu segmento de vidro a sua alta qualidade e competência.
     </p>
   </div>
+  <div className="h-[40rem] relative  flex items-center justify-center">
+      <DirectionAwareHover imageUrl={imageUrl}>
+        <p className="font-bold text-xl">In the mountains</p>
+        <p className="font-normal text-sm">$1299 / night</p>
+      </DirectionAwareHover>
+    </div>
 </div>
   );
 }

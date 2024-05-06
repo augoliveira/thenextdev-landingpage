@@ -7,6 +7,7 @@ import { TbBrandGithub } from "react-icons/tb";
 import { RxOpenInNewWindow } from "react-icons/rx";
 import { AnimatedText } from './Portifolio/AnimatedText/index';
 
+
 const includedFeatures = [
   'Porta de abrir',
   'Porta de correr',
@@ -36,15 +37,16 @@ const Projects = () => {
             </div>
           </Link>
           <div className="w-full xl:w-1/2 flex flex-col gap-6 lgl:justify-between items-end text-right xl:-ml-16 z-10">
-            <div className="mt-10 flex items-center justify-center gap-x-6">
-              <a
-                href="#"
-                className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-              >
-                Get started
-              </a>
-              <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-                Learn more <span aria-hidden="true">→</span>
+          <div>
+              <p className="col-start-1 row-start-2 mt-4 max-w-[36rem] text-4xl font-extrabold tracking-tight text-slate-900 sm:text-7xl xl:max-w-[43.5rem]">
+                Porta de correr
+              </p>
+            </div>
+          <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+          Solicite um Orçamento.{' '}
+              <a href="https://api.whatsapp.com/send?phone=5561986692775" className="font-semibold text-indigo-600">
+                <span className="absolute inset-0" aria-hidden="true" />
+                Whatsapp <span aria-hidden="true">&rarr;</span>
               </a>
             </div>
             <p className="bg-[#112240] text-sm md:text-base p-2 md:p-6 rounded-md">
@@ -105,10 +107,9 @@ const Projects = () => {
           </a>
           <div className="w-full xl:w-1/2 flex flex-col gap-6 justify-between items-end text-right z-10">
             <div>
-              <p className="font-titleFont text-textGreen text-sm tracking-wide">
-                Featured Project
+              <p className="col-start-1 row-start-2 mt-4 max-w-[36rem] text-4xl font-extrabold tracking-tight text-slate-900 sm:text-7xl xl:max-w-[43.5rem]">
+                Janela
               </p>
-              <h3 className="text-2xl font-bold">Cyber Security Blog</h3>
             </div>
             <p className="text-sm md:text-base bg-[#112240] p-2 md:p-6 rounded-md xl:-mr-16">
               A full functional Cyber Security Blog where you can view the

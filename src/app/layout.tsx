@@ -119,32 +119,31 @@ export default function RootLayout({
       >
         <div className="mx-auto max-w-8xl space-y-8 px-2 pt-20 lg:py-8 lg:px-8">
           <div className="rounded-lg bg-vc-border-gradient p-px shadow-lg shadow-black/20">
-        <ThemeProvider attribute='class' defaultTheme='system' enableSystem>
-        <Navbar/>
-          <StyledComponentsRegistry>
-            <Suspense>
-            <div className="mx-auto max-w-8xl space-y-8 px-2 pt-20 lg:py-8 lg:px-8">
-          <div className="rounded-lg bg-vc-border-gradient p-px shadow-lg shadow-black/20">
-          <div className="rounded-t-lg bg-vc-border-gradient p-px shadow-lg shadow-black/20">
-                                <div className="rounded-t-lg bg-gradient-to-r from-bodyColor to-[#66a900]">
-                                    <AddressBar />
-                                </div>
-                            </div>
-                {children}
-                <div className="rounded-lg bg-vc-border-gradient p-px shadow-lg shadow-black/20">
-                            <div className="rounded-lg bg-black/30 backdrop-blur-xl">
-                <Footer />
-                </div> 
-                        </div> 
-                </div>
-            </div>
-            </Suspense>
-          </StyledComponentsRegistry>
-            <GlobalStyle />
-          <Analytics />
-          <GoogleTagManager gtmId='GTM-NQ43J9D' />
-          
-        </ThemeProvider>
+            <ThemeProvider attribute='class' defaultTheme='system' enableSystem>
+              <Navbar/>
+                  <StyledComponentsRegistry>
+                    <Suspense>
+                      <div className="mx-auto max-w-8xl space-y-8 px-2 pt-20 lg:py-8 lg:px-8">
+                        <div className="rounded-lg bg-vc-border-gradient p-px shadow-lg shadow-black/20">
+                          <div className="rounded-t-lg bg-vc-border-gradient p-px shadow-lg shadow-black/20">
+                              <div className="rounded-t-lg bg-gradient-to-r from-bodyColor to-[#66a900]">
+                                  <AddressBar />
+                              </div>
+                          </div>
+                              {children}
+                            <div className="rounded-lg bg-vc-border-gradient p-px shadow-lg shadow-black/20">
+                              <div className="rounded-lg bg-black/30 backdrop-blur-xl">
+                                  <Footer />
+                              </div> 
+                            </div> 
+                        </div>
+                      </div>
+                    </Suspense>
+                  </StyledComponentsRegistry>
+                <GlobalStyle />
+              <Analytics />
+            <GoogleTagManager gtmId='GTM-NQ43J9D' />
+          </ThemeProvider>
         </div>
         </div>
       </body>

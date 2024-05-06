@@ -2,10 +2,12 @@
 import { data } from "@/lib/_data";
   
 import Portifolio from '../components/Portifolio/Projects';
+import ProjectsSection from "../components/ProjectsSection/ProjectsSection";
 import SecondFeatureSection from "../components/sections/SecondFeatureSection";
 import Services, { ServiceProp } from "../components/sections/Services";
 import Categoria from '../components/Slider/Categoria';
 import FifthSection from "../components/ui/fifth-section";
+import Experience from "@/components/Experience";
 import AboutSection from './_components/about-section';
 import Archive from "./_components/Archive";
 import DemoSlider from "./_components/DemoSlider";
@@ -41,11 +43,15 @@ export default function Home() {
         <div className="w-full backdrop-blur-xl bg-bodyColor">
           <FifthSection />
         </div>
+          <div className="h-[88vh] mx-auto p-4 bg-teal-900">
+            <Experience />
+          </div>
         <Portifolio />
         <SecondFeatureSection />
         <Categoria />
         <InvestmentSection />
         <Archive />
+        <ProjectsSection />
         <FAQ />
         <CardContact />
       </main>
