@@ -19,6 +19,7 @@ import "swiper/css/pagination";
 
 // Our custom button component
 import SliderButtons from "./SliderButtons";
+import BlurImage from './../../components/ui/blur-image';
 
 interface Slide {
   id: number;
@@ -64,7 +65,7 @@ const DemoSlider: React.FC<DemoSliderProps> = ({ data }) => {
                 <div
                   className="col-span-4 place-self-center mt-8 lg:mt-0"
                 >
-                  <Image
+                  <BlurImage
                     alt="Mountains"
                     src={image}
                     className="image-layer"
