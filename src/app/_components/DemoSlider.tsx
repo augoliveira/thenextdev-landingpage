@@ -68,10 +68,9 @@ const DemoSlider: React.FC<DemoSliderProps> = ({ data }) => {
                   <BlurImage
                     alt="Mountains"
                     src={image}
-                    className="image-layer"
+                    className="trasition-opacity-0 duration-[2s]"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    placeholder='blur'
-                    blurDataURL='data:image/png;base64,[IMAGE_CODE_FROM_PNG_PIXEL]'
+                    onLodingComplete={(image) => image.classList.remove("opacity-0")}
                     quality={100}
                     fill
                     style={{
