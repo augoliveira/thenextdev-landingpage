@@ -3,7 +3,7 @@
 "use client"; // <===== REQUIRED
 
 import Image from "next/image";
-import { useState} from "react";
+import React from "react";
 
 import { motion } from 'framer-motion';
 
@@ -68,14 +68,8 @@ const DemoSlider: React.FC<DemoSliderProps> = ({ data }) => {
                   <BlurImage
                     alt="Mountains"
                     src={image}
-                    className="trasition-opacity-0 duration-[2s]"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    onLodingComplete={(image) => image.classList.remove("opacity-0")}
-                    quality={100}
+                    className="-z-10 object-cover"
                     fill
-                    style={{
-                      objectFit: "cover",
-                    }}
                   />
                 </div>
                 
