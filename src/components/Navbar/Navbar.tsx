@@ -79,7 +79,7 @@ const Navbar = (props: Props) => {
                   ? 'scale-110 blur-2xl grayscale'
                   : 'scale-100 blur-0 grayscale-0'
               }}`}
-              onLoadingComplete={() => setLoading(false)}
+              onLoad={() => setLoading(false)}
             />
                 </Link>
                 <button type='button' onClick={() => setShowNav(!showNav)} className='lg:hidden cursor-pointer'>
