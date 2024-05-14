@@ -14,7 +14,7 @@ import { cn } from '@/lib/utils';
 
 import { WEBSITE_HOST_URL } from '@/lib/constants';
 
-import Navbar from '../components/Navbar/Navbar';
+
 import { siteConfig } from '../config';
 import { ThemeProvider } from './_components/theme-provider';
 
@@ -131,7 +131,7 @@ export default function RootLayout({
         <div className="mx-auto max-w-8xl space-y-8 px-2 pt-20 lg:py-8 lg:px-8">
           <div className="rounded-lg bg-vc-border-gradient p-px shadow-lg shadow-black/20">
             <ThemeProvider attribute='class' defaultTheme='system' enableSystem>
-              <Navbar/>
+              
                   <StyledComponentsRegistry>
                     <Suspense>
                       <div className="mx-auto max-w-8xl space-y-8 px-2 pt-20 lg:py-8 lg:px-8">
