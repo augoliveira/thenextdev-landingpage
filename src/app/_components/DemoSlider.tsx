@@ -66,10 +66,15 @@ const DemoSlider: React.FC<DemoSliderProps> = ({ data }) => {
                   className="col-span-4 place-self-center mt-8 lg:mt-0"
                 >
                   <BlurImage
-                    alt="Mountains"
+                    alt="Herohome"
                     src={image}
                     className="-z-10 object-cover"
                     fill
+                    size="100vw"
+                    style={{
+                      width: '100%',
+                      height: 'auto',
+                    }}
                   />
                 </div>
                 

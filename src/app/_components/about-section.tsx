@@ -59,6 +59,7 @@ function AboutSection() {
               alt="sobre"
               width={400}
               height={400}
+              priority
               className="rounded-xl grayscale group-hover:opacity-80"
             />
           </div>
