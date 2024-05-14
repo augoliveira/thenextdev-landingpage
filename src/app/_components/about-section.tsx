@@ -57,16 +57,16 @@ function AboutSection() {
             <Image
               src={Sobre}
               alt="sobre"
-              width={500}
-              height={500}
+            width={420}
+            height={404}
               loading="eager"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              className={`aspect-square rotate-3 w-full h-full object-cover group-hover:scale-110 duration-500 transition-all ${
+              className={`w-[300px] h-[300px] lg:w-[420px] lg:h-[404px] mb-6 lg:mb-0 shadow-2xl rounded-lg aspect-square rotate-3 object-cover group-hover:scale-110 duration-500 transition-all ${
                 loading
                   ? 'scale-110 blur-2xl grayscale'
                   : 'scale-100 blur-0 grayscale-0'
               }}`}
-              onLoadingComplete={() => setLoading(false)}
+              onLoad={() => setLoading(false)}
             />
           </div>
         </div>
