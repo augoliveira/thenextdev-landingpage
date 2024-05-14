@@ -70,11 +70,7 @@ const DemoSlider: React.FC<DemoSliderProps> = ({ data }) => {
                     src={image}
                     className="-z-10 object-cover"
                     fill
-                    size="100vw"
-                    style={{
-                      width: '100%',
-                      height: 'auto',
-                    }}
+                    sizes="100vw"
                   />
                 </div>
                 
