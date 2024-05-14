@@ -34,18 +34,7 @@ export default function CardBox() {
 
   return (
     <section ref={ref} className="md:mt-[8rem]">
-      <div>
-        <p className="text-[24px] font-bold text-darkBlue">
-          Unsere Dienstleistungen
-        </p>
-        <p className="text-lightBlue text-[16px] md:max-w-[520px]">
-          Dienstleistung ist für unsere Mitarbeiter Herausforderung, das ist die
-          Stärke unseres Teams. Ganz gleich, ob Verkehrsplanungen, Ver- und
-          Ent­sorgung, Lärmschutz oder Spezialgebiete – wir bieten
-          Rundum-Service mit:
-        </p>
-      </div>
-      <div className="flex justify-between flex-wrap gap-8 md:gap-32">
+      <div className="max-w-container z-40 py-16 px-4 sm:mt-4 sm:px-6 lg:px-8 xl:-mt-32 grid grid-cols-1 sm:grid-cols-[repeat(auto-fit,minmax(350px,1fr))] gap-x-4 gap-y-6">
         {data.map((service, index) => (
           <motion.div
             key={index}
