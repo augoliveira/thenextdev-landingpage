@@ -2,7 +2,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 'use client';
 
-import Image from 'next/image';
+import BlurImage from '@/components/ui/blur-image';
 import Link from 'next/link';
 import { useState } from 'react';
 
@@ -31,6 +31,7 @@ const features = [
     description:
       'A Glazing Design é uma empresa especializada na concepção e instalação de projetos inteligentes e modernos. Hoje em dia são virtualmente impossíveis não olhar ao redor e perceber a importância que o vidro tem em nossas vidas. Nossa missão é ajudar você quando o assunto é este material tão presente e arrojado. Adicione beleza e praticidade aos seus projetos de engenharia ou decoração!',
     icon: CloudArrowUpIcon,
+
   },
   {
     name: ' MISSÃO.',
@@ -45,7 +46,6 @@ const features = [
 ]
 
 function AboutSection() {
-  const [loading, setLoading] = useState(true);
   return (
     <section
       id='about'
@@ -54,19 +54,12 @@ function AboutSection() {
       <div className='grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:gap-y-12 lg:grid-rows-[auto-1fr]'>
         <div className='lg:pl-20 flex justify-center'>
           <div className='max-w-xs px-2.5 lg:max-w-none'>
-            <Image
+            <BlurImage
               src={Sobre}
               alt="sobre"
-            width={420}
-            height={404}
-              loading="eager"
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              className={`w-[300px] h-[300px] lg:w-[420px] lg:h-[404px] mb-6 lg:mb-0 shadow-2xl rounded-lg aspect-square rotate-3 object-cover group-hover:scale-110 duration-500 transition-all ${
-                loading
-                  ? 'scale-110 blur-2xl grayscale'
-                  : 'scale-100 blur-0 grayscale-0'
-              }}`}
-              onLoad={() => setLoading(false)}
+              width={400}
+              height={400}
+              className="rounded-xl grayscale group-hover:opacity-80"
             />
           </div>
         </div>
