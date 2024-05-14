@@ -1,5 +1,6 @@
 /* eslint-disable import-helpers/order-imports */
 import type { Metadata, Viewport } from 'next';
+import Script from 'next/script'
 import { Inter as FontSans } from 'next/font/google';
 import localFont from 'next/font/local';
 import { ReactNode, Suspense } from 'react';
@@ -110,6 +111,16 @@ export default function RootLayout({
 }) {
   return (
     <html suppressHydrationWarning lang="Pt-BR" className="[color-scheme:dark]">
+      <Script strategy='afterInteractive'>{`
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:3553114,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');`}
+      </Script>
       <body
         className={cn(
           'bg-gray-1100 overflow-y-scroll bg-background font-sans antialiased',
