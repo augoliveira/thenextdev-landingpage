@@ -3,14 +3,13 @@ import type { Metadata, Viewport } from 'next';
 import Script from 'next/script'
 import { Inter as FontSans } from 'next/font/google';
 import localFont from 'next/font/local';
-import { ReactNode, Suspense } from 'react';
 
 import { GoogleTagManager } from '@next/third-parties/google'
 import { Analytics } from '@vercel/analytics/react';
 import Byline from './../components/ui/byline';
 import { AddressBar } from './../components/ui/address-bar';
 
-import { cn } from '@/lib/utils';
+import clsx from "clsx";
 
 import { WEBSITE_HOST_URL } from '@/lib/constants';
 
@@ -121,19 +120,15 @@ export default function RootLayout({
         a.appendChild(r);
     })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');`}
       </Script>
-      <body
-        className={cn(
-          'bg-gray-1100 overflow-y-scroll bg-background font-sans antialiased',
-          fontSans.variable,
-          fontHeading.variable
-        )}
-      >
+      <body className={clsx(
+					"min-h-screen bg-background font-sans antialiased bg-gray-900 overflow-y-scroll bg-hero-image bg-cover bg-center bg-no-repeat pb-36",
+					fontSans.variable
+				)}>
         <div className="mx-auto max-w-8xl space-y-8 px-2 pt-20 lg:py-8 lg:px-8">
           <div className="rounded-lg bg-vc-border-gradient p-px shadow-lg shadow-black/20">
             <ThemeProvider attribute='class' defaultTheme='system' enableSystem>
               
                   <StyledComponentsRegistry>
-                    <Suspense>
                       <div className="mx-auto max-w-8xl space-y-8 px-2 pt-20 lg:py-8 lg:px-8">
                         <div className="rounded-lg bg-vc-border-gradient p-px shadow-lg shadow-black/20">
                           <div className="rounded-t-lg bg-vc-border-gradient p-px shadow-lg shadow-black/20">
@@ -149,7 +144,6 @@ export default function RootLayout({
                             </div> 
                         </div>
                       </div>
-                    </Suspense>
                   </StyledComponentsRegistry>
                 <GlobalStyle />
               <Analytics />
