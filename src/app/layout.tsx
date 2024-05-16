@@ -121,12 +121,17 @@ export default function RootLayout({
     })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');`}
       </Script>
       <body className={clsx(
-					"min-h-screen bg-background font-sans antialiased bg-gray-900 overflow-y-scroll bg-hero-image bg-cover bg-center bg-no-repeat pb-36",
+					"min-h-screen bg-background font-sans antialiased bg-gray-600 overflow-y-scroll bg-hero-image bg-cover bg-center bg-no-repeat pb-36",
 					fontSans.variable
 				)}>
         <div className="mx-auto max-w-8xl space-y-8 px-2 pt-20 lg:py-8 lg:px-8">
           <div className="rounded-lg bg-vc-border-gradient p-px shadow-lg shadow-black/20">
-            <ThemeProvider attribute='class' defaultTheme='system' enableSystem>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
               
                   <StyledComponentsRegistry>
                       <div className="mx-auto max-w-8xl space-y-8 px-2 pt-20 lg:py-8 lg:px-8">

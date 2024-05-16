@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 'use client'
 
+import React, { useState, useEffect } from 'react'
 import Image from "next/image";
 import Link from 'next/link';
 import { Github, LinkedIn, Twitter } from '@/components/shared/icons';
@@ -17,8 +18,10 @@ import payment from "../../../public/Forma-de-pagamento.webp";
 import { Wave } from '@/components/ui/wave';
 
 import Logo from "../../../public/logo-campanha.png";
+import { BlurImage } from '@/components/ui/blur-image';
 
 export function Footer() {
+  const [loading, setLoading] = useState(true);
   return (
     <div className="lg:pt-3 flex flex-wrap flex-col justify-center w-full">
       <div className="container flex flex-col sm:flex-row justify-around bg-[#1a1c20] min-w-full pb-5">
@@ -28,8 +31,14 @@ export function Footer() {
             height={30}
             src={Logo}
             alt="Logo Glazing Design"
-            priority
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            loading="eager"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              className={`w-full h-full object-cover group-hover:scale-110 duration-500 transition-all ${
+                loading
+                  ? 'scale-110 blur-2xl grayscale'
+                  : 'scale-100 blur-0 grayscale-0'
+              }}`}
+              onLoad={() => setLoading(false)}
           />
           <p className='text-gray-400 pb-1'>Fique por dentro das novidades!!</p>
           <input

@@ -30,9 +30,8 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        'hero-image': "url('/title-area-pattern-2.png')",
+        'hero-image': "url('/grid.svg')",
         'hero-card': "url('/bg-box.png')",
-        'hero-image': "url('/5.jpg')",
         'hero-page': "url('/bg-vidracaria-2.jpg')",
         'contato-page': "url('/Bg-contato.jpg')",
       },
