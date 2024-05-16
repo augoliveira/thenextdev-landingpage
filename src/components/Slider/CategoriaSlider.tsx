@@ -15,12 +15,14 @@ import Vidro from '../../../public/spader.png';
 
 const Categoria = [
   {
+    "id": 1,
     name: "Spider",
     description: "O sistema spider glass é formado por aranha e rótula - peças pontuais e articuladas, cujo objetivo é fixar os vidros a uma estrutura. As rótulas podem ser fixas ou flexíveis e são fixadas ao vidro por meio de parafusos especiais. Tenha em mente que o spider surgiu com o objetivo de facilitar o trabalho diário, garantindo mais rapidez e eficiência na fixação dos vidros.",
     image: Vidro,
     btnText: "Orçmento",
   },
   {
+    "id": 2,
     name: "Vidro Laminado",
     description: "O vidro laminado, apesar de também garantir segurança, passa por um processo diferente na sua fabricação. Este tipo de vidro é composto por duas – ou até mais – placas de vidro que são unidas por uma camada intermediária de Polivinil Butiral (PVB). Este processo garante que, caso o material se danifique, os estilhaços permaneçam colados na película e não se soltem.",
     span: "A película de PVB também filtra até 99,6% dos raios ultravioleta, que são responsáveis por descolorir móveis, tecidos e objetos. Além disso, o vidro laminado também auxilia na redução de ruídos, diminuindo as vibrações sonoras, por meio da camada de polivinil butiral.",
@@ -28,12 +30,14 @@ const Categoria = [
     btnText: "especificações técnicas",
   },
   {
+    "id": 3,
     name: "Guarda-corpo",
     description: "Você sabia que não é permitido utilizar qualquer tipo de vidro para a construção de guarda-corpos? Para quem está construindo, é de suma importância saber que esse item deve atender a algumas normas técnicas para proporcionar maior segurança. Infelizmente, ainda há casos em que as pessoas não observam essas regras e acabam deixando que o preço mais baixo seja um elemento de definição na escolha do vidro.",
     image: Pelicula,
     btnText: "Saiba mais ou solicite um orçamento",
   },
   {
+    "id": 4,
     name: "Box de vidro Elegance",
     description: "O box de vidro frontal é o mais vendido hoje em dia, sua grande variedade de cores e modelos, a Glazing Design têm diversos para te oferecer!",
     span: "Lembrando que ao pedir um orçamento, e se tiver dúvidas da cor do vidro do box, pode nos enviar uma foto do banheiro onde será instalado e daremos algumas dicas 😉",

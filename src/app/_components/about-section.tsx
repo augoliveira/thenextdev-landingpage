@@ -57,9 +57,13 @@ function AboutSection() {
             <BlurImage
               src={Sobre}
               alt="sobre"
-              width={400}
-              height={400}
-              priority
+              sizes="100vw"
+              style={{
+                width: '100%',
+                height: 'auto',
+              }}
+              width={800}
+              height={800}
               className="rounded-xl grayscale group-hover:opacity-80"
             />
           </div>

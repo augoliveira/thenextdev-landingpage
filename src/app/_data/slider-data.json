@@ -4,7 +4,7 @@
     "title": "FECHAMENTO DE AMBIENTE",
     "subtitle": "fechamentos de varandas",
     "tagline": "vidros temperados , box p/banheiros e fechamentos de varandas. Atendimento Via Email. Atendimento Direcionado. Atendimento Via Telefone. Destaques: Seguros, Sofisticados, Modernos.",
-    "image": "/Slide.svg",
+    "image": "/1.png",
     "perfil": "/engenheiro.png",
     "buttons": [
       {
@@ -20,7 +20,7 @@
     "title": "CORTINA DE VIDRO",
     "subtitle": "Fechamento de sacada com vidro: Proteja os seus ambientes",
     "tagline": "O fechamento de sacada com vidro é muito importante para a conservação dos móveis na decoração da varanda. Há no mercado vários tipos de fechamento de sacada com vidro como os articulados que utilizam trilhos e roldanas, fixas ou com abertura deslizante.",
-    "image": "/cortinas-vidro.svg",
+    "image": "/CORTINA-DE-VIDRO.png",
     "perfil": "/Orçmento.png",
     "buttons": [
       {
@@ -33,10 +33,10 @@
   },
   {
     "id": 3,
-    "title": "PELÍCULA DE CONTRO SOLAR",
-    "subtitle": "Película Residencial",
-    "tagline": "Essa versatilidade possibilita um novo estilo de decoração graças ao efeito espelho visível no lado mais claro do box.",
-    "image": "/Pelicula.svg",
+    "title": "fechamentos de varandas",
+    "subtitle": "FECHAMENTO DE AMBIENTE",
+    "tagline": "vidros temperados , box p/banheiros e fechamentos de varandas. Atendimento Via Email. Atendimento Direcionado. Atendimento Via Telefone. Destaques: Seguros, Sofisticados, Modernos.",
+    "image": "/Fechamento.png",
     "perfil": "/Vidro-de-Controle-Solar.png",
     "buttons": [
       {
@@ -49,10 +49,10 @@
   },
   {
     "id": 4,
-    "title": "PELE DE VIDRO",
+    "title": "ESQUADRIA DE ALUMINIO",
     "subtitle": "fachadas em pele de vidro",
     "tagline": "Pele de vidro é um tipo de estrutura de fachada de vidro, que contribui esteticamente com os edifícios de médio e grande porte, além de proporcionar uma série de vantagens.",
-    "image": "/Vidro-Lamindo.svg",
+    "image": "/esquadria.png",
     "perfil": "/Vidro-Duplo.png",
     "buttons": [
       {
@@ -68,7 +68,7 @@
     "title": "ESCADA DE VIDRO",
     "subtitle": "Escada de vidro e Guarda corpo",
     "tagline": "Um novo modelo de escada que vem tendo muito destaque na arquitetura moderna é a escada de vidro. Elas são uma opção que além de tornar seu espaço mais sofisticado também o deixa muito mais funcional.",
-    "image": "/escada1.svg",
+    "image": "/Escada-de-vidro.png",
     "perfil": "/Variedade-Em-Vidros.png",
     "buttons": [
       {

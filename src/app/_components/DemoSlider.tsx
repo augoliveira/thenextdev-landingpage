@@ -1,17 +1,10 @@
-/* eslint-disable import-helpers/order-imports */
-/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client"; // <===== REQUIRED
 
-import React from "react";
-
 import { motion } from 'framer-motion';
-
 
 // Swiper components, modules and styles
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-
-import Img from '/public/banner1.png';
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -42,10 +35,10 @@ interface DemoSliderProps {
 
 const DemoSlider: React.FC<DemoSliderProps> = ({ data }) => {
   return (
-    <section className="min-h-[760px]">
-        <div className="continer mx-auto h-[760px]">
-          
-          <Swiper
+    <section className="w-full">
+      <div className=" h-screen">
+        <ul className="h-full w-full">
+        <Swiper
             navigation
             pagination={{ type: "bullets", clickable: true }}
             autoplay={true}
@@ -58,18 +51,17 @@ const DemoSlider: React.FC<DemoSliderProps> = ({ data }) => {
             }}
             className="demoslider min-h-[520px]"
           >
-            {data.map(({ id, image, perfil, tagline, title, subtitle, buttons }) => (
+            {data.map(({ id, image, tagline, title, subtitle, buttons }) => (
               <SwiperSlide key={id}>
                 <div
-                className="absolute inset-0 bg-cover bg-center"
-                  style={{ backgroundImage: `url(${image})` }}
-                >
-                </div>
-                <div className="absolute left-0 top-0 h-full w-full bg-black/20 opacity-20"></div>
-                <div className="space-y-5 title-content absolute py-[8%] px-16 sm:py-[8rem] left-3">
-                  <div className="flex flex-col gap-y-5 px-8 lg:px-8 md:flex-row md:gap-x-16">
-                  <div className="mr-auto place-self-center lg:col-span-7">
-                  <div className="text-left backdrop-brightness-50 bg-black/50 py-16 px-16 rounded-md">
+                  className="h-full w-full absolute left-0 top-0"
+                  style={{
+                    background: `url(${image}) center center / cover scroll no-repeat`,
+                  }}
+                ></div>
+                <div className="h-full w-full absolute left-0 top-0 bg-black opacity-50"></div>
+                <div className="relative z-10 h-full flex items-center justify-center">
+                <div className="text-left backdrop-brightness-50 bg-gradient-to-r from-gray-900/30 from-10% via-green-900/30 via-30% to-emerald-900/30 to-90% shadow-2xl py-16 px-16 m-8 rounded-md">
                     <motion.div
                       initial={{ y: 10, opacity: 0 }}
                       animate={{ y: 0, opacity: 1 }}
@@ -91,7 +83,7 @@ const DemoSlider: React.FC<DemoSliderProps> = ({ data }) => {
                       whileInView={{ opacity: 1, y: 0, scale: 1 }}
                       exit={{ opacity: 0, y: 200, scale: 0.5 }}
                       transition={{ duration: 0.5 }}
-                      className="col-start-1 row-start-3 leading-6 mt-4 max-w-lg text-lg text-slate-200">
+                      className="mt-6 max-w-lg text-lg leading-8 text-gray-200">
                         {tagline}
                       </motion.p>
                     )}
@@ -103,14 +95,12 @@ const DemoSlider: React.FC<DemoSliderProps> = ({ data }) => {
                     ) : null}
                     
                   </div>
-                  </div>
-                
-                </div>
                 </div>
               </SwiperSlide>
             ))}
           </Swiper>
-        </div>
+        </ul>
+      </div>
     </section>
   );
 };
