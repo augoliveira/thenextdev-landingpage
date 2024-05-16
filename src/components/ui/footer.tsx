@@ -18,7 +18,6 @@ import payment from "../../../public/Forma-de-pagamento.webp";
 import { Wave } from '@/components/ui/wave';
 
 import Logo from "../../../public/logo-campanha.png";
-import { BlurImage } from '@/components/ui/blur-image';
 
 export function Footer() {
   const [loading, setLoading] = useState(true);
