@@ -1,6 +1,5 @@
 /* eslint-disable import-helpers/order-imports */
 import type { Metadata, Viewport } from 'next';
-import Script from 'next/script'
 import { Inter as FontSans } from 'next/font/google';
 import localFont from 'next/font/local';
 
@@ -19,8 +18,6 @@ import { ThemeProvider } from './_components/theme-provider';
 
 import './globals.css';
 import { Footer } from './../components/ui/footer';
-import StyledComponentsRegistry from './registry';
-import GlobalStyle from './../styles/GlobalStyle';
 
 const fontSans = FontSans({
   subsets: ['latin'],
@@ -110,16 +107,6 @@ export default function RootLayout({
 }) {
   return (
     <html suppressHydrationWarning lang="Pt-BR" className="[color-scheme:dark]">
-      <Script strategy='afterInteractive'>{`
-    (function(h,o,t,j,a,r){
-        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        h._hjSettings={hjid:3553114,hjsv:6};
-        a=o.getElementsByTagName('head')[0];
-        r=o.createElement('script');r.async=1;
-        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-        a.appendChild(r);
-    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');`}
-      </Script>
       <body className={clsx(
 					"min-h-screen bg-background font-sans antialiased bg-gray-600 overflow-y-scroll bg-hero-image bg-cover bg-center bg-no-repeat pb-36",
 					fontSans.variable
@@ -132,8 +119,6 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-              
-                  <StyledComponentsRegistry>
                       <div className="mx-auto max-w-8xl space-y-8 px-2 pt-20 lg:py-8 lg:px-8">
                         <div className="rounded-lg bg-vc-border-gradient p-px shadow-lg shadow-black/20">
                           <div className="rounded-t-lg bg-vc-border-gradient p-px shadow-lg shadow-black/20">
@@ -149,8 +134,6 @@ export default function RootLayout({
                             </div> 
                         </div>
                       </div>
-                  </StyledComponentsRegistry>
-                <GlobalStyle />
               <Analytics />
             <GoogleTagManager gtmId='GTM-NQ43J9D' />
           </ThemeProvider>
