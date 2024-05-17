@@ -12,7 +12,7 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "assets.vercel.com",
+        hostname: "avatar.vercel.sh",
         port: "",
         pathname: "/image/upload/**",
       },

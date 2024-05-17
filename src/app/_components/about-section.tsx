@@ -2,6 +2,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 'use client';
 
+import CldImage from '@/components/ui/CldImage';
 import BlurImage from '@/components/ui/blur-image';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -54,16 +55,16 @@ function AboutSection() {
       <div className='grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:gap-y-12 lg:grid-rows-[auto-1fr]'>
         <div className='lg:pl-20 flex justify-center'>
           <div className='max-w-xs px-2.5 lg:max-w-none'>
-            <BlurImage
-              src={Sobre}
+          <CldImage
+              src="https://res.cloudinary.com/dp1588w0y/image/upload/v1715905533/ucwbzb0ninumik2u4wwf.png"
               alt="sobre"
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px)"
-              style={{
-                width: '100%',
-                height: 'auto',
-              }}
+              fillBackground
               width={800}
               height={800}
+              sizes="(max-width: 640px) 100vw,
+                      (max-width: 768px) 80vw,
+                      (max-width: 1024px) 60vw,
+                      50vw"
               className="origin-top-left rotate-12 object-cover rounded-xl group-hover:opacity-80"
             />
           </div>
