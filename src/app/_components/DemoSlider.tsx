@@ -1,6 +1,7 @@
 "use client"; // <===== REQUIRED
 
 import { motion } from 'framer-motion';
+import CldImage from '@/components/ui/CldImage';
 
 // Swiper components, modules and styles
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
@@ -55,10 +56,20 @@ const DemoSlider: React.FC<DemoSliderProps> = ({ data }) => {
               <SwiperSlide key={id}>
                 <div
                   className="h-full w-full absolute left-0 top-0 lazyload"
-                  style={{
-                    background: `url(${image}) center center / cover scroll no-repeat`,
-                  }}
-                ></div>
+                >
+                   <CldImage
+                width={1920}
+                height={1080}
+                crop="pad"
+                srcset={image}
+                alt={title}
+                fillBackground
+                sizes="(max-width: 640px) 100vw,
+                      (max-width: 768px) 80vw,
+                      (max-width: 1024px) 60vw,
+                      50vw"
+              />
+              </div>
                 <div className="h-full w-full absolute left-0 top-0 bg-black opacity-50"></div>
                 <div className="relative z-10 h-full flex items-center justify-center">
                 <div className="text-left backdrop-brightness-50 bg-gradient-to-r from-gray-900/30 from-10% via-green-900/30 via-30% to-emerald-900/30 to-90% shadow-2xl py-16 px-16 m-8 rounded-md">
