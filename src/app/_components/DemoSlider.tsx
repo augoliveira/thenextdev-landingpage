@@ -61,7 +61,7 @@ const DemoSlider: React.FC<DemoSliderProps> = ({ data }) => {
                 width={1920}
                 height={1080}
                 crop="pad"
-                srcset={image}
+                src={image}
                 alt={title}
                 fillBackground
                 sizes="(max-width: 640px) 100vw,
