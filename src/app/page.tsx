@@ -1,6 +1,6 @@
 
 import { data } from "@/lib/_data";
-import { Suspense } from 'react'
+import { Suspense } from "react"
   
 import Portifolio from '../components/Portifolio/Projects';
 import ProjectsSection from "../components/ProjectsSection/ProjectsSection";
