@@ -1,7 +1,7 @@
 "use client"; // <===== REQUIRED
 
+import React from "react";
 import { motion } from 'framer-motion';
-import CldImage from '@/components/ui/CldImage';
 
 // Swiper components, modules and styles
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
@@ -12,6 +12,7 @@ import "swiper/css/pagination";
 
 // Our custom button component
 import SliderButtons from "./SliderButtons";
+import Image from 'next/image';
 
 interface Slide {
   id: number;
@@ -38,7 +39,7 @@ const DemoSlider: React.FC<DemoSliderProps> = ({ data }) => {
   return (
     <section className="w-full">
       <div className=" h-screen">
-        <ul className="h-full w-full">
+        <div className="h-full w-full">
         <Swiper
             navigation
             pagination={{ type: "bullets", clickable: true }}
@@ -52,55 +53,56 @@ const DemoSlider: React.FC<DemoSliderProps> = ({ data }) => {
             }}
             className="demoslider min-h-[520px]"
           >
-            {data.map(({ id, image, tagline, title, subtitle, buttons }) => (
+            {data.map(({ id, image, perfil, tagline, title, subtitle, buttons }) => (
               <SwiperSlide key={id}>
                 <div
-                  className="h-full w-full absolute left-0 top-0 lazyload"
+                  className="h-full w-full absolute left-0 top-0"
                 >
-                   <CldImage
-                width={1920}
-                height={1080}
-                crop="pad"
-                src={image}
-                alt={title}
-                fillBackground
-                sizes="(max-width: 640px) 100vw,
-                      (max-width: 768px) 80vw,
-                      (max-width: 1024px) 60vw,
-                      50vw"
-              />
-              </div>
-                <div className="h-full w-full absolute left-0 top-0 bg-black opacity-50"></div>
-                <div className="relative z-10 h-full flex items-center justify-center">
-                <div className="text-left backdrop-brightness-50 bg-gradient-to-r from-gray-900/30 from-10% via-green-900/30 via-30% to-emerald-900/30 to-90% shadow-2xl py-16 px-16 m-8 rounded-md">
-                    <motion.div
+                  <Image
+                    alt="Mountains"
+                    src={image}
+                    className="image-layer lazyload"
+                    placeholder='blur'
+                    blurDataURL='data:image/png;base64,[IMAGE_CODE_FROM_PNG_PIXEL]'
+                    quality={100}
+                    fill
+                    sizes="100vw"
+                    style={{
+                      objectFit: "cover",
+                    }}
+                  />
+                </div>
+                <div className="h-full w-full absolute left-0 top-0 bg-black opacity-20"></div>
+                <div className="relative z-10 h-full flex items-center justify-center px-4 sm:mt-10 sm:px-6 lg:px-8 xl:mt-16">
+                <div className="text-left backdrop-brightness-50 bg-black/30 py-16 px-8 rounded-md">
+                <motion.div
                       initial={{ y: 10, opacity: 0 }}
                       animate={{ y: 0, opacity: 1 }}
                       transition={{ duration: 0.5, delay: 0.7 }}
-                      className="gradient-text heavy mb-4 max-w-2xl animate-gradient text-4xl font-extrabold leading-none drop-shadow-md tracking-tight text-transparent md:text-5xl xl:text-6xl dark:text-purple">
-                        <div className='pl-4 flex text-lg text-[#fbb33f] border-b border-slate-300/30'><span className="-mb-px py-2 border-b border-b-current">{subtitle}</span></div>
+                      className="gradient-text mb-4 max-w-2xl animate-gradient text-4xl font-extrabold md:text-5xl xl:text-6xl dark:text-purple">
+                        <div className='pl-4 flex text-xl text-[#ffc955] border-b border-slate-300/30'><span className="-mb-px py-2 border-b border-b-current">{subtitle}</span></div>
                     </motion.div>
                     <motion.div
                       initial={{ y: 10, opacity: 0 }}
                       animate={{ y: 0, opacity: 1 }}
                       transition={{ duration: 0.5, delay: 0.7 }}
-                      className="gradient-text heavy mb-4 max-w-2xl animate-gradient text-4xl font-extrabold leading-none drop-shadow-md tracking-tight text-transparent md:text-5xl xl:text-6xl dark:text-purple">
+                      className="gradient-text mb-4 max-w-2xl animate-gradient text-4xl font-extrabold leading-none tracking-tight text-transparent md:text-5xl xl:text-6xl dark:text-purple">
                       {title}
                     </motion.div>
                     
                     {tagline && (
                       <motion.p
-                      initial={{ opacity: 0, y: 200, scale: 0.5 }}
-                      whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                      exit={{ opacity: 0, y: 200, scale: 0.5 }}
-                      transition={{ duration: 0.5 }}
-                      className="mt-6 max-w-lg text-lg leading-8 text-gray-200">
+                      initial={{ y: 10, opacity: 0 }}
+                      animate={{ y: 0, opacity: 1 }}
+                      transition={{ duration: 0.5, delay: 0.8 }}
+                      className="text-base md:max-w-[650px] text-textDark font-medium"
+                    >
                         {tagline}
                       </motion.p>
                     )}
                     
                     {buttons.length > 0 ? (
-                      <p className="inline-block rounded-full px-2 -py-8 text-white lg:mt-20">
+                      <p className="inline-block rounded-full px-2 -py-8 lg:mt-20">
                         <SliderButtons buttons={buttons} />
                       </p>
                     ) : null}
@@ -110,7 +112,7 @@ const DemoSlider: React.FC<DemoSliderProps> = ({ data }) => {
               </SwiperSlide>
             ))}
           </Swiper>
-        </ul>
+        </div>
       </div>
     </section>
   );

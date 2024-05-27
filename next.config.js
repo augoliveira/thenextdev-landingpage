@@ -22,6 +22,9 @@ const nextConfig = {
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
   experimental: {
+    reactCompiler: {
+      compilationMode: 'annotation',
+    },
     optimizePackageImports: ['package-name'],
     staleTimes: {
       dynamic: 30,
