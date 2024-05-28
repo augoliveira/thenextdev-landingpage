@@ -1,6 +1,6 @@
 "use client"; // <===== REQUIRED
 
-import React from "react";
+import { useState } from "react";
 import { motion } from 'framer-motion';
 
 // Swiper components, modules and styles
@@ -61,7 +61,8 @@ const DemoSlider: React.FC<DemoSliderProps> = ({ data }) => {
                   <Image
                     alt="Mountains"
                     src={image}
-                    className="image-layer lazyload"
+                    className="transition-opacity opacity-0 duration-[2s]" loading="lazy"
+                    onLoadingComplete={(image) => image.classList.remove("opacity-0")}
                     placeholder='blur'
                     blurDataURL='data:image/png;base64,[IMAGE_CODE_FROM_PNG_PIXEL]'
                     quality={100}

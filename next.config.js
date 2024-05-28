@@ -1,6 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  bundlePagesRouterDependencies: true,
   compress: false,
   httpAgentOptions: {
     keepAlive: false,
@@ -23,10 +22,6 @@ const nextConfig = {
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
   experimental: {
-    ppr: 'incremental',
-    reactCompiler: {
-      compilationMode: 'annotation',
-    },
     optimizePackageImports: ['package-name'],
     staleTimes: {
       dynamic: 30,

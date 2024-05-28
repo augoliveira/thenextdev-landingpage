@@ -8,10 +8,10 @@ import { motion } from "framer-motion";
 import { Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-import Box from '/public/box-evidence-720x480-3.png';
-import Pelicula from '/public/Espresso.png';
-import Laminado from '/public/laminated-glass.webp';
-import Vidro from '/public/spader.png';
+import Box from '../../../public/box-evidence-720x480-3.png';
+import Pelicula from '../../../public/Espresso.png';
+import Laminado from '../../../public/laminated-glass.webp';
+import Vidro from '../../../public/spader.png';
 
 const Categoria = [
   {
