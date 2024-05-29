@@ -36,6 +36,13 @@ interface DemoSliderProps {
   data: Slide[];
 }
 
+const normalizeSrc = (src) => src[0] === '/' ? src.slice(1) : src
+
+export function cloudinaryLoader({ src, width, quality }) {
+  const params = ['f_auto', 'c_limit', 'w_' + width, 'q_' + (quality || 'auto')];
+  return `https://res.cloudinary.com/${process.env.CLOUDINARY_CLOUD_NAME}/image/upload/${params.join(',')}/${normalizeSrc(src)}`;
+}
+
 const DemoSlider: React.FC<DemoSliderProps> = ({ data }) => {
   return (
     <section className="w-full">
@@ -62,13 +69,11 @@ const DemoSlider: React.FC<DemoSliderProps> = ({ data }) => {
                   <CldImage
                     alt="Mountains"
                     src={image}
-                    placeholder='blur'
-                    blurDataURL='data:image/png;base64,[IMAGE_CODE_FROM_PNG_PIXEL]'
                     quality={100}
-                    crop="pad"
+                    fill
                     fillBackground
                     sizes="100vw"
-                    loading="lazy"
+                    loader={cloudinaryLoader}
                     style={{
                       objectFit: "cover",
                     }}
