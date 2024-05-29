@@ -65,7 +65,8 @@ const DemoSlider: React.FC<DemoSliderProps> = ({ data }) => {
                     placeholder='blur'
                     blurDataURL='data:image/png;base64,[IMAGE_CODE_FROM_PNG_PIXEL]'
                     quality={100}
-                    fill
+                    crop="pad"
+                    fillBackground
                     sizes="100vw"
                     loading="lazy"
                     style={{
