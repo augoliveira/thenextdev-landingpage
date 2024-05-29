@@ -5,8 +5,6 @@ import localFont from 'next/font/local';
 import AnimatedGridPattern from "@/components/magicui/animated-grid-pattern";
 
 
-
-import { GoogleTagManager } from '@next/third-parties/google'
 import { Analytics } from '@vercel/analytics/react';
 import Byline from './../components/ui/byline';
 import { AddressBar } from './../components/ui/address-bar';
@@ -141,7 +139,6 @@ export default function RootLayout({
                         </div>
                       </div>
         <Analytics />
-            <GoogleTagManager gtmId='GTM-NQ43J9D' />
           </ThemeProvider>
       </body>
     </html>
