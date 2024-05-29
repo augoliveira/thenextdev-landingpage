@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion } from 'framer-motion';
+import CldImage from '@/components/ui/CldImage';
 
 // Swiper components, modules and styles
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
@@ -58,7 +59,7 @@ const DemoSlider: React.FC<DemoSliderProps> = ({ data }) => {
                 <div
                   className="h-full w-full absolute left-0 top-0"
                 >
-                  <Image
+                  <CldImage
                     alt="Mountains"
                     src={image}
                     className="transition-opacity opacity-0 duration-[2s]" loading="lazy"

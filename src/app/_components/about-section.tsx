@@ -58,9 +58,10 @@ function AboutSection() {
           <CldImage
               src="https://res.cloudinary.com/dp1588w0y/image/upload/v1715905533/ucwbzb0ninumik2u4wwf.png"
               alt="sobre"
-              fillBackground
               width={800}
               height={800}
+              crop="fill"
+              blur="100"
               sizes="(max-width: 640px) 100vw,
                       (max-width: 768px) 80vw,
                       (max-width: 1024px) 60vw,
