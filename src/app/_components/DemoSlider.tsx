@@ -62,13 +62,12 @@ const DemoSlider: React.FC<DemoSliderProps> = ({ data }) => {
                   <CldImage
                     alt="Mountains"
                     src={image}
-                    className="transition-opacity opacity-0 duration-[2s]" loading="lazy"
-                    onLoadingComplete={(image) => image.classList.remove("opacity-0")}
                     placeholder='blur'
                     blurDataURL='data:image/png;base64,[IMAGE_CODE_FROM_PNG_PIXEL]'
                     quality={100}
                     fill
                     sizes="100vw"
+                    loading="lazy"
                     style={{
                       objectFit: "cover",
                     }}
