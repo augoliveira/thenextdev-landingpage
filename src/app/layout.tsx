@@ -1,5 +1,6 @@
 /* eslint-disable import-helpers/order-imports */
 import type { Metadata, Viewport } from 'next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Inter as FontSans } from 'next/font/google';
 import localFont from 'next/font/local';
 import AnimatedGridPattern from "@/components/magicui/animated-grid-pattern";
@@ -129,7 +130,10 @@ export default function RootLayout({
                               </div>
                           </div>
                               <div className="rounded-b-lg bg-black/30 p-3.5 backdrop-blur-sm lg:p-6">
-                              <>{children}</>
+                              <>
+                              {children}
+                              <SpeedInsights />
+                              </>
                               </div>
                             <div className="rounded-lg bg-vc-border-gradient p-px shadow-lg shadow-black/20">
                               <div className="rounded-lg bg-black/30 backdrop-blur-xl">
