@@ -2,13 +2,14 @@
 import type { Metadata, Viewport } from 'next';
 import { Inter as FontSans } from 'next/font/google';
 import localFont from 'next/font/local';
+import AnimatedGridPattern from "@/components/magicui/animated-grid-pattern";
 
 import { GoogleTagManager } from '@next/third-parties/google'
 import { Analytics } from '@vercel/analytics/react';
 import Byline from './../components/ui/byline';
 import { AddressBar } from './../components/ui/address-bar';
 
-import clsx from "clsx";
+import { cn } from '@/lib/utils';
 
 import { WEBSITE_HOST_URL } from '@/lib/constants';
 
@@ -107,26 +108,29 @@ export default function RootLayout({
 }) {
   return (
     <html suppressHydrationWarning lang="Pt-BR" className="[color-scheme:dark]">
-      <body className={clsx(
-					"min-h-screen bg-background font-sans antialiased bg-gray-600 overflow-y-scroll bg-hero-image bg-cover bg-center bg-no-repeat pb-36",
-					fontSans.variable
-				)}>
-        <div className="mx-auto max-w-8xl space-y-8 px-2 pt-20 lg:py-8 lg:px-8">
-          <div className="rounded-lg bg-vc-border-gradient p-px shadow-lg shadow-black/20">
-          <ThemeProvider
+      <body
+        className={cn(
+          'bg-gray-1100 overflow-y-scroll bg-hero-page bg-cover bg-center font-sans antialiased',
+          fontSans.variable,
+          fontHeading.variable
+        )}
+      >
+        <ThemeProvider
             attribute="class"
             defaultTheme="system"
             enableSystem
             disableTransitionOnChange
           >
-                      <div className="mx-auto max-w-8xl space-y-8 px-2 pt-20 lg:py-8 lg:px-8">
-                        <div className="rounded-lg bg-vc-border-gradient p-px shadow-lg shadow-black/20">
-                          <div className="rounded-t-lg bg-vc-border-gradient p-px shadow-lg shadow-black/20">
+        <div className="mx-auto max-w-8xl space-y-8 px-2 pt-20 lg:py-8 lg:px-8">
+          <div className="rounded-lg bg-vc-border-gradient p-px shadow-lg shadow-black/20">
+                            <div className="rounded-t-lg bg-vc-border-gradient p-px shadow-lg shadow-black/20">
                               <div className="rounded-t-lg bg-gradient-to-r from-bodyColor to-[#66a900]">
                                   <AddressBar />
                               </div>
                           </div>
-                              {children}
+                              <div className="rounded-b-lg bg-black/30 p-3.5 backdrop-blur-sm lg:p-6">
+                                {children}
+                              </div>
                             <div className="rounded-lg bg-vc-border-gradient p-px shadow-lg shadow-black/20">
                               <div className="rounded-lg bg-black/30 backdrop-blur-xl">
                                   <Footer />
@@ -134,11 +138,9 @@ export default function RootLayout({
                             </div> 
                         </div>
                       </div>
-              <Analytics />
+        <Analytics />
             <GoogleTagManager gtmId='GTM-NQ43J9D' />
           </ThemeProvider>
-        </div>
-        </div>
       </body>
     </html>
   );

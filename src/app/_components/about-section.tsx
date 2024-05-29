@@ -82,24 +82,6 @@ function AboutSection() {
                   </div>
                 ))}
               </dl>
-          <div className='mt-6 flex justify-center md:justify-start gap-6'>
-            <SocialLink
-              href='https://instagram.com/lucasnhimi'
-              icon={InstagramIcon}
-            />
-            <SocialLink
-              href='https://github.com/lucasnhimi'
-              icon={GitHubIcon}
-            />
-            <SocialLink
-              href='https://linkedin.com/in/lucasnhimi'
-              icon={LinkedInIcon}
-            />
-            <SocialLink
-              href='https://youtube.com/lucasnhimi'
-              icon={YoutTubeIcon}
-            />
-          </div>
         </div>
       </div>
     </section>
