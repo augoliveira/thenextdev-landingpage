@@ -3,8 +3,8 @@ import type { Metadata, Viewport } from 'next';
 import { Inter as FontSans } from 'next/font/google';
 import localFont from 'next/font/local';
 import AnimatedGridPattern from "@/components/magicui/animated-grid-pattern";
-import {lazy, Suspense} from "react";
-import Loading from "./quem-somos/loading";
+
+
 
 import { GoogleTagManager } from '@next/third-parties/google'
 import { Analytics } from '@vercel/analytics/react';
@@ -131,7 +131,7 @@ export default function RootLayout({
                               </div>
                           </div>
                               <div className="rounded-b-lg bg-black/30 p-3.5 backdrop-blur-sm lg:p-6">
-                              <Suspense fallback={<Loading />}>{children}</Suspense>
+                              <>{children}</>
                               </div>
                             <div className="rounded-lg bg-vc-border-gradient p-px shadow-lg shadow-black/20">
                               <div className="rounded-lg bg-black/30 backdrop-blur-xl">
