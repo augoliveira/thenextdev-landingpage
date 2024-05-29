@@ -67,7 +67,6 @@ const DemoSlider: React.FC<DemoSliderProps> = ({ data }) => {
                     fill
                     fillBackground
                     sizes="100vw"
-                    loader={cloudinaryLoader}
                     style={{
                       objectFit: "cover",
                     }}
