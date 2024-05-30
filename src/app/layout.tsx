@@ -1,8 +1,9 @@
 /* eslint-disable import-helpers/order-imports */
 import type { Metadata, Viewport } from 'next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
-import { Inter as FontSans } from 'next/font/google';
-import localFont from 'next/font/local';
+import { Montserrat } from 'next/font/google'
+
+const montserrat = Montserrat({ subsets: ['latin'] })
 import AnimatedGridPattern from "@/components/magicui/animated-grid-pattern";
 
 
@@ -21,15 +22,6 @@ import { ThemeProvider } from './_components/theme-provider';
 import './globals.css';
 import { Footer } from './../components/ui/footer';
 
-const fontSans = FontSans({
-  subsets: ['latin'],
-  variable: '--font-sans',
-});
-
-const fontHeading = localFont({
-  src: '../assets/fonts/CalSans-SemiBold.woff2',
-  variable: '--font-heading',
-});
 
 export const metadata: Metadata = {
   title: {
@@ -110,12 +102,7 @@ export default function RootLayout({
   return (
     <html suppressHydrationWarning lang="Pt-BR" className="[color-scheme:dark]">
       <body
-        className={cn(
-          'bg-gray-1100 overflow-y-scroll bg-hero-page bg-cover bg-center font-sans antialiased',
-          fontSans.variable,
-          fontHeading.variable
-        )}
-      >
+        className={montserrat.className}>
         <ThemeProvider
             attribute="class"
             defaultTheme="system"
