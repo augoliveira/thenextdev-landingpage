@@ -1,6 +1,5 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable import-helpers/order-imports */
+/* eslint-disable no-undef */
+
 /* eslint-disable @typescript-eslint/no-var-requires */
 /* eslint-disable no-dupe-keys */
 const { fontFamily } = require('tailwindcss/defaultTheme');
@@ -26,7 +25,8 @@ module.exports = {
       },
     },
     fontFamily: {
-      sans: ['var(--font-inter)', 'sans-serif'],
+      permanent: ['Permanent Marker', 'cursive'],
+      foldit: ['Foldit', 'cursive']
     },
     extend: {
       backgroundImage: {

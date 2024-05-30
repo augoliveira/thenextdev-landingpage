@@ -1,9 +1,9 @@
 /* eslint-disable import-helpers/order-imports */
 import type { Metadata, Viewport } from 'next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
-import { Montserrat } from 'next/font/google'
+import { Inter } from 'next/font/google';
 
-const montserrat = Montserrat({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin'] });
 import AnimatedGridPattern from "@/components/magicui/animated-grid-pattern";
 
 
@@ -102,7 +102,7 @@ export default function RootLayout({
   return (
     <html suppressHydrationWarning lang="Pt-BR" className="[color-scheme:dark]">
       <body
-        className={montserrat.className}>
+        className={`${inter.className} w-full bg-primary`}>
         <ThemeProvider
             attribute="class"
             defaultTheme="system"
