@@ -1,6 +1,13 @@
+/* eslint-disable no-undef */
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  bundlePagesRouterDependencies: true,
+
+import bundleAnalyzer from "@next/bundle-analyzer";
+
+const withBundleAnalyzer = bundleAnalyzer({
+  enabled: process.env.ANALYZE === "true",
+});
+
+let nextConfig = {
   compress: false,
   httpAgentOptions: {
     keepAlive: false,
@@ -31,5 +38,6 @@ const nextConfig = {
   },
 };
 
+nextConfig = withBundleAnalyzer(nextConfig);
 
-module.exports = nextConfig;
+export default nextConfig;
