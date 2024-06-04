@@ -1,4 +1,4 @@
-import Image, { StaticImageData } from 'next/image';
+import Image from 'next/image';
 import cortina from '../../assets/images/projects/Cortina-de-vidro.png';
 import projectThree from '../../assets/images/projects/esquadria.png';
 import guardaCorpo from '../../assets/images/projects/guardacorpo.png';
