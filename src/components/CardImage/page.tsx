@@ -6,7 +6,7 @@ import projectTwo from '../../assets/images/projects/janela.png';
 import projectOne from '../../assets/images/projects/projectOne.png';
 
 interface IcardImageProps {
-  image: string | staticImageData;
+  image: string;
   title: string;
   subtitle: string;
 }
