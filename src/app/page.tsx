@@ -18,6 +18,8 @@ import InvestmentSection from './_components/investment-section';
 import dataSlider from "./_data/slider-data.json";
 import FAQ from './../components/ui/faq';
 import { CardContact } from './../components/CardContact/index';
+import Projects from "@/components/ui/Projects";
+import CardImage from "./../components/CardImage/page";
 
 export default function Home() {
   return (
@@ -29,9 +31,11 @@ export default function Home() {
           <Services key={item.id} service={item} index={index} />
         ))}
       </section>
+        <Projects />
+        <CardImage />
         <IntroSection />
         <AboutSection />
-        <div className="w-full backdrop-blur-xl bg-bodyColor">
+        <div className="w-full backdrop-blur-xl bg-cyan-800">
           <FifthSection />
         </div>
           <div className="h-[88vh] mx-auto p-4 bg-teal-900">

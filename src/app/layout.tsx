@@ -102,7 +102,7 @@ export default function RootLayout({
   return (
     <html suppressHydrationWarning lang="Pt-BR" className="[color-scheme:dark]">
       <body
-        className={`${inter.className} w-full bg-primary`}>
+        className={`${inter.className} w-full bg-gradient-to-r from-bodyColor to-[#107a39]`}>
         <ThemeProvider
             attribute="class"
             defaultTheme="system"
