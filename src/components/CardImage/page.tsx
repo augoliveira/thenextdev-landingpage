@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import cortina from '../../assets/images/projects/Cortina-de-vidro.png';
 import projectThree from '../../assets/images/projects/esquadria.png';
 import guardaCorpo from '../../assets/images/projects/guardacorpo.png';
@@ -6,7 +6,7 @@ import projectTwo from '../../assets/images/projects/janela.png';
 import projectOne from '../../assets/images/projects/projectOne.png';
 
 interface IcardImageProps {
-  image: string;
+  image: string | StaticImageData;
   title: string;
   subtitle: string;
 }
@@ -52,7 +52,7 @@ export default function CardImage() {
               </div>
             </div>
             <Image src={item.image} alt="image" className="max-w-none h-full" />
-            <div class="absolute inset-0 z-10 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
+            <div className="absolute inset-0 z-10 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
         </div>
       ))}
     </div>

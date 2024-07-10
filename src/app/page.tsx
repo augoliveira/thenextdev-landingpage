@@ -1,7 +1,7 @@
 
 import { data } from "@/lib/_data";
 import React, { Suspense } from 'react';
-import dynamic from 'next/dynamic';
+import dynamic from 'next/dynamic';   
   
 import Portifolio from '../components/Portifolio/Projects';
 import ProjectsSection from "../components/ProjectsSection/ProjectsSection";
@@ -18,8 +18,8 @@ import InvestmentSection from './_components/investment-section';
 import dataSlider from "./_data/slider-data.json";
 import FAQ from './../components/ui/faq';
 import { CardContact } from './../components/CardContact/index';
-import Projects from "@/components/ui/Projects";
-import CardImage from "./../components/CardImage/page";
+import Projects from "@/components/ui/Projects";  
+import CardImage from './../components/CardImage/page';
 
 export default function Home() {
   return (
