@@ -3,7 +3,7 @@
 import React from "react";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import Progress from "./Progress";
-import { CurrentSlideData, Data } from "./index";
+import { CurrentSlideData, Data } from "./";
 
 type Props = {
   currentSlideData: CurrentSlideData;

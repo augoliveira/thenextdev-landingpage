@@ -4,7 +4,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import OtherInfo from "./OtherInfo";
 import { PiWhatsappLogoBold } from "react-icons/pi";
-import { Data, CurrentSlideData } from "./index";
+import { Data, CurrentSlideData } from "./";
 
 type Props = {
   transitionData: Data;
