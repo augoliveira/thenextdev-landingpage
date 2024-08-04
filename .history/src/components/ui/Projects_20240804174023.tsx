@@ -1,4 +1,4 @@
-'use client'
+
 
 import { CheckIcon } from '@heroicons/react/20/solid'
 import amazonImg from "../../../public/assets/images/cortina-de-vidro1.jpg";
