@@ -32,12 +32,12 @@ let nextConfig = {
     optimizePackageImports: ["package-name"],
     turbo: {
       rules: {
-        "*.svg": {
-          loaders: ["@svgr/webpack"],
-          as: "*.js"
-        }
-      }
-    }
+        '*.svg': {
+          loaders: ['@svgr/webpack'],
+          as: '*.js',
+        },
+      },
+    },
   }
 };
 

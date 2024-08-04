@@ -29,15 +29,15 @@ let nextConfig = {
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;"
   },
   experimental: {
-    optimizePackageImports: ["package-name"],
+    optimizePackageImports: ["package-name"]
     turbo: {
       rules: {
-        "*.svg": {
-          loaders: ["@svgr/webpack"],
-          as: "*.js"
-        }
-      }
-    }
+        '*.svg': {
+          loaders: ['@svgr/webpack'],
+          as: '*.js',
+        },
+      },
+    },
   }
 };
 
