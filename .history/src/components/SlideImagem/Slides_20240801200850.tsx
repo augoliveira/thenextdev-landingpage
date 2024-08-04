@@ -1,6 +1,6 @@
 'use client';
 
-import { Data } from "./index";
+import { Data } from "@/pages";
 import React from "react";
 import SliderCard from "./SliderCard";
 
