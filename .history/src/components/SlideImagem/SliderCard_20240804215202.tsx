@@ -32,14 +32,8 @@ function SliderCard({ data }: Props) {
         layoutId={data.img}
         alt="Transition Image"
         src={data.img}
-        placeholder='blur'
-        blurDataURL='data:image/png;base64,[IMAGE_CODE_FROM_PNG_PIXEL]'
-        quality={100}
-        fill
-        sizes="100vw"
-        style={{
-          objectFit: "cover",
-        }}
+        width={300}
+        height={300}
         className="image-layer lazyload absolute h-full w-full  rounded-2xl  object-cover brightness-75 "
       />
       
