@@ -58,7 +58,7 @@ const Experience = () => {
     >
       <AnimatedText text='VIDROS' />
       <div className="w-full mt-10 flex flex-col md:flex-row gap-8">
-        <ul className="md:w-96 flex flex-col">
+        <ul className="md:w-72 flex flex-col">
           <li
             onClick={handleBox}
             className={`${

@@ -58,14 +58,14 @@ const Experience = () => {
     >
       <AnimatedText text='VIDROS' />
       <div className="w-full mt-10 flex flex-col md:flex-row gap-8">
-        <ul className="md:w-96 flex flex-col">
+        <ul className="md:w-72 flex flex-col">
           <li
             onClick={handleBox}
             className={`${
               workBox
                 ? "border-l-textGreen text-textGreen"
                 : "border-l-hoverColor text-textDark"
-            } border-l-2 bg-transparent hover:bg-[#112240] py-3 text-xl cursor-pointer duration-300 px-8 font-bold`}
+            } border-l-2 bg-transparent hover:bg-[#112240] py-3 text-  cursor-pointer duration-300 px-8 font-semibold`}
           >
             Box de Banheiro
           </li>
@@ -75,7 +75,7 @@ const Experience = () => {
               workGoogle
                 ? "border-l-textGreen text-textGreen"
                 : "border-l-hoverColor text-textDark"
-            } border-l-2 bg-transparent hover:bg-[#112240] py-3 text-xl cursor-pointer duration-300 px-8 font-bold`}
+            } border-l-2 bg-transparent hover:bg-[#112240] py-3 text-sm  cursor-pointer duration-300 px-8 font-medium`}
           >
             Cobertura de Vidro
           </li>
@@ -85,7 +85,7 @@ const Experience = () => {
               workApple
                 ? "border-l-textGreen text-textGreen"
                 : "border-l-hoverColor text-textDark"
-            } border-l-2 bg-transparent hover:bg-[#112240] py-3 text-xl cursor-pointer duration-300 px-8 font-bold`}
+            } border-l-2 bg-transparent hover:bg-[#112240] py-3 text-sm  cursor-pointer duration-300 px-8 font-medium`}
           >
             Espelhos
           </li>
@@ -95,7 +95,7 @@ const Experience = () => {
               workSplash
                 ? "border-l-textGreen text-textGreen"
                 : "border-l-hoverColor text-textDark"
-            } border-l-2 bg-transparent hover:bg-[#112240] py-3 text-xl cursor-pointer duration-300 px-8 font-bold`}
+            } border-l-2 bg-transparent hover:bg-[#112240] py-3 text-sm  cursor-pointer duration-300 px-8 font-medium`}
           >
             Fachadas
           </li>
@@ -105,7 +105,7 @@ const Experience = () => {
               workAmazon
                 ? "border-l-textGreen text-textGreen"
                 : "border-l-hoverColor text-textDark"
-            } border-l-2 bg-transparent hover:bg-[#112240] py-3 text-xl cursor-pointer duration-300 px-8 font-bold`}
+            } border-l-2 bg-transparent hover:bg-[#112240] py-3 text-sm  cursor-pointer duration-300 px-8 font-medium`}
           >
             Guarda-Corpo
           </li>

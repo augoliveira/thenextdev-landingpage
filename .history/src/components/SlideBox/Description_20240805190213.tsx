@@ -4,8 +4,8 @@ import React from "react";
 
 import { motion } from "framer-motion";
 
-import left from "../../../public/left.svg";
-import right from "../../../public/right.svg";
+import left from "../../";
+import right from "/public/right.svg";
 
 import { images } from "./constants";
 

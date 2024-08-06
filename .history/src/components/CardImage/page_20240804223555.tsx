@@ -42,7 +42,7 @@ export default function CardImage() {
           key={index}
           className="group group/item cursor-pointer flex-1 hover:flex-[2] overflow-hidden duration-300 relative transition-shadow hover:shadow-xl hover:shadow-black/30">
             <div className="absolute left-14 top-9 z-50">
-              <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight animate-in">{item.title}</h1>
+              <h1 className="text-emerald-700 text-4xl font-bold animate-in">{item.title}</h1>
             </div>
             <div className="absolute bottom-6 left-9 z-50 -rotate-90 group-hover/item:rotate-0 translate-all duration-300 origin-top-left">
               <div className="relative px-2">

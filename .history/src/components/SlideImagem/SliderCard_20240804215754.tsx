@@ -27,7 +27,7 @@ function SliderCard({ data }: Props) {
         stiffness: 100,
       }}
     >
-      <motion.img
+      <Image
         layoutId={data.img}
         alt="Transition Image"
         src={data.img}

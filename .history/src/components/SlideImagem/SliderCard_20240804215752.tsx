@@ -2,6 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import Image, { ImageProps } from 'next/image';
 
 type Props = {
   data: any;
@@ -27,7 +28,7 @@ function SliderCard({ data }: Props) {
         stiffness: 100,
       }}
     >
-      <motion.img
+      <Image
         layoutId={data.img}
         alt="Transition Image"
         src={data.img}

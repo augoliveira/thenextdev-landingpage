@@ -2,7 +2,8 @@ import Image, { StaticImageData } from 'next/image';
 import cortina from '../../assets/images/projects/Cortina-de-vidro.png';
 import projectThree from '../../assets/images/projects/esquadria.png';
 import guardaCorpo from '../../assets/images/projects/guardacorpo.png';
-import projectTwo from '../../assets/images/projects/projectOne.png';
+import projectTwo from '../../assets/images/projects/janela.png';
+import projectOne from '../../assets/images/projects/projectOne.png';
 
 interface IcardImageProps {
   image: string | StaticImageData;
@@ -18,17 +19,17 @@ const mock: IcardImageProps[] = [
   },
   {
     image: projectThree,
-    title: 'ESQUADRIA DE ALUMINIO', 
+    title: 'E', 
     subtitle: 'centro de arte contemporânea',
   },
   {
     image: guardaCorpo,
-    title: 'GUARDA CORPO', 
+    title: 'zaha hadid', 
     subtitle: 'centro de arte contemporânea',
   },
   {
     image: projectTwo,
-    title: 'COBERTURA DE VIDRO', 
+    title: 'zaha hadid', 
     subtitle: 'centro de arte contemporânea',
   },
 ]
@@ -42,7 +43,7 @@ export default function CardImage() {
           key={index}
           className="group group/item cursor-pointer flex-1 hover:flex-[2] overflow-hidden duration-300 relative transition-shadow hover:shadow-xl hover:shadow-black/30">
             <div className="absolute left-14 top-9 z-50">
-              <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight animate-in">{item.title}</h1>
+              <h1 className="text-4xl font-bold animate-in">{item.title}</h1>
             </div>
             <div className="absolute bottom-6 left-9 z-50 -rotate-90 group-hover/item:rotate-0 translate-all duration-300 origin-top-left">
               <div className="relative px-2">

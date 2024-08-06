@@ -32,6 +32,7 @@
     "@radix-ui/react-toast": "^1.2.1",
     "@react-google-maps/api": "^2.19.3",
     "@studio-freight/lenis": "^1.0.42",
+    "@svgr/webpack": "^8.1.0",
     "@testing-library/react": "^16.0.0",
     "@tsparticles/engine": "^3.5.0",
     "@tsparticles/react": "^3.0.0",
