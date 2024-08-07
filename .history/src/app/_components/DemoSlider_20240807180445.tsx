@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from 'framer-motion';
-
+import CldImage from '@/components/ui/CldImage';
 
 // Swiper components, modules and styles
 import { Autoplay, Navigation, Pagination } from "swiper/modules";

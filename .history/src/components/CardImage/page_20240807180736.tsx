@@ -52,7 +52,7 @@ export default function CardImage() {
             </div>
             <Image 
             src={item.image} 
-            className="image-layer lazyload w-full h-full object-cover group-hover:scale-110 duration-500 transition-all"
+            className="image-layer lazyload"
             placeholder='blur'
             blurDataURL='data:image/png;base64,[IMAGE_CODE_FROM_PNG_PIXEL]'
             quality={100}
@@ -61,7 +61,7 @@ export default function CardImage() {
             style={{
               objectFit: "cover",
             }}
-            />
+            className="w-full h-full object-cover group-hover:scale-110 duration-500 transition-all" />
             <div className="absolute inset-0 z-10 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-lime-700/70"></div>
         </div>
       ))}
