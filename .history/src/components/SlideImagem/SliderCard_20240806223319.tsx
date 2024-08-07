@@ -31,9 +31,8 @@ function SliderCard({ data }: Props) {
         layoutId={data.img}
         alt="Transition Image"
         src={data.img}
-        className="image-layer lazyload absolute h-full w-full  rounded-2xl  object-cover brightness-75 "
-        placeholder='blur'
-        blurDataURL='data:image/png;base64,[IMAGE_CODE_FROM_PNG_PIXEL]'
+        className="image-layer lazyload absolute h-full w-full  rounded-2xl  object-cover brightness-75 "placeholder='blur'
+                    blurDataURL='data:image/png;base64,[IMAGE_CODE_FROM_PNG_PIXEL]'
       />
       
       <motion.div className=" absolute z-10 flex h-full items-end p-4">

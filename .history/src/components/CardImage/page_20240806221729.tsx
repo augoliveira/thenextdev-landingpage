@@ -52,8 +52,7 @@ export default function CardImage() {
             </div>
             <Image 
             src={item.image} 
-            alt="image" 
-            className="w-full h-full object-cover group-hover:scale-110 duration-500 transition-all" />
+            alt="image" className="w-full h-full object-cover group-hover:scale-110 duration-500 transition-all" />
             <div className="absolute inset-0 z-10 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-lime-700/70"></div>
         </div>
       ))}
