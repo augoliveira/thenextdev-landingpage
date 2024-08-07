@@ -4,6 +4,7 @@ import projectThree from '../../assets/images/projects/esquadria.png';
 import guardaCorpo from '../../assets/images/projects/guardacorpo.png';
 import projectTwo from '../../assets/images/projects/projectOne.png';
 
+
 interface IcardImageProps {
   image: string | StaticImageData;
   title: string;
@@ -52,7 +53,6 @@ export default function CardImage() {
             </div>
             <Image 
             src={item.image} 
-            alt="Image"
             className="image-layer lazyload w-full h-full object-cover group-hover:scale-110 duration-500 transition-all"
             placeholder='blur'
             blurDataURL='data:image/png;base64,[IMAGE_CODE_FROM_PNG_PIXEL]'
