@@ -19,9 +19,9 @@ let nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "res.cloudinary.com",
+        hostname: "s3.amazonaws.com",
         port: "",
-        pathname: "/image/upload/**"
+        pathname: "/my-bucket/**"
       }
     ],
     dangerouslyAllowSVG: true,

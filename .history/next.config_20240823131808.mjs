@@ -19,9 +19,9 @@ let nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "res.cloudinary.com",
+        hostname: "avatar.vercel.sh",
         port: "",
-        pathname: "/image/upload/**"
+        pathname: "/image/upload/**",
       }
     ],
     dangerouslyAllowSVG: true,
