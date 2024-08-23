@@ -19,9 +19,9 @@ let nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "avatar.vercel.sh",
+        hostname: "s3.amazonaws.com",
         port: "",
-        pathname: "/image/upload/**"
+        pathname: "/my-bucket/**"
       }
     ],
     dangerouslyAllowSVG: true,

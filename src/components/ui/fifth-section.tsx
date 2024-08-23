@@ -72,8 +72,8 @@ const FifthSection = () => {
           }}
         />
       </div>
-      <div className="col-start-1 row-start-2 mt-4 max-w-[46rem] text-4xl font-extrabold tracking-tight text-slate-400 sm:text-7xl xl:max-w-[60rem]">
-        Transforme Seu Banheiro com Nossos Boxes de Vidro Exclusivos!
+      <div className="col-start-1 row-start-2 py-8 mt-4 max-w-[46rem] text-4xl font-extrabold tracking-tight text-slate-400 sm:text-7xl xl:max-w-[60rem]">
+        Box para banheiro!
       </div>
       <p>
         Descubra a perfeição em cada detalhe com nossas opções exclusivas de

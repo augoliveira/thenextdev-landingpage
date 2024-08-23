@@ -6,9 +6,9 @@ const Google = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ delay: 0.1 }}
-      className="w-full"
+      className="max-w-screen-lg w-full backdrop-blur-sm bg-gradient-to-r from-bodyColor to-[#66a900] py-4 px-4 shadow-lg shadow-gray-800/40"
     >
-      <h3 className="flex gap-1 font-medium text-xl font-titleFont">
+      <h3 className="flex gap-1 text-4xl lgl:text-6xl font-titleFont font-semibold">
       Cobertura de 
         <span className="text-textGreen tracking-wide">Vidro</span>
       </h3>

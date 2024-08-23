@@ -36,10 +36,7 @@ export default function Home() {
         <CardImage />
         <IntroSection />
         <AboutSection />
-        <div className="w-full backdrop-blur-xl bg-cyan-800">
-          <FifthSection />
-        </div>
-          <div className="h-[88vh] mx-auto p-4 bg-teal-900">
+          <div className="w-full h-full p-4 bg-teal-900">
             <Experience />
           </div>
         <Portifolio />

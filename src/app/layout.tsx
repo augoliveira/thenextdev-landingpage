@@ -111,20 +111,20 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-        <div className="mx-auto max-w-8xl space-y-8 px-2 pt-20 lg:py-8 lg:px-8">
-          <div className="rounded-lg bg-vc-border-gradient p-px shadow-lg shadow-black/20">
-                            <div className="rounded-t-lg bg-vc-border-gradient p-px shadow-lg shadow-black/20">
-                              <div className="rounded-t-lg bg-gradient-to-r from-bodyColor to-[#66a900]">
-                                  <AddressBar />
-                              </div>
-                          </div>
-                              <div className="rounded-b-lg bg-black/30 p-3.5 backdrop-blur-sm lg:p-6">
-                              <>
-                              {children}
-                              <Script src="@/lazysizes.min.js" async></Script>
-                              <SpeedInsights />
+            <div className="mx-auto max-w-8xl space-y-8 px-2 pt-20 lg:py-8 lg:px-8">
+              <div className="rounded-lg bg-vc-border-gradient p-px shadow-lg shadow-black/20">
+                <div className="rounded-t-lg bg-vc-border-gradient p-px shadow-lg shadow-black/20">
                               <ScrollBtn />
-                              </>
+                                <div className="rounded-t-lg bg-gradient-to-r from-bodyColor to-[#66a900]">
+                                  <AddressBar /> 
+                                </div>
+                            </div>
+                              <div className="rounded-b-lg bg-black/30 p-3.5 backdrop-blur-sm lg:p-6">
+                                <>
+                                  {children}
+                                    <Script src="@/lazysizes.min.js" async></Script>
+                                    <SpeedInsights />
+                                </>
                               </div>
                             <div className="rounded-lg bg-vc-border-gradient p-px shadow-lg shadow-black/20">
                               <div className="rounded-lg bg-black/30 backdrop-blur-xl">
@@ -132,9 +132,9 @@ export default function RootLayout({
                               </div> 
                             </div> 
                         </div>
-                      </div>
-        <Analytics />
-          </ThemeProvider>
+                        </div>
+              <Analytics />
+            </ThemeProvider>
       </body>
     </html>
   );

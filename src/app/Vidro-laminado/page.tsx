@@ -2,18 +2,18 @@
 
 import { Boundary } from '@/components/ui/boundary';
 import { motion } from 'framer-motion';
-import { AnimatedText } from '../../components/AnimatedText';
+import { AnimatedText } from '../../components/AnimatedText-page';
 import SliderProduto from '../../components/SlideBox/Slider';
 import Link from 'next/link';
 
 export default function Page() {
   return (
-    <Boundary labels={['vidro-laminado/page.tsx']} size="small">
+    <Boundary labels={['vidro-laminado']} size="small">
       <div className="prose prose-sm prose-invert max-w-none">
       <AnimatedText text='Vidros Especias' />
       <section
       id="home"
-      className="max-w-contentContainer mx-auto py-10 mdl:py-24 flex flex-col gap-4 lgl:gap-8 mdl:px-10 xl:px-4"
+      className="max-w-contentContainer mx-auto pb-10 mdl:py-24 flex flex-col gap-4 lgl:gap-8 mdl:px-10 xl:px-4"
     >
       <motion.h3
         initial={{ y: 10, opacity: 0 }}

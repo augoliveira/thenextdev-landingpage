@@ -57,7 +57,7 @@ const ScrollBtn = () => {
             cx="25"
             cy="25"
             r={radius}
-            stroke="#64ffda"
+            stroke="#1c7e3d"
             strokeWidth="4"
             fill="none"
             strokeDasharray={circumference}

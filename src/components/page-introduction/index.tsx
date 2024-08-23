@@ -28,6 +28,7 @@ export const PageIntroduction = () => {
         <Link href="/">
           <HiArrowNarrowLeft size={20} />
           Voltar para Home
+          
         </Link>
       </motion.div>
     </section>

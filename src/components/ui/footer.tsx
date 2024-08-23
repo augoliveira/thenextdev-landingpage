@@ -10,8 +10,11 @@ import {
   FacebookLogo,
   InstagramLogo,
   TwitterLogo,
-  YoutubeLogo
-} from 'phosphor-react'
+  YoutubeLogo,
+  PhoneList,
+  MapPinArea,
+  At
+} from '@phosphor-icons/react'
 
 import payment from "../../../public/Forma-de-pagamento.webp";
 
@@ -24,31 +27,45 @@ export function Footer() {
   return (
     <div className="lg:pt-3 flex flex-wrap flex-col justify-center w-full">
       <div className="container flex flex-col sm:flex-row justify-around bg-[#1a1c20] min-w-full pb-5">
-        <div className="flex flex-col px-2 mt-8 items-start"> 
-        <Image
-            width={300}
-            height={30}
-            src={Logo}
-            alt="Logo Glazing Design"
-            loading="eager"
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              className={`w-full h-full object-cover group-hover:scale-110 duration-500 transition-all ${
-                loading
-                  ? 'scale-110 blur-2xl grayscale'
-                  : 'scale-100 blur-0 grayscale-0'
-              }}`}
-              onLoad={() => setLoading(false)}
-          />
-          <p className='text-gray-400 pb-1'>Fique por dentro das novidades!!</p>
-          <input
-            className="py-2 p-2 text-sm bg-white rounded shadow-lg border border-gray-300  mb-3 w-full text-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-transparent "
-            type="email"
-            placeholder="Cadastre seu email"
-          />
-          <button className=" w-2/4 p-1 bg-green-500 border-0 text-white rounded-lg hover:bg-green-300">
-            Subscribe
-          </button>
+        <div className="-mt-20 w-screen max-w-96 flex-auto overflow-hidden rounded-sm bg-gradient-to-r from-bodyColor to-[#2c4606] text-sm leading-6 shadow-lg ring-1 ring-gray-900/5">
+          <div className="flex flex-col px-4 py-4 mt-4 items-center"> 
+              <Image
+                width={300}
+                height={30}
+                style={{
+                  maxWidth: "100%",
+                  height: "auto",
+                }}
+                src={Logo}
+                alt="Logo Glazing Design"
+                loading="eager"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  className={`w-72 h-32 object-cover group-hover:scale-110 duration-500 transition-all ${
+                    loading
+                      ? 'scale-110 blur-2xl grayscale'
+                      : 'scale-100 blur-0 grayscale-0'
+                  }}`}
+                  onLoad={() => setLoading(false)}
+              />
+            <div className="space-y-6">
+            <p className='text-gray-400 text-sm max-w-[300px]'>Criatividade e compromisso: nossa receita para o sucesso.</p>
+            <div className="max-2xl:text-left">
+              <h1 className="text-3xl font-bold text-teal-100">Solicite um orçamento</h1>
+              <Link href='#' className="flex items-center gap-2 mt-2 text-gray-400 hover:text-lime-300 cursor-pointer transition-all">
+                <PhoneList size={32} className="text-gray-400 hover:text-lime-300 cursor-pointer transition-all" />
+              (61) 9 8669-2775
+              </Link>
+              <p className="flex items-center gap-2 mt-2 text-gray-400 ">
+              <MapPinArea size={32} className="text-gray-400"/> <span className="font-semibold text-white">ENDEREÇO:</span> ADE Aguas claras DF
+              </p>
+              <p className="flex items-center gap-2 mt-2 text-gray-400 ">
+              <At size={32} className="text-gray-400"/> <span className="font-semibold text-white">E-MAIL:</span> contato@glazingdesign.com.br
+              </p>
+            </div>
+          </div>
         </div>
+        </div>
+        
 
         <div className='flex items-center space-x-2'>
               <Link

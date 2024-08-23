@@ -10,11 +10,11 @@ export const metadata = {
 
 export default function Layout({
   children,
-  audience,
+  projetos,
   views,
 }: {
   children: React.ReactNode;
-  audience: React.ReactNode;
+  projetos: React.ReactNode;
   views: React.ReactNode;
 }) {
   return (
@@ -23,7 +23,7 @@ export default function Layout({
         {children}
 
         <div className="space-y-6">
-          {audience}
+          {projetos}
           {views}
         </div>
       </div>

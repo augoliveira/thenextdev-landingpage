@@ -10,22 +10,10 @@ import { useMediaQuery } from "react-responsive";
 export default function CardBox() {
   const data = [
     {
-      imageUrl: "/images/a_1.png",
-      title: "Studien und Konzepte, Gesamtplanung",
+      imageUrl: "/box-articulado.jpg",
+      title: "Linha Box Articulado",
       description:
-        "Neubau und Ausbau von Straßen, Verkehrsflächen, Wasserwegen und Eisenbahnen erfordert überzeugende Verkehrskonzepte.",
-    },
-    {
-      imageUrl: "/images/a_2.png",
-      title: "Verkehrsanlagen und Ingenieurbauwerke",
-      description:
-        "Verkehrskonzepte sind ein entscheidender Faktor jeglicher Infrastruktur. Das Ingenieurbüro Weiss hat deshalb ein Expertenteam aufgebaut.",
-    },
-    {
-      imageUrl: "/images/a_3.png",
-      title: "Entwurfsvermessung, 3D-Laserscanning",
-      description:
-        "Bei Ausführung sämtlicher vermessungstechnischer Aufgaben im Leistungsbild „Ent­wurfs­vermessung“ sind wir ein leistungsstarker Partner.",
+        "Conheça o Box Articulado e descubra novas oportunidades de aproveitamento do espaço do seu banheiro com design prático, moderno e flexível.",
     },
   ];
 
@@ -33,8 +21,8 @@ export default function CardBox() {
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });
 
   return (
-    <section ref={ref} className="md:mt-[8rem]">
-      <div className="max-w-container z-40 py-16 px-4 sm:mt-4 sm:px-6 lg:px-8 xl:-mt-32 grid grid-cols-1 sm:grid-cols-[repeat(auto-fit,minmax(350px,1fr))] gap-x-4 gap-y-6">
+    <section ref={ref} className="md:mt-[2rem]">
+      <div className="max-w-container z-40 py-16 px-4 sm:mt-4 sm:px-6 lg:px-8 xl:-mt-32 grid grid-cols-1 sm:grid-cols-[repeat(auto-fit,min-max(350px,1fr))] gap-x-4 gap-y-6">
         {data.map((service, index) => (
           <motion.div
             key={index}

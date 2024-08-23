@@ -22,6 +22,14 @@ module.exports = {
         "2xl": "1400px"
       }
     },
+    aspectRatio: {
+      // defaults to {}
+      none: 0,
+      square: [1, 1], // or 1 / 1, or simply 1
+      "16/9": [16, 9], // or 16 / 9
+      "4/3": [4, 3], // or 4 / 3
+      "21/9": [21, 9] // or 21 / 9
+    },
     fontFamily: {
       permanent: ["Permanent Marker", "cursive"],
       foldit: ["Foldit", "cursive"]
@@ -200,11 +208,15 @@ module.exports = {
       }
     }
   },
+  variants: {
+    aspectRatio: ["responsive"] // defaults to ['responsive']
+  },
   plugins: [
     require("@tailwindcss/typography"),
     require("@tailwindcss/forms"),
     require("tailwind-scrollbar-hide"),
     require("tailwindcss-animate"),
+    require("@tailwindcss/aspect-ratio"),
     require("tailwindcss-radix")()
   ]
 };

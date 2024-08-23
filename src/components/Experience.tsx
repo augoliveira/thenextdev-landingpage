@@ -1,6 +1,6 @@
 'use client';
 import { useState } from "react";
-import { AnimatedText } from './Portifolio/AnimatedText/index';
+import { AnimatedText } from './AnimatedText-page';
 import Amazon from "./works/Amazon";
 import Apple from "./works/Apple";
 import Google from "./works/Google";
@@ -54,9 +54,11 @@ const Experience = () => {
   return (
     <section
       id="experience"
-      className="max-w-[1600px] mx-auto py-10 lgl:py-24 px-4"
+      className="mx-auto max-w-[80%] py-32 sm:py-48 lg:py-56 flex w-full flex-col gap-20 px-4 md:px-14 md:py-40 lg:flex-row"
     >
+      <div className="max-w-2xl py-12 flex items-center justify-center gap-x-6 lg:justify-center">
       <AnimatedText text='VIDROS' />
+      </div>
       <div className="w-full mt-10 flex flex-col md:flex-row gap-8">
         <ul className="md:w-96 flex flex-col">
           <li
