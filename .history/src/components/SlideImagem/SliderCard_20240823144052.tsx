@@ -28,22 +28,14 @@ function SliderCard({ data }: Props) {
         stiffness: 100,
       }}
     >
-      <motion.div>
-        <Image
+      <Image
         layoutId={data.img}
         alt="Transition Image"
         src={data.img}
-        placeholder='blur'
-        blurDataURL='data:image/png;base64,[IMAGE_CODE_FROM_PNG_PIXEL]'
-        quality={100}
-        fill
-        sizes="100vw"
-        style={{
-          objectFit: "cover",
-        }}
+        
         className="image-layer lazyload absolute h-full w-full  rounded-2xl  object-cover brightness-75 "
       />
-      </motion.div>
+      
       <motion.div className=" absolute z-10 flex h-full items-end p-4">
         <motion.div>
           

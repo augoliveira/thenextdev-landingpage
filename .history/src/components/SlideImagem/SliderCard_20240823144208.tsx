@@ -28,8 +28,7 @@ function SliderCard({ data }: Props) {
         stiffness: 100,
       }}
     >
-      <motion.div>
-        <Image
+      <motion.Image
         layoutId={data.img}
         alt="Transition Image"
         src={data.img}
@@ -43,7 +42,7 @@ function SliderCard({ data }: Props) {
         }}
         className="image-layer lazyload absolute h-full w-full  rounded-2xl  object-cover brightness-75 "
       />
-      </motion.div>
+      
       <motion.div className=" absolute z-10 flex h-full items-end p-4">
         <motion.div>
           

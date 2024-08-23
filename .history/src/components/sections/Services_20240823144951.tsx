@@ -45,9 +45,9 @@ const Services = ({ service }: Prop) => {
                     src={service.image.original}
                     alt=""
                     width={1080}
-                    height={672}
-                    unoptimized
-                    className="w-full h-full object-cover group-hover:scale-110 duration-500 transition-all"
+        height={672}
+        unoptimized
+        className="w-full h-full object-cover group-hover:scale-110 duration-500 transition-all"
                   />
                 </div>
                 <div className="flex-1 flex flex-col p-8">

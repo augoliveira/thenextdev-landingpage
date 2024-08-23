@@ -44,9 +44,13 @@ const Services = ({ service }: Prop) => {
                 <BlurImage 
                     src={service.image.original}
                     alt=""
-                    width={1080}
-                    height={672}
-                    unoptimized
+                    sizes="100vw"
+                    style={{
+                      width: '100%',
+                      height: 'auto',
+                    }}
+                    width={500}
+                    height={300}
                     className="w-full h-full object-cover group-hover:scale-110 duration-500 transition-all"
                   />
                 </div>

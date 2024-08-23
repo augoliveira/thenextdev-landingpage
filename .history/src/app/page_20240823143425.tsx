@@ -26,7 +26,7 @@ export default function Home() {
   return (
     <>
       <div className='rouded-ms'>
-        <SlideImagem />
+        <DemoSlider /
       <section id="product-marketing-sections" className="max-w-container z-40 py-16 px-4 sm:mt-4 sm:px-6 lg:px-8 xl:-mt-32 grid grid-cols-1 sm:grid-cols-[repeat(auto-fit,minmax(350px,1fr))] gap-x-4 gap-y-6">
         {data.map((item: ServiceProp, index) => (
           <Services key={item.id} service={item} index={index} />
