@@ -44,7 +44,6 @@ export {
   amazonImg,
   cyberImg,
   clientTwo,
-  noorShop,
   clientThree,
   clientFour,
   clientFive,

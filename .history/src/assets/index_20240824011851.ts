@@ -1,6 +1,6 @@
 import reactBdLogo from "./logo-campanha.png";
 import profileImg from './images/profile.png';
-import amazonImg from './images/projects/Cortina-de-vidro.png';
+import amazonImg from './images/cortina-de-vidro1.jpg';
 import cyberImg from './images/cyberBlog.png';
 import noorShop from './images/noorShop.png';
 import clientOne from "./clientsImg/clientOne.webp";
@@ -41,10 +41,8 @@ import portfolioImgTwo from "@/assets/project/portfolioTwo.png";
 export {
   reactBdLogo,
   clientOne,
-  amazonImg,
-  cyberImg,
+  amazonImg
   clientTwo,
-  noorShop,
   clientThree,
   clientFour,
   clientFive,

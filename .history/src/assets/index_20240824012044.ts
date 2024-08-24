@@ -41,10 +41,8 @@ import portfolioImgTwo from "@/assets/project/portfolioTwo.png";
 export {
   reactBdLogo,
   clientOne,
-  amazonImg,
-  cyberImg,
+  amazonImg
   clientTwo,
-  noorShop,
   clientThree,
   clientFour,
   clientFive,

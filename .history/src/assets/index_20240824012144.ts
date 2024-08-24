@@ -42,9 +42,8 @@ export {
   reactBdLogo,
   clientOne,
   amazonImg,
-  cyberImg,
+  cyberImg
   clientTwo,
-  noorShop,
   clientThree,
   clientFour,
   clientFive,
