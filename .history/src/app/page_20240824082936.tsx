@@ -19,7 +19,7 @@ import FAQ from './../components/ui/faq';
 import { CardContact } from './../components/CardContact/index';
 import Projects from "@/components/ui/Projects";  
 import CardImage from './../components/CardImage/page';
-
+import SlideImagem from './../components/SlideImagem/index';
 
 export default function Home() {
   return (
