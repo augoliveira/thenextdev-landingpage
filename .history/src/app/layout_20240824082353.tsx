@@ -3,6 +3,7 @@ import type { Metadata, Viewport } from 'next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Inter } from 'next/font/google';
 import Script from 'next/script'
+import Navbar from "./../components/Navbar/Navbar";
 
 const inter = Inter({ subsets: ['latin'] });
 import AnimatedGridPattern from "@/components/magicui/animated-grid-pattern";
