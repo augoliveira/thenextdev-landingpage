@@ -1,7 +1,7 @@
 import { CheckIcon } from '@heroicons/react/20/solid'
 import amazonImg from "../assets/amazonImg.png";
-import cyberImg from "../assets/cyberBlog.png";
-import noorShop from "../assets/noorShop.png";
+import { amazonImg, cyberImg, noorShop } from "@/assets";
+import { amazonImg, cyberImg, noorShop } from "@/assets";
 import Image from "next/image";
 import Link from 'next/link';
 import { AiOutlineYoutube } from "react-icons/ai";
