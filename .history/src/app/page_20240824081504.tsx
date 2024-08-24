@@ -20,6 +20,7 @@ import { CardContact } from './../components/CardContact/index';
 import Projects from "@/components/ui/Projects";  
 import CardImage from './../components/CardImage/page';
 import SlideImagem from './../components/SlideImagem/index';
+import Banner from "./../components/ui/Banner";
 
 export default function Home() {
   return (
