@@ -65,6 +65,8 @@ const Projects = () => {
                 className="w-full h-full rounded-l-xl object-contain"
                 src={amazonImg}
                 alt="amazonImg"
+                placeholder='blur'
+                blurDataURL='data:image/png;base64,[IMAGE_CODE_FROM_PNG_PIXEL]'
               />
               <div className="absolute w-full h-full bg-textGreen/10 rounded-lg top-0 left-0 group-hover:bg-transparent duration-300"></div>
             </div>
@@ -86,10 +88,10 @@ const Projects = () => {
                         <item.icon className="h-6 w-6 text-gray-600 group-hover:text-indigo-400" aria-hidden="true" />
                       </div>
                       <div className="flex-auto">
-                        <a href={item.href} className="col-start-1 row-start-2 mt-4 max-w-[36rem] text-4xl font-extrabold tracking-tight text-slate-900 sm:text-2xl xl:max-w-[43.5rem]">
+                        <Link href={item.href} className="col-start-1 row-start-2 mt-4 max-w-[36rem] text-4xl font-extrabold tracking-tight text-slate-900 sm:text-2xl xl:max-w-[43.5rem]">
                           {item.name}
                           <span className="absolute inset-0" />
-                        </a>
+                        </Link>
                         <p className="col-start-1 row-start-3 tracking-7 max-w-lg text-lg text-slate-700">{item.description}</p>
                       </div>
                     </div>
@@ -97,23 +99,23 @@ const Projects = () => {
                 </div>
                 <div className="grid grid-cols-2 divide-x divide-gray-200/5 bg-gradient-to-r from-bodyColor to-[#66a900]">
                   {callsToAction.map((item) => (
-                    <a
+                    <Link
                       key={item.name}
                       href={item.href}
                       className="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-200 hover:bg-gray-800"
                     >
                       <item.icon className="h-5 w-5 flex-none text-cyan-500" aria-hidden="true" />
                       {item.name}
-                    </a>
+                    </Link>
                   ))}
                 </div>
               </div>
               <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 bg-gray-200/10 ring-green-900/10 hover:ring-gray-900/20">
           Solicite um Orçamento.{' '}
-              <a href="https://api.whatsapp.com/send?phone=5561986692775" className="font-semibold text-[#ffffff] backdrop-grayscale bg-gradient-to-r from-bodyColor to-[#66a900]/90 rounded-full px-3 py-1">
+              <Link href="https://api.whatsapp.com/send?phone=5561986692775" className="font-semibold text-[#ffffff] backdrop-grayscale bg-gradient-to-r from-bodyColor to-[#66a900]/90 rounded-full px-3 py-1">
                 <span className="absolute inset-0" aria-hidden="true" />
                 Whatsapp <span aria-hidden="true">&rarr;</span>
-              </a>
+              </Link>
             </div>
             
           </div>
