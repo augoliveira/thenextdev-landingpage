@@ -2,7 +2,6 @@
 import type { Metadata, Viewport } from 'next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Inter } from 'next/font/google';
-import Script from 'next/script'
 
 const inter = Inter({ subsets: ['latin'] });
 import AnimatedGridPattern from "@/components/magicui/animated-grid-pattern";
@@ -124,7 +123,6 @@ export default function RootLayout({
                               <div className="rounded-b-lg bg-black/30 p-3.5 backdrop-blur-sm lg:p-6">
                                 <>
                                 {children}
-                                    <Script src="@/lazysizes.min.js" async></Script>
                                     <SpeedInsights />
                                 </>
                               </div>
