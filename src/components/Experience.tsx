@@ -54,7 +54,7 @@ const Experience = () => {
   return (
     <section
       id="experience"
-      className="mx-auto max-w-[80%] py-32 sm:py-48 lg:py-56 flex w-full flex-col gap-20 px-4 md:px-14 md:py-40 lg:flex-row"
+      className="mx-auto max-w-max py-32 sm:py-48 lg:py-56 flex w-full flex-col gap-20 md:px-14 md:py-40 lg:flex-row"
     >
       <div className="max-w-2xl py-12 flex items-center justify-center gap-x-6 lg:justify-center">
       <AnimatedText text='VIDROS' />
@@ -65,7 +65,7 @@ const Experience = () => {
             onClick={handleBox}
             className={`${
               workBox
-                ? "border-l-textGreen text-textGreen"
+                ? "border-l-textGreen text-textGreen bg-gradient-to-r from-bodyColor to-[#66a900] text-white after:bg-lime-800 after:w-5 after:h-5 z-10 after:inline-block after:absolute after:-bottom-2 after:rotate-45"
                 : "border-l-hoverColor text-textDark"
             } border-l-2 bg-transparent hover:bg-[#112240] py-3 text-xl cursor-pointer duration-300 px-8 font-bold`}
           >
@@ -75,7 +75,7 @@ const Experience = () => {
             onClick={handleGoogle}
             className={`${
               workGoogle
-                ? "border-l-textGreen text-textGreen"
+                ? "border-l-textGreen text-textGreen bg-gradient-to-r from-bodyColor to-[#66a900] text-white after:bg-lime-800 after:w-5 after:h-5 z-10 after:inline-block after:absolute after:-bottom-2 after:rotate-45"
                 : "border-l-hoverColor text-textDark"
             } border-l-2 bg-transparent hover:bg-[#112240] py-3 text-xl cursor-pointer duration-300 px-8 font-bold`}
           >
@@ -85,8 +85,9 @@ const Experience = () => {
             onClick={handleApple}
             className={`${
               workApple
-                ? "border-l-textGreen text-textGreen"
+                ? "border-l-textGreen text-textGreen bg-gradient-to-r from-bodyColor to-[#66a900] text-white after:bg-lime-800 after:w-5 after:h-5 z-10 after:inline-block after:absolute after:-bottom-2 after:rotate-45"
                 : "border-l-hoverColor text-textDark"
+                
             } border-l-2 bg-transparent hover:bg-[#112240] py-3 text-xl cursor-pointer duration-300 px-8 font-bold`}
           >
             Espelhos
@@ -95,7 +96,7 @@ const Experience = () => {
             onClick={handleSplash}
             className={`${
               workSplash
-                ? "border-l-textGreen text-textGreen"
+                ? "border-l-textGreen text-textGreen bg-gradient-to-r from-bodyColor to-[#66a900] text-white after:bg-lime-800 after:w-5 after:h-5 z-10 after:inline-block after:absolute after:-bottom-2 after:rotate-45"
                 : "border-l-hoverColor text-textDark"
             } border-l-2 bg-transparent hover:bg-[#112240] py-3 text-xl cursor-pointer duration-300 px-8 font-bold`}
           >
@@ -105,7 +106,7 @@ const Experience = () => {
             onClick={handleAmazon}
             className={`${
               workAmazon
-                ? "border-l-textGreen text-textGreen"
+                ? "border-l-textGreen text-textGreen bg-gradient-to-r from-bodyColor to-[#66a900] text-white after:bg-lime-800 after:w-5 after:h-5 z-10 after:inline-block after:absolute after:-bottom-2 after:rotate-45"
                 : "border-l-hoverColor text-textDark"
             } border-l-2 bg-transparent hover:bg-[#112240] py-3 text-xl cursor-pointer duration-300 px-8 font-bold`}
           >

@@ -40,7 +40,7 @@ module.exports = {
         "hero-card": "url('/bg-box.png')",
         "hero-page": "url('/bg-vidracaria-2.jpg')",
         "contato-page": "url('/Bg-contato.jpg')",
-        bgOne: "url('/bg-home1.jpg')",
+        bgOne: "url('/assets/bg-home1.webp')",
         bgTwo: "url('/assets/bgTwo.webp')",
         bgThree: "url('/assets/bgThree.webp')",
         "reactBd-highPerformanceBg": "url('/assets/highPerformanceBg.webp')",
@@ -50,7 +50,9 @@ module.exports = {
         mono: ["var(--font-plex-mono)", "monospace"]
       },
       boxShadow: {
-        button: "0px 0px 68px 7px rgba(5, 150, 105, 0.4)"
+        button: "0px 0px 68px 7px rgba(5, 150, 105, 0.4)",
+        myShadow1: "4.1px -5px 0 0 rgb(17,24,39)",
+        myShadow2: "-4.1px -5px 0 0 rgb(17,24,39)"
       },
       screens: {
         xs: "320px",

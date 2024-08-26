@@ -1,10 +1,7 @@
+import { TabGroup } from '@/components/ui/tab-group';
 import React from 'react';
 
-import { Tab } from '@/components/ui/tab';
-
-import { RandomPostTab } from './random-post-tab';
-
-const title = 'Static Data';
+const title = 'Dynamic Data';
 
 export const metadata = {
   title,
@@ -13,16 +10,23 @@ export const metadata = {
     images: [`/api/og?title=${title}`],
   },
 };
-
 export default function Layout({ children }: { children: React.ReactNode }) {
+  const ids = [{ id: '1' }, { id: '2' }, { id: '3' }];
+
   return (
     <div className="space-y-9">
-      <div className="flex flex-wrap items-center gap-2">
-        <Tab path="/ssg" item={{ text: 'Home' }} />
-        <Tab path="/ssg" item={{ text: 'Missão', slug: '1' }} />
-        <Tab path="/ssg" item={{ text: 'Post 2', slug: '2' }} />
-        <RandomPostTab path="/ssg" />
-      </div>
+      <TabGroup
+        path="/quem-somos"
+        items={[
+          {
+            text: 'Home',
+          },
+          ...ids.map((x) => ({
+            text: `Post ${x.id}`,
+            slug: x.id,
+          })),
+        ]}
+      />
 
       <div>{children}</div>
     </div>

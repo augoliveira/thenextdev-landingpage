@@ -24,7 +24,7 @@ import whatWeDoImg from "./whatWeDo/whatWeDo.webp";
 import highPerformanceImg from "./highPerformance/highPerformanceImg.webp";
 import projectOneImg from "./projects/projectOne.webp";
 import projectTwoImg from "./projects/projectTwo.webp";
-import projectThreeImg from "./projects/projectThree.webp";
+import projectThreeImg from "./projects/Vidro-Pelicula.webp";
 import aboutUsImgOne from "./pages/aboutUs/aboutUsImgOne.webp";
 import aboutUsImgTwo from "./pages/aboutUs/aboutUsImgTwo.webp";
 import aboutUsImgThree from "./pages/aboutUs/aboutUsImgThree.webp";

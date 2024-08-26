@@ -13,7 +13,7 @@ import { MdClose } from "react-icons/md";
 
 const navigation = [
   { title: "Home", link: "/" },
-  { title: "About us", link: "/about" },
+  { title: "Quem Somos", link: "/quem-somos" },
   { title: "Services", link: "/services" },
   { title: "Faq", link: "/faq" },
   { title: "Blog", link: "/blog" },
@@ -30,7 +30,7 @@ const Header = () => {
   const [navColor, setNavColor] = useState("#010e02");
 
   const listenScrollEvent = () => {
-    window.scrollY > 10 ? setNavColor("#063b14") : setNavColor("#161616");
+    window.scrollY > 10 ? setNavColor("#063b14") : setNavColor("#1616161f");
     window.scrollY > 10 ? setNavSize("90px") : setNavSize("90px");
   };
 

@@ -35,10 +35,10 @@ const Development = () => {
               ease: "easeIn",
               duration: 1,
             }}
-            className="text-2xl mb-10"
+            className="text-2xl font-medium tracking-tight mb-10"
           >
-            Website
-            <span className="text-secondaryColor ml-3">Development</span>
+            Vidro com
+            <span className="text-lime-600 ml-3">Película de Segurança</span>
           </motion.h3>
           <motion.div
             initial={{ x: 50, opacity: 0 }}
@@ -55,54 +55,46 @@ const Development = () => {
           >
             <div className="flex flex-col gap-6">
               <h3 className="font-titleFont text-lg font-bold flex items-center gap-4">
-                <span className="text-secondaryColor">
+                <span className="text-lime-600">
                   <GiCheckMark />
                 </span>
-                Planning
+                Películas decorativas
               </h3>
               <p className="text-base text-darkText hover:text-gray-300 duration-300">
-                The planning stage is the first and the most important stage.
-                Because according to your planning and mapping you have to run
-                the entire project.
+              As películas decorativas oferecem uma grande variedade de soluções e podem trazer um toque pessoal aos seus vidros.
               </p>
             </div>
             <div className="flex flex-col gap-6">
               <h3 className="font-titleFont text-lg font-bold flex items-center gap-4">
-                <span className="text-secondaryColor">
+                <span className="text-lime-600">
                   <GiCheckMark />
                 </span>
-                Development
+                Películas segurança
               </h3>
               <p className="text-base text-darkText hover:text-gray-300 duration-300">
-                Loading content and the combination of the programming work are
-                included in the development stage. It might be you or someone
-                else who will create the contens for your website.
+              Extremamente duráveis, estas películas oferecem a segurança de pessoas e bens. Permitem evitar a destruição do vidro.
               </p>
             </div>
             <div className="flex flex-col gap-6">
               <h3 className="font-titleFont text-lg font-bold flex items-center gap-4">
-                <span className="text-secondaryColor">
+                <span className="text-lime-600">
                   <GiCheckMark />
                 </span>
-                Design
+                Películas Privacidade
               </h3>
               <p className="text-base text-darkText hover:text-gray-300 duration-300">
-                The information that has been outlined in the planning stage
-                will be moved into a full proof visual shape in the design
-                stage.
+              As películas espelho unidirecional permitem criar de um lado do vidro um espelho perfeito e a transparência.
               </p>
             </div>
             <div className="flex flex-col gap-6">
               <h3 className="font-titleFont text-lg font-bold flex items-center gap-4">
-                <span className="text-secondaryColor">
+                <span className="text-lime-600">
                   <GiCheckMark />
                 </span>
-                Launch
+                Películas térmicas
               </h3>
               <p className="text-base text-darkText hover:text-gray-300 duration-300">
-                Giving a website finishing polish of design elements to prepare
-                it perfectly for the public viewing is the purpose of launch
-                stage.
+              As películas adesivas anti-calor resistentes são a alternativa perfeita para o ar condicionado. Aplicadas às janelas, rejeitam até 80% do calor.
               </p>
             </div>
           </motion.div>

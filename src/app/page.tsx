@@ -17,8 +17,7 @@ import InvestmentSection from './_components/investment-section';
 import dataSlider from "./_data/slider-data.json";
 import FAQ from './../components/ui/faq';
 import { CardContact } from './../components/CardContact/index';
-import Projects from "@/components/ui/Projects";  
-import CardImage from './../components/CardImage/page';
+import Projects from "@/components/ui/Projects";
 import Banner from "./../components/ui/Banner";
 import PickServices from "./../components/ui/services/PickServices";
 
@@ -29,7 +28,6 @@ export default function Home() {
         <Banner />
         <PickServices />
         <Projects />
-        <CardImage />
         <IntroSection />
         <AboutSection />
           <div className="w-full h-full p-4 bg-teal-900">

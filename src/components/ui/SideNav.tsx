@@ -14,17 +14,13 @@ const SideNav = () => {
       <PageHeaderHeading className="hidden md:block">
       Box e Vidro com problema? Resolvemos!
         </PageHeaderHeading>
+        <p className="text-gray-400">
+      Chame a <span className="p-2 text-bold text-slate-300">Glazing design:</span> 
+      somos a primeira empresa do DF especializada em manutenção e reparo de box e esquadrias de vidro em geral!
+      </p>
       <div>
       <Dashboard />
     </div>
-      <p className="text-gray-400">
-        Quisque actraqum nunc no dolor sit amet augue dolor. Lorem ipsum dolor
-        sit amet, consyect etur adipiscing elit.
-      </p>
-      <p className="text-gray-400">
-        Quisque actraqum nunc no dolor sit amet augue dolor. Lorem ipsum dolor
-        sit amet, consyect etur adipiscing elit.
-      </p>
       {/* <span
         onClick={() => setToggleNav(false)}
         className="text-white text-lg absolute top-10 right-10 animate-spin hover:animate-none hover:cursor-pointer"

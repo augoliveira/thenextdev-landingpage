@@ -25,9 +25,9 @@ import Logo from "../../../public/logo-campanha.png";
 export function Footer() {
   const [loading, setLoading] = useState(true);
   return (
-    <div className="lg:pt-3 flex flex-wrap flex-col justify-center w-full">
-      <div className="container flex flex-col sm:flex-row justify-around bg-[#1a1c20] min-w-full pb-5">
-        <div className="-mt-20 w-screen max-w-96 flex-auto overflow-hidden rounded-sm bg-gradient-to-r from-bodyColor to-[#2c4606] text-sm leading-6 shadow-lg ring-1 ring-gray-900/5">
+    <div className="lg:pt-3 flex flex-wrap flex-col justify-center w-full bg-[#1a1c20]">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 lgl:px-2 grid grid-cols-1 md:grid-cols-3 lgl:grid-cols-3 gap-8 py-10 sm:flex-row justify-around pb-5">
+        <div className="-mt-20 w-full max-w-96 flex-auto overflow-hidden rounded-sm bg-gradient-to-r from-bodyColor to-[#2c4606] text-sm leading-6 shadow-lg ring-1 ring-gray-900/5">
           <div className="flex flex-col px-4 py-4 mt-4 items-center"> 
               <Image
                 width={300}
@@ -67,7 +67,7 @@ export function Footer() {
         </div>
         
 
-        <div className='flex items-center space-x-2'>
+        <div className='flex items-center justify-center'>
               <Link
                 href='https://twitter.com/dubdotsh'
                 target='_blank'

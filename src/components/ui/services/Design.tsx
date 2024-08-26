@@ -35,10 +35,10 @@ const Design = () => {
               ease: "easeIn",
               duration: 1,
             }}
-            className="text-xl lgl:text-2xl mb-10"
+            className="text-2xl font-medium tracking-tight mb-10"
           >
-            Choose Your
-            <span className="text-secondaryColor ml-3">Website Design</span>
+            Porta de
+            <span className="text-lime-600 ml-3">aluminio com vidro</span>
           </motion.h3>
           <motion.div
             initial={{ x: 50, opacity: 0 }}
@@ -55,52 +55,46 @@ const Design = () => {
           >
             <div className="flex flex-col gap-6">
               <h3 className="font-titleFont text-lg font-bold flex items-center gap-4">
-                <span className="text-secondaryColor">
+                <span className="text-lime-600">
                   <GiCheckMark />
                 </span>
-                Determining Your Need
+                Porta de vidro temperado
               </h3>
               <p className="text-base text-darkText hover:text-gray-300 duration-300">
-                Analyze your current website to determine what it will need in
-                future. When choosing a web host, plan according to the need.
+              A <span classname="text-lime-600">porta de vidro temperado</span> Uma porta de vidro temperado é um tipo de porta feita de vidro que foi tratado para aumentar sua resistência e segurança. O vidro temperado é submetido a um processo de aquecimento e resfriamento rápido, o que o torna muito mais robusto do que o vidro comum.
               </p>
             </div>
             <div className="flex flex-col gap-6">
               <h3 className="font-titleFont text-lg font-bold flex items-center gap-4">
-                <span className="text-secondaryColor">
+                <span className="text-lime-600">
                   <GiCheckMark />
                 </span>
-                Compare Features
+                Porta de vidro laminado
               </h3>
               <p className="text-base text-darkText hover:text-gray-300 duration-300">
-                There are some important features such as bandwidth, storage,
-                server OS and acceptable security tools that must be compared to
-                you.
+              Uma porta de vidro laminado é um tipo de porta que utiliza vidro laminado, um material feito de duas ou mais camadas de vidro unidas por uma camada intermediária de material plástico, geralmente polivinil butiral (PVB). Esse tipo de vidro é projetado para oferecer uma combinação de segurança, durabilidade e estética.
               </p>
             </div>
             <div className="flex flex-col gap-6">
               <h3 className="font-titleFont text-lg font-bold flex items-center gap-4">
-                <span className="text-secondaryColor">
+                <span className="text-lime-600">
                   <GiCheckMark />
                 </span>
-                Select Hosting Type
+                Porta de esquadria de aluminio
               </h3>
               <p className="text-base text-darkText hover:text-gray-300 duration-300">
-                Generally, you will be offered three types of servers by web
-                hosting companies. They are Shared, VPS and dedicated servers.
+              Uma porta de esquadria de alumínio é um tipo de porta feita com uma estrutura de alumínio, conhecida por sua durabilidade, resistência e estética moderna. A esquadria refere-se à estrutura de alumínio que forma a moldura da porta, e pode ser usada em combinação com diferentes tipos de painéis, como vidro ou painéis sólidos.
               </p>
             </div>
             <div className="flex flex-col gap-6">
               <h3 className="font-titleFont text-lg font-bold flex items-center gap-4">
-                <span className="text-secondaryColor">
+                <span className="text-lime-600">
                   <GiCheckMark />
                 </span>
-                Compare Features
+                Porta com acustico
               </h3>
               <p className="text-base text-darkText hover:text-gray-300 duration-300">
-                Select and order the web hosting package that suits you the
-                best. After that, an email will be sent to you to let you know
-                some instructions about your website.
+              Uma porta acústica é projetada para reduzir a transmissão de som entre ambientes, proporcionando um nível elevado de isolamento acústico. Essas portas são especialmente úteis em locais onde é necessário minimizar o ruído, como em estúdios de gravação, salas de conferências, consultórios, ou até mesmo em ambientes residenciais para maior conforto.
               </p>
             </div>
           </motion.div>
