@@ -61,7 +61,11 @@ const Design = () => {
                 Porta de vidro temperado
               </h3>
               <p className="text-base text-darkText hover:text-gray-300 duration-300">
-              A <span classname="text-lime-600">porta de vidro temperado</span> Uma porta de vidro temperado é um tipo de porta feita de vidro que foi tratado para aumentar sua resistência e segurança. O vidro temperado é submetido a um processo de aquecimento e resfriamento rápido, o que o torna muito mais robusto do que o vidro comum.
+              Na Glazing Design Você encontra Existem diversos tipos de portas no mercado… Mas você conhece a porta de vidro temperado?
+
+A porta de vidro temperado é um assunto que acaba gerando muitas dúvidas por parte dos clientes, principalmente, na hora de iniciar o projeto ou uma reforma…
+
+Porém, no post de hoje iremos explorar um pouco mais sobre esse assunto para que você compreenda ao máximo sobre esse tipo de porta.
               </p>
             </div>
             <div className="flex flex-col gap-6">
