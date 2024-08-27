@@ -5,7 +5,7 @@ import { FaHome } from "react-icons/fa";
 import { MdMarkEmailUnread } from "react-icons/md";
 import { BsPhoneFill } from "react-icons/bs";
 import { IoLogoWhatsapp } from "react-icons/io";
-import TitleBanner from "@/components/ui/TitleBanner";
+import { AnimatedText } from './AnimatedText/index';
 import ContactForm from "@/components/ui/ContactForm";
 import { motion } from "framer-motion";
 
@@ -15,7 +15,7 @@ const Contact = () => {
 
   return (
     <div className="w-full">
-      <TitleBanner subtitle="Olá que bom" title="Que chegou até aqui!" />
+      <AnimatedText text='Vamos conversar?' />
       <div className="max-w-screen-2xl mx-auto flex flex-col mdl:flex-row justify-between gap-10 pb-10 pt-5 px-4">
         <div className="w-full mdl:w-3/4 flex flex-col gap-10 col-start-1 col-end-4">
           <div className="flex flex-col gap-5 mdl:gap-10">
