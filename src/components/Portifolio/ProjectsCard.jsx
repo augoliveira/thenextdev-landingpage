@@ -1,6 +1,6 @@
 'use client';
 
-import Image from 'next/Image';
+import Image from 'next/image';
 import { useState } from 'react';
 import { BsGithub } from 'react-icons/bs';
 import { FaGlobe } from 'react-icons/fa';
