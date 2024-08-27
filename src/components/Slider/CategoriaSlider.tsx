@@ -2,11 +2,12 @@
 'use client';
 
 import Image from 'next/image';
-import { useState } from 'react';
+import React, { useState, useEffect } from 'react'
 
 import { motion } from "framer-motion";
 import { Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { HiArrowNarrowRight } from 'react-icons/hi';
 
 import Box from '../../../public/box-evidence-720x480-3.png';
 import Pelicula from '../../../public/Espresso.png';
@@ -24,7 +25,7 @@ const Categoria = [
   {
     "id": 2,
     name: "Vidro Laminado",
-    description: "O vidro laminado, apesar de também garantir segurança, passa por um processo diferente na sua fabricação. Este tipo de vidro é composto por duas – ou até mais – placas de vidro que são unidas por uma camada intermediária de Polivinil Butiral (PVB). Este processo garante que, caso o material se danifique, os estilhaços permaneçam colados na película e não se soltem.",
+    description: "O vidro laminado, apesar de também garantir segurança, passa por um processo diferente na sua fabricação. Este tipo de vidro é composto por duas ou até mais placas de vidro que são unidas por uma camada intermediária de Polivinil Butiral (PVB). Este processo garante que, caso o material se danifique, os estilhaços permaneçam colados na película e não se soltem.",
     span: "A película de PVB também filtra até 99,6% dos raios ultravioleta, que são responsáveis por descolorir móveis, tecidos e objetos. Além disso, o vidro laminado também auxilia na redução de ruídos, diminuindo as vibrações sonoras, por meio da camada de polivinil butiral.",
     image: Laminado,
     btnText: "especificações técnicas",
@@ -49,9 +50,15 @@ const Categoria = [
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
-import Button from '../SliderProduto/Button';
+import { Button } from '../button/index';
 export default function CategoriaSlider() {
   const [loading, setLoading] = useState(true);
+  const handleContact = () => {
+    const contactSection = document.querySelector('#contato')
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
   return (
     <Swiper
       modules={[Navigation]}
@@ -97,7 +104,10 @@ export default function CategoriaSlider() {
               </div>
               <code className="font-montserrt font-semibold">{Categoria.span}</code>
               <div className='py-4 sm:mb-4'>
-                <Button link="#" text={Categoria.btnText} />
+                <Button className="w-max shadow-button" onClick= {handleContact}>
+                {Categoria.btnText}
+                <HiArrowNarrowRight size={18} />
+            </Button>
                 </div>
             </div>
             </div>
