@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import Link from 'next/link';
 import { motion } from "framer-motion";
 import { ChevronRight } from "lucide-react";
-import NextImage from './../ui/NextImage';
+import Image from 'next/image';
 
 interface IProps {
   imageUrl: string;
@@ -18,7 +18,7 @@ function ServiceCard({ imageUrl, title, description }: IProps) {
     
     <div className="shadow-shadowOne group flex h-auto w-full cursor-pointer flex-col rounded-lg bg-gradient-to-r from-bodyColor to-[#66a900] p-4 transition-transform duration-200 ease-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-900 xl:px-12 xl:py-10">
       <div className="w-full h-56 overflow-hidden">
-        <NextImage
+        <Image
         src={imageUrl} 
         alt="service image"
         width={1080}
