@@ -5,7 +5,7 @@ import Image from "next/image"
 import Link from 'next/link';
 interface Props {
   title: string;
-  imh: string;
+  img: string;
   des: string;
   listItem: string[];
   link: string;
