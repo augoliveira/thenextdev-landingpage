@@ -1,6 +1,6 @@
 'use client';
 
-import Image from 'next/image';
+import NextImage from '../ui/NextImage';
 import Link from 'next/link';
 
 import { TelegramLogo } from 'phosphor-react';
@@ -22,7 +22,7 @@ export function CardContact() {
           </div>
 
           <div className='contact'>
-            <Image
+            <NextImage
               src='/contact.svg'
               width={680}
               height={580}

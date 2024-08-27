@@ -6,7 +6,7 @@ import { CalendarDaysIcon, HandRaisedIcon } from '@heroicons/react/24/outline'
 import { CloudArrowUpIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/20/solid'
 
 
-import Image from "next/image";
+import NextImage from "./NextImage";
 import Link from 'next/link';
 import { AiOutlineYoutube } from "react-icons/ai";
 import { TbBrandGithub } from "react-icons/tb";
@@ -61,7 +61,7 @@ const Projects = () => {
             target="_blank"
           >
             <div>
-              <Image
+              <NextImage
                 className="w-full h-full rounded-l-xl object-contain"
                 src={amazonImg}
                 alt="amazonImg"

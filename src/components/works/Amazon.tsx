@@ -7,7 +7,7 @@ const Amazon = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ delay: 0.1 }}
-      className="w-full"
+      className="max-w-container z-40 py-16 px-4 sm:mt-4 sm:px-6 lg:px-8 xl:-mt-32 grid grid-cols-1 sm:grid-cols-[repeat(auto-fit,min-max(350px,1fr))] gap-x-4 gap-y-6"
     >
       <h3 className="flex gap-1 font-medium text-xl font-titleFont">
       Guarda-Corpo de

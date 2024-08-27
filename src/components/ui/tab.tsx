@@ -1,6 +1,6 @@
 'use client';
 
-import Link from 'next/link';
+import NextLink from './NextLink';
 import { useSelectedLayoutSegment } from 'next/navigation';
 
 import clsx from 'clsx';
@@ -27,7 +27,7 @@ export const Tab = ({
     segment === item.slug;
 
   return (
-    <Link
+    <NextLink
       href={href}
       className={clsx('rounded-lg px-3 py-1 text-sm font-medium', {
         'bg-gray-700 text-gray-100 hover:bg-gray-500 hover:text-white':
@@ -36,6 +36,6 @@ export const Tab = ({
       })}
     >
       {item.text}
-    </Link>
+    </NextLink>
   );
 };

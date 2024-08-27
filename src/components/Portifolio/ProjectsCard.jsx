@@ -1,6 +1,6 @@
 'use client';
 
-import Image from 'next/image';
+import NextImage from '../ui/NextImage';
 import { useState } from 'react';
 import { BsGithub } from 'react-icons/bs';
 import { FaGlobe } from 'react-icons/fa';
@@ -12,7 +12,7 @@ const ProjectsCard = ({ title, des, src }) => {
   return (
     <div className='shadow-shadowOne group flex h-auto w-full cursor-pointer flex-col rounded-lg bg-gradient-to-r from-bodyColor to-[#66a900] p-4 transition-transform duration-200 ease-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-900 xl:px-12 xl:py-10'>
       <div className='h-[80%] w-full overflow-hidden rounded-lg shadow-2xl'>
-        <Image
+        <NextImage
           className={`w-full h-full object-cover group-hover:scale-110 duration-500 transition-all ${
             loading
               ? 'scale-110 blur-2xl grayscale'

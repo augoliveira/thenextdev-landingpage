@@ -1,54 +1,73 @@
 /* eslint-disable import-helpers/order-imports */
 'use client';
 
-import Image from 'next/image';
-import React from 'react';
-import { useState } from 'react';
+import NextImage from '../components/ui/NextImage';
+import { Button } from '../components/button/index'
+import React, { useState, useEffect } from 'react'
+import { HiArrowNarrowRight } from 'react-icons/hi'
 
 import { AnimatePresence, motion } from 'framer-motion';
 
 import Image1 from '../../public/cortina-de-vidro1.jpg';
-import Image3 from '../../public/Porta-2.jpg';
+import Image3 from '../../public/guada-corpo.jpg';
+import Image4 from '../../public/Corbertura.jpg';
 import Image2 from '../../public/Portas.jpg';
+import Container from './ui/container'
 
 // import { Container } from './styles';
 import { AnimatedText } from '@/components/AnimatedText/index';
 
 const Service: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const handleContact = () => {
+    const contactSection = document.querySelector('#contato')
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
 
   const TimelineItems = [
     {
-      title: 'Box para banheiro com sistema com roldanas aparentes',
+      title: 'Envidraçamento de sacadas',
       description:
-        'O Box de Vidro Com Roldanas Aparentes com acabamento em aço inox é um dos modelos mais procurados atualmente por conseguir agregar alta resistência com beleza e sofisticação.',
+        'O envidraçamento de sacadas é sinônimo de segurança! Você sabe por quê? Aprenda isso e mais nesse artigo da Construção em Vidros.',
       image: Image1
     },
     {
-      title: 'Box para Banheiro de Abrir',
+      title: 'Esquadrias de Alumínio e Vidro',
       description:
-        'O Box para banheiro de Abrir é um modelo prático, mais indicado para pequenos ambientes, pois permite maior comodidade na abertura da porta e na passagem entre o seu box de vidro para banheiro e os outros móveis e louças sanitárias. Caso seu banheiro tenha um espaço pequeno e reduzido. O modelo ideal é o Box Marine com porta de abrir, uma opção é instalar a dobradiça com a abertura para dentro do box, desde que haja espaço útil entre a porta e as paredes internas. ou box do tipo Camarão Articulado onde as duas folhas recolhem.',
+        'As esquadrias são muito importantes em qualquer obra, já que precisam se adequar ao projeto corretamente não apenas por questões estéticas, mas também por desempenho.',
       image: Image2
     },
     {
-      title: 'Box Articulado – Box de Vidro Articulado Arty Rollit',
+      title: 'Guarda corpo de vidro',
       description:
-        'O Box de Vidro Rollit Arty Articulado, box do tipo camarão, foi projetado para atender pequenos espaços. Ou seja, box para banheiros menores, garantindo a abertura total do vão.',
+        'Um guarda-corpo de vidro é uma solução moderna e elegante para segurança em espaços que exigem uma proteção sem obstruir a visão.',
       image: Image3
+    },
+    {
+      title: 'Cobertura De Vidro',
+      description:
+        'Cobertura de vidro: Quer deixar algumas áreas de sua casa como:  varanda, área de lazer ou hall de entrada,  muito mais bonito? Que tal investir na cobertura de vidro?  Elas são geralmente feitas com aço galvanizado ou alumínio em sua estrutura, além disso dispõe de uma pintura especial que impede a oxidação. Já o vidro pode ser incolor ou mais escuro. Tudo depende, é claro, da quantidade de iluminação que se deseja ter no ambiente e do gosto de cada cliente. Os vidros claros possibilitam a entrada de até 92% da iluminação natural, que atravessa quase livremente a cobertura.',
+      image: Image4
     }
   ];
   return (
-    <main className="flex w-full flex-col gap-20 bg-white px-4 py-20 md:px-14 md:py-40 lg:flex-row">
+    <Container>
+    <main className="flex w-full flex-col gap-20 px-4 py-20 md:px-14 md:py-40 lg:flex-row">
       <div className="flex w-full flex-col justify-between lg:w-1/2">
         <AnimatedText text="PORQUE NOS ESCOLHER" />
-        <div className="flex w-full flex-col items-center justify-center gap-8">
+        <div className="flex w-full flex-col items-center justify-center">
           {TimelineItems.map((item, index) => (
             <div
               key={index}
-              className={`${activeIndex === index ? 'border-l-textGreen text-textGreen' : 'border-l-hoverColor text-textDark'} border-l-2 bg-transparent hover:bg-[#cdd1ce] py-3 text-sm  cursor-pointer duration-300 px-8 font-medium`}
+              className={`${activeIndex === index 
+                ? "border-l-textGreen text-textGreen bg-backdrop-blur-sm bg-white/30 text-white after:bg-slate-400 after:w-5 after:h-5 z-10 after:inline-block after:absolute after:-bottom-2 after:rotate-45"
+                : "border-l-hoverColor text-textDark"
+              } border-l-2 bg-transparent hover:bg-green-700 py-3 text-xl cursor-pointer duration-300 px-8 font-bold`}
             >
               <h1
-                className={`col-start-1 row-start-2 mt-4 max-w-[36rem] cursor-pointer text-4xl font-extrabold tracking-tight text-slate-900 sm:text-2xl xl:max-w-[43.5rem] ${
+                className={`col-start-1 row-start-2 max-w-[36rem] cursor-pointer text-4xl font-extrabold tracking-tight text-lime-950 sm:text-2xl xl:max-w-[43.5rem] ${
                   activeIndex === index ? 'text-black' : 'text-gray-400'
                 }`}
                 onClick={() => setActiveIndex(index)}
@@ -68,9 +87,12 @@ const Service: React.FC = () => {
               </motion.div>
             </div>
           ))}
-          <button className="hover:opacity-2 mt-4 rounded-full border-r-gray-600 bg-green-400 px-4 py-2 text-sm text-slate-50 transition-all hover:text-base">
-            Saiba Mais
-          </button>
+          <div className="py-8">
+            <Button className="w-max shadow-button" onClick= {handleContact}>
+                            Orçamento
+                <HiArrowNarrowRight size={18} />
+            </Button>
+          </div>
         </div>
       </div>
       <div className="w-1/2">
@@ -81,7 +103,7 @@ const Service: React.FC = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, ease: 'easeInOut' }}
           >
-            <Image
+            <NextImage
               src={TimelineItems[activeIndex].image}
               alt="Image"
               className="rounded-lg"
@@ -90,6 +112,7 @@ const Service: React.FC = () => {
         </AnimatePresence>
       </div>
     </main>
+    </Container>
   );
 };
 

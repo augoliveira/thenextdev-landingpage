@@ -1,4 +1,4 @@
-import Image from "next/image";
+import NextImage from "../ui/NextImage";
 import Link from "next/link";
 import React from "react";
 
@@ -24,7 +24,7 @@ function Card({
   return (
     <div className="flex flex-col">
       <div className="mb-4">
-        <Image src={image} alt="fetaure image" />
+        <NextImage src={image} alt="fetaure image" />
       </div>
       <p className="text-[2.25rem] font-[700] text-lightGray text-center">
         {title}

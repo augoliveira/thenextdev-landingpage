@@ -8,7 +8,6 @@ import ProjectsSection from "../components/ProjectsSection/ProjectsSection";
 import SecondFeatureSection from "../components/sections/SecondFeatureSection";
 import Categoria from '../components/Slider/Categoria';
 import FifthSection from "../components/ui/fifth-section";
-import Experience from "@/components/Experience";
 import AboutSection from './_components/about-section';
 import Archive from "./_components/Archive";
 import DemoSlider from "./_components/DemoSlider";
@@ -20,6 +19,7 @@ import { CardContact } from './../components/CardContact/index';
 import Projects from "@/components/ui/Projects";
 import Banner from "./../components/ui/Banner";
 import PickServices from "./../components/ui/services/PickServices";
+import Service from './../components/service';
 
 export default function Home() {
   return (
@@ -30,8 +30,8 @@ export default function Home() {
         <Projects />
         <IntroSection />
         <AboutSection />
-          <div className="w-full h-full p-4 bg-teal-900">
-            <Experience />
+          <div className="w-full h-full p-4 bg-slate-400">
+            <Service />
           </div>
         <Portifolio />
         <SecondFeatureSection />

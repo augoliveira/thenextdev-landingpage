@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import NextImage from "../ui/NextImage";
 import { useEffect, useState } from "react";
 
 import { images } from "./constants";
@@ -43,7 +43,7 @@ const SliderProduto = () => {
                 : "hidden"
             }`}
           >
-            <Image
+            <NextImage
               src={elem.src}
               alt=""
               width={400}

@@ -1,5 +1,5 @@
 import React from "react";
-import Image from 'next/image'
+import NextImage from '../ui/NextImage'
 import { CodeBracketIcon, EyeIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 
@@ -17,7 +17,7 @@ const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }: Props) 
       <div className="h-52 md:h-72 rounded-t-xl relative overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30 group"
       >
         <div style={{ display: 'flex', flexDirection: 'column' }}>
-      <Image
+      <NextImage
         alt="Mountains"
         // Importing an image will
         // automatically set the width and height

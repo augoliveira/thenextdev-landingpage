@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 import { AiOutlineClose } from "react-icons/ai";
 import { CgMenuRight } from "react-icons/cg";
 
-import Link from "next/link";
+import NextLink from "./NextLink";
 import { reactBdLogo } from "@/assets";
 import SideNav from "./SideNav";
-import Image from "next/image";
+import NextImage from "../ui/NextImage";
 import { usePathname } from "next/navigation";
 import { MdClose } from "react-icons/md";
 
@@ -54,22 +54,22 @@ const Header = () => {
         <div className="w-full h-[90px]">
           <header className="max-w-screen-2xl mx-auto text-white flex items-center justify-between h-full overflow-hidden">
             {/* ================= Header logo start here ================= */}
-            <Link href="/">
+            <NextLink href="/">
               <div>
-                <Image
+                <NextImage
                   priority
                   className="w-36"
                   src={reactBdLogo}
                   alt="reactBdLogo"
                 />
               </div>
-            </Link>
+            </NextLink>
             {/* ================= Header logo end here =================== */}
             {/* ================= Header Nav Link start here =================== */}
             <div className="relative">
               <div className="hidden lgl:flex items-center gap-6 xl:gap-12 uppercase text-4xl tracking-tight text-[14px] font-semibold">
                 {navigation?.map((item) => (
-                  <Link
+                  <NextLink
                     key={item?.title}
                     href={item?.link}
                     className="relative px-3 group hover:cursor-pointer overflow-hidden py-1"
@@ -85,7 +85,7 @@ const Header = () => {
                         item?.link === pathname && "bg-secondaryColor"
                       }`}
                     ></span>
-                  </Link>
+                  </NextLink>
                 ))}
               </div>
               {/* ================== Header Small Icon start here ================== */}
@@ -149,42 +149,42 @@ const Header = () => {
           className="w-full py-6 px-4 top-0 mt-20 z-50 bg-black fixed inline-block lgl:hidden text-white/80"
         >
           <ul className="w-full flex flex-col gap-2 font-titleFont uppercase text-sm">
-            <Link href="/">
+            <NextLink href="/">
               <li
                 onClick={() => setToggleNav(false)}
                 className=" w-full px-3 hover:cursor-pointer py-1 border-b-[1px] border-b-borderColor hover:text-secondaryColor hover:border-b-secondaryColor transition-hover duration-500"
               >
                 Home
               </li>
-            </Link>
-            <Link href="/about">
+            </NextLink>
+            <NextLink href="/about">
               <li
                 onClick={() => setToggleNav(false)}
                 className="px-3 hover:cursor-pointer py-2 border-b-[1px] border-b-borderColor hover:text-secondaryColor hover:border-b-secondaryColor transition-hover duration-500"
               >
                 About Us
               </li>
-            </Link>
-            <Link onClick={() => setToggleNav(false)} href="/services">
+            </NextLink>
+            <NextLink onClick={() => setToggleNav(false)} href="/services">
               <li className="px-3 hover:cursor-pointer flex items-center gap-1 py-2 border-b-[1px] border-b-borderColor hover:text-secondaryColor hover:border-b-secondaryColor transition-hover duration-500">
                 Services
               </li>
-            </Link>
-            <Link href="/faq">
+            </NextLink>
+            <NextLink href="/faq">
               <li className="px-3 hover:cursor-pointer py-2 border-b-[1px] border-b-borderColor hover:text-secondaryColor hover:border-b-secondaryColor transition-hover duration-500">
                 FAQ
               </li>
-            </Link>
-            <Link href="/blog">
+            </NextLink>
+            <NextLink href="/blog">
               <li className="px-3 hover:cursor-pointer py-2 border-b-[1px] border-b-borderColor hover:text-secondaryColor hover:border-b-secondaryColor transition-hover duration-500">
                 Blog
               </li>
-            </Link>
-            <Link onClick={() => setToggleNav(false)} href="/contact">
+            </NextLink>
+            <NextLink onClick={() => setToggleNav(false)} href="/contact">
               <li className="px-3 hover:cursor-pointer py-2 border-b-[1px] border-b-borderColor hover:text-secondaryColor hover:border-b-secondaryColor transition-hover duration-500">
                 Contact
               </li>
-            </Link>
+            </NextLink>
           </ul>
         </motion.div>
       )}

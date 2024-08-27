@@ -2,62 +2,62 @@
 import { useState } from "react";
 import { AnimatedText } from './AnimatedText-page';
 import Amazon from "./works/Amazon";
-import Apple from "./works/Apple";
-import Google from "./works/Google";
+import Espelho from "./works/Espelho";
+import Cobertura from "./works/Cobertura";
 import Box from "./works/Box";
 import Splash from "./works/Splash";
 
 const Experience = () => {
   const [workBox, setWorkBox] = useState(true);
-  const [workGoogle, setWorkGoogle] = useState(false);
-  const [workApple, setWorkApple] = useState(false);
+  const [workCobertura, setWorkCobertura] = useState(false);
+  const [workEspelho, setWorkEspelho] = useState(false);
   const [workSplash, setWorkSplash] = useState(false);
   const [workAmazon, setWorkAmazon] = useState(false);
 
   const handleBox = () => {
     setWorkBox(true);
-    setWorkGoogle(false);
-    setWorkApple(false);
+    setWorkCobertura(false);
+    setWorkEspelho(false);
     setWorkSplash(false);
     setWorkAmazon(false);
   };
 
-  const handleGoogle = () => {
+  const handleCobertura = () => {
     setWorkBox(false);
-    setWorkGoogle(true);
-    setWorkApple(false);
+    setWorkCobertura(true);
+    setWorkEspelho(false);
     setWorkSplash(false);
     setWorkAmazon(false);
   };
 
-  const handleApple = () => {
+  const handleEspelho = () => {
     setWorkBox(false);
-    setWorkGoogle(false);
-    setWorkApple(true);
+    setWorkCobertura(false);
+    setWorkEspelho(true);
     setWorkSplash(false);
     setWorkAmazon(false);
   };
   const handleSplash = () => {
     setWorkBox(false);
-    setWorkGoogle(false);
-    setWorkApple(false);
+    setWorkCobertura(false);
+    setWorkEspelho(false);
     setWorkSplash(true);
     setWorkAmazon(false);
   };
   const handleAmazon = () => {
     setWorkBox(false);
-    setWorkGoogle(false);
-    setWorkApple(false);
+    setWorkCobertura(false);
+    setWorkEspelho(false);
     setWorkSplash(false);
     setWorkAmazon(true);
   };
   return (
     <section
       id="experience"
-      className="mx-auto max-w-max py-32 sm:py-48 lg:py-56 flex w-full flex-col gap-20 md:px-14 md:py-40 lg:flex-row"
+      className="mx-auto max-w-max py-8 sm:py-8 lg:py-24 gap-20 md:px-8 md:py-8 lg:flex-row"
     >
-      <div className="max-w-2xl py-12 flex items-center justify-center gap-x-6 lg:justify-center">
-      <AnimatedText text='VIDROS' />
+      <div className="max-w-7xl py-12 gap-x-6 lg:justify-center">
+      <AnimatedText text='Ligue e peça uma visita: vamos até você' />
       </div>
       <div className="w-full mt-10 flex flex-col md:flex-row gap-8">
         <ul className="md:w-96 flex flex-col">
@@ -72,9 +72,9 @@ const Experience = () => {
             Box de Banheiro
           </li>
           <li
-            onClick={handleGoogle}
+            onClick={handleCobertura}
             className={`${
-              workGoogle
+              workCobertura
                 ? "border-l-textGreen text-textGreen bg-gradient-to-r from-bodyColor to-[#66a900] text-white after:bg-lime-800 after:w-5 after:h-5 z-10 after:inline-block after:absolute after:-bottom-2 after:rotate-45"
                 : "border-l-hoverColor text-textDark"
             } border-l-2 bg-transparent hover:bg-[#112240] py-3 text-xl cursor-pointer duration-300 px-8 font-bold`}
@@ -82,9 +82,9 @@ const Experience = () => {
             Cobertura de Vidro
           </li>
           <li
-            onClick={handleApple}
+            onClick={handleEspelho}
             className={`${
-              workApple
+              workEspelho
                 ? "border-l-textGreen text-textGreen bg-gradient-to-r from-bodyColor to-[#66a900] text-white after:bg-lime-800 after:w-5 after:h-5 z-10 after:inline-block after:absolute after:-bottom-2 after:rotate-45"
                 : "border-l-hoverColor text-textDark"
                 
@@ -114,8 +114,8 @@ const Experience = () => {
           </li>
         </ul>
         {workBox && <Box />}
-        {workGoogle && <Google />}
-        {workApple && <Apple />}
+        {workCobertura && <Cobertura />}
+        {workEspelho && <Espelho />}
         {workSplash && <Splash />}
         {workAmazon && <Amazon />}
       </div>

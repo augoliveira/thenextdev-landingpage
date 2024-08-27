@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import Link from 'next/link';
+import NextLink from './NextLink';
 
 export const TabNavItem = ({
   children,
@@ -11,7 +11,7 @@ export const TabNavItem = ({
   isActive?: boolean;
 }) => {
   return (
-    <Link
+    <NextLink
       href={href}
       className={clsx('rounded-lg px-3 py-1 text-sm font-medium', {
         'bg-gray-700 text-gray-100 hover:bg-gray-500 hover:text-white':
@@ -20,6 +20,6 @@ export const TabNavItem = ({
       })}
     >
       {children}
-    </Link>
+    </NextLink>
   );
 };

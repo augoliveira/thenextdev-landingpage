@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { GiCheckMark } from "react-icons/gi";
 import { projectTwoImg } from "@/assets";
-import Image from "next/image";
+import NextImage from "../NextImage";
 
 const Design = () => {
   return (
@@ -20,7 +20,7 @@ const Design = () => {
         }}
         className="hidden lgl:inline-flex w-2/5"
       >
-        <Image src={projectTwoImg} alt="projectTwoImg" />
+        <NextImage src={projectTwoImg} alt="projectTwoImg" />
       </motion.div>
       <div className="w-full lgl:w-3/5">
         <div className="flex flex-col gap-4">

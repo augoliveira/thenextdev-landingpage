@@ -1,7 +1,7 @@
 'use client';
 
 import React from "react";
-import Image from "next/image";
+import NextImage from "../ui/NextImage";
 import { motion } from "framer-motion";
 
 type Props = {
@@ -29,7 +29,7 @@ function SliderCard({ data }: Props) {
       }}
     >
       <motion.div>
-        <Image
+        <NextImage
         alt="Transition Image"
         src={data.img}
         placeholder='blur'
