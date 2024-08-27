@@ -1,7 +1,7 @@
 /* eslint-disable import-helpers/order-imports */
 'use client';
 
-import NextImage from '../components/ui/NextImage';
+import Image from 'next/image';
 import { Button } from '../components/button/index'
 import React, { useState, useEffect } from 'react'
 import { HiArrowNarrowRight } from 'react-icons/hi'
@@ -103,9 +103,12 @@ const Service: React.FC = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, ease: 'easeInOut' }}
           >
-            <NextImage
+            <Image
               src={TimelineItems[activeIndex].image}
               alt="Image"
+              width={1080}
+              height={672}
+              unoptimized
               className="rounded-lg"
             />
           </motion.div>

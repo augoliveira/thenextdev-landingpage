@@ -3,7 +3,7 @@ import { data } from "@/lib/_data";
 import React, { Suspense } from 'react';
 import dynamic from 'next/dynamic';   
   
-import Portifolio from '../components/Portifolio/Projects';
+import Portifolio from '../components/works/CardBox';
 import ProjectsSection from "../components/ProjectsSection/ProjectsSection";
 import SecondFeatureSection from "../components/sections/SecondFeatureSection";
 import Categoria from '../components/Slider/Categoria';

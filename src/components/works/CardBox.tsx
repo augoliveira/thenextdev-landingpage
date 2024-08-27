@@ -15,6 +15,54 @@ export default function CardBox() {
       description:
         "Conheça o Box Articulado e descubra novas oportunidades de aproveitamento do espaço do seu banheiro com design prático, moderno e flexível.",
     },
+    {
+      imageUrl: "/box-articulado.jpg",
+      title: "TELHADO DE VIDRO",
+      description:
+        "Conheça o Box Articulado e descubra novas oportunidades de aproveitamento do espaço do seu banheiro com design prático, moderno e flexível.",
+    },
+    {
+      imageUrl: "/box-articulado.jpg",
+      title: "TELHADO DE VIDRO",
+      description:
+        "Conheça o Box Articulado e descubra novas oportunidades de aproveitamento do espaço do seu banheiro com design prático, moderno e flexível.",
+    },
+    {
+      imageUrl: "/box-articulado.jpg",
+      title: "TELHADO DE VIDRO",
+      description:
+        "Conheça o Box Articulado e descubra novas oportunidades de aproveitamento do espaço do seu banheiro com design prático, moderno e flexível.",
+    },
+    {
+      imageUrl: "/box-articulado.jpg",
+      title: "TELHADO DE VIDRO",
+      description:
+        "Conheça o Box Articulado e descubra novas oportunidades de aproveitamento do espaço do seu banheiro com design prático, moderno e flexível.",
+    },
+    {
+      imageUrl: "/box-articulado.jpg",
+      title: "TELHADO DE VIDRO",
+      description:
+        "Conheça o Box Articulado e descubra novas oportunidades de aproveitamento do espaço do seu banheiro com design prático, moderno e flexível.",
+    },
+    {
+      imageUrl: "/box-articulado.jpg",
+      title: "TELHADO DE VIDRO",
+      description:
+        "Conheça o Box Articulado e descubra novas oportunidades de aproveitamento do espaço do seu banheiro com design prático, moderno e flexível.",
+    },
+    {
+      imageUrl: "/box-articulado.jpg",
+      title: "TELHADO DE VIDRO",
+      description:
+        "Conheça o Box Articulado e descubra novas oportunidades de aproveitamento do espaço do seu banheiro com design prático, moderno e flexível.",
+    },
+    {
+      imageUrl: "/box-articulado.jpg",
+      title: "TELHADO DE VIDRO",
+      description:
+        "Conheça o Box Articulado e descubra novas oportunidades de aproveitamento do espaço do seu banheiro com design prático, moderno e flexível.",
+    },
   ];
 
   const { ref, inView } = useInView({ threshold: 0.5, triggerOnce: false });
@@ -22,7 +70,7 @@ export default function CardBox() {
 
   return (
     <section ref={ref} className="md:mt-[2rem]">
-      <div className="max-w-container z-40 py-16 px-4 sm:mt-4 sm:px-6 lg:px-8 xl:-mt-32 grid grid-cols-1 sm:grid-cols-[repeat(auto-fit,min-max(350px,1fr))] gap-x-4 gap-y-6">
+      <div className="grid grid-cols-1 gap-6 py-16 md:grid-cols-2 xl:grid-cols-3 xl:gap-14">
         {data.map((service, index) => (
           <motion.div
             key={index}

@@ -16,9 +16,9 @@ const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }: Props) 
     <div>
       <div className="h-52 md:h-72 rounded-t-xl relative overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30 group"
       >
-        <div style={{ display: 'flex', flexDirection: 'column' }}>
+<div className="w-full h-56 overflow-hidden">
       <Image
-        alt="Mountains"
+        alt="Projetos"
         // Importing an image will
         // automatically set the width and height
         src={imgUrl}

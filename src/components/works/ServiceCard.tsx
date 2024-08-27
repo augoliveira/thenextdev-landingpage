@@ -16,7 +16,7 @@ function ServiceCard({ imageUrl, title, description }: IProps) {
     const [hovered1, setHovered1] = useState<boolean>(false)
   return (
     
-    <div className="rounded-lg h-[436px] flex flex-col bg-gradient-to-r from-bodyColor to-[#66a900] overflow-hidden group transition-all border-2 border-gray-800 hover:border-emerald-500 opacity-70 hover:opacity-100">
+    <div className="shadow-shadowOne group flex h-auto w-full cursor-pointer flex-col rounded-lg bg-gradient-to-r from-bodyColor to-[#66a900] p-4 transition-transform duration-200 ease-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-900 xl:px-12 xl:py-10">
       <div className="w-full h-56 overflow-hidden">
         <NextImage
         src={imageUrl} 
@@ -31,11 +31,11 @@ function ServiceCard({ imageUrl, title, description }: IProps) {
         initial={{ y: 10, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.7 }}
-        className="px-4 text-4xl lgl:text-6xl mt-6 font-titleFont font-semibold flex flex-col"
+        className="px-4 text-4xl lgl:text-4xl mt-6 font-titleFont font-semibold flex flex-col"
       >
         {title}
       </motion.h1>
-      <p className="px-4 text-lightBlue text-[16px] font-normal my-[24px] md:max-w-[420px]">
+      <p className="px-4 text-lightBlue text-[16px] py-4 font-normal my-[24px] md:max-w-[420px]">
         {description}
       </p>
 

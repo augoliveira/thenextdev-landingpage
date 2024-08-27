@@ -19,43 +19,46 @@ const Archive = () => {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 mt-10 lgl:px-10">
         <ArchiveCard
-          title="Box para banheiro de canto"
+          title="Box para banheiro"
+          img="/ProdutoBoxFlex.jpg"
           des=" O box de vidro para banheiro é o tipo de envidraçamento mais realizado pelo Brasil."
           listItem={["Box reto", "Box de canto", "Box com porta de abrir"]}
           link="/box-para-banheiro"
         />
         <ArchiveCard
           title="Portas e janelas"
+          img="/ProdutoJanela.jpg"
           des=" Fabricação e instalação de portas de vidro elegantes e funcionais para residências e estabelecimentos comerciais."
-          listItem={["Reactjs", "Tailwind CSS", "getform.io"]}
+          listItem={["Porta de abrir", "Porta de correr", "Porta de vidro light holder"]}
           link="/portas-e-janelas"
         />
         <ArchiveCard
-          title="ReactBD web development company"
+          title="Coberturas de vidro"
+          img="/ProdutoTeto.jpg"
           des=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
             laudantium velit qui sint non, voluptates quo a veritatis."
-          listItem={["Reactjs", "Tailwind CSS", "getform.io"]}
+          listItem={["Economia de energia", "Proteção", "Pouca manutenção"]}
           link="https://reactbd.com/"
         />
         <ArchiveCard
-          title="Amazon Clone with login, cart-option and payment intrigation."
-          des=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
-            laudantium velit qui sint non, voluptates quo a veritatis."
-          listItem={["Reactjs", "Tailwind CSS", "getform.io"]}
+          title="Esquadrias em alumínio."
+          img="/ProdutoEsquadrias.jpg"
+          des=" Na Glazing Design, oferecemos esquadrias em alumínio de alta qualidade para complementar e valorizar seus projetos arquitetônicos."
+          listItem={["Portas", "Janelas", "Divissorias"]}
           link="https://amazonclone.reactbd.com/"
         />
         <ArchiveCard
-          title="JSON data (example data api for test projects)"
-          des=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
-              laudantium velit qui sint non, voluptates quo a veritatis."
-          listItem={["Nextjs", "Tailwind CSS", "next-router"]}
+          title="Guarda Corpo de vidro"
+          img="/ProdutoGuarda-corpo.jpg"
+          des=" Oferecemos soluções de guarda-corpo em vidro que unem segurança, elegância e funcionalidade."
+          listItem={["vidro resinado", "vidro laminado", "vidro temperado"]}
           link="https://jsondata.reactbd.com/"
         />
         <ArchiveCard
-          title="Dynamic Responsive Portfolio"
-          des=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
-            laudantium velit qui sint non, voluptates quo a veritatis."
-          listItem={["Reactjs", "Tailwind CSS", "getform.io"]}
+          title="Fachada Pele de Vidro"
+          img="/ProdutoPele.jpg"
+          des=" Somos especialistas em projetos de fachadas com pele de vidro, oferecendo soluções modernas e elegantes para edifícios comerciais, residenciais e industriais. Nossa equipe altamente qualificada trabalha em estreita colaboração com arquitetos e clientes para projetar e instalar sistemas de fachada que combinam beleza arquitetônica com desempenho excepcional."
+          listItem={["Stick ou Grid", "Unitizado", "Híbrido"]}
           link="https://portfolioone.reactbd.com/"
         />
 
