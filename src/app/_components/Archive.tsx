@@ -71,6 +71,7 @@ const Archive = () => {
             >
               <ArchiveCard
                 title="OREBI e-commerce Shopping store"
+                img="/ProdutoPele.jpg"
                 des=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
             laudantium velit qui sint non, voluptates quo a veritatis."
                 listItem={["Reactjs", "Tailwind CSS", "getform.io"]}
@@ -84,6 +85,7 @@ const Archive = () => {
             >
               <ArchiveCard
                 title="Noor Online Shopping Store"
+                img="/ProdutoPele.jpg"
                 des=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
             laudantium velit qui sint non, voluptates quo a veritatis."
                 listItem={["Reactjs", "Tailwind CSS", "redux-toolkit"]}
@@ -97,6 +99,7 @@ const Archive = () => {
             >
               <ArchiveCard
                 title="Personalized Blog"
+                img="/ProdutoPele.jpg"
                 des=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
             laudantium velit qui sint non, voluptates quo a veritatis."
                 listItem={["Nextjs", "Tailwind CSS", "next-auth", "firebase"]}
@@ -110,6 +113,7 @@ const Archive = () => {
             >
               <ArchiveCard
                 title="Shoppers Online Shopping Market"
+                img="/ProdutoPele.jpg"
                 des=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
             laudantium velit qui sint non, voluptates quo a veritatis."
                 listItem={["Nextjs", "react-slick", "redux-toolkit"]}
@@ -123,6 +127,7 @@ const Archive = () => {
             >
               <ArchiveCard
                 title="Single Page Personalized Portfolio"
+                img="/ProdutoPele.jpg"
                 des=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
             laudantium velit qui sint non, voluptates quo a veritatis."
                 listItem={["Reactjs", "Tailwind CSS", "vercel deploy"]}
@@ -136,6 +141,7 @@ const Archive = () => {
             >
               <ArchiveCard
                 title="Nextjs Dynamic Portfolio"
+                img="/ProdutoPele.jpg"
                 des=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
             laudantium velit qui sint non, voluptates quo a veritatis."
                 listItem={["Reactjs", "Tailwind CSS", "vercel deploy"]}
@@ -149,6 +155,7 @@ const Archive = () => {
             >
               <ArchiveCard
                 title="Bazaar - A Modern Shopping app"
+                img="/ProdutoPele.jpg"
                 des=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
             laudantium velit qui sint non, voluptates quo a veritatis."
                 listItem={["Reactjs", "Tailwind CSS", "vercel deploy"]}
@@ -162,6 +169,7 @@ const Archive = () => {
             >
               <ArchiveCard
                 title="Blog101 Application"
+                img="/ProdutoPele.jpg"
                 des=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
             laudantium velit qui sint non, voluptates quo a veritatis."
                 listItem={["Nextjs", "Tailwind CSS", "next-auth"]}
@@ -175,6 +183,7 @@ const Archive = () => {
             >
               <ArchiveCard
                 title="Todo application"
+                img="/ProdutoPele.jpg"
                 des=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
             laudantium velit qui sint non, voluptates quo a veritatis."
                 listItem={["Reactjs", "Tailwind CSS", "vercel deploy"]}
