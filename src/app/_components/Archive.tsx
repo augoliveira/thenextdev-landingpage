@@ -45,7 +45,7 @@ const Archive = () => {
           img="/ProdutoEsquadrias.jpg"
           des=" Na Glazing Design, oferecemos esquadrias em alumínio de alta qualidade para complementar e valorizar seus projetos arquitetônicos."
           listItem={["Portas", "Janelas", "Divissorias"]}
-          link="https://amazonclone.reactbd.com/"
+          link="/esquadria"
         />
         <ArchiveCard
           title="Guarda Corpo de vidro"

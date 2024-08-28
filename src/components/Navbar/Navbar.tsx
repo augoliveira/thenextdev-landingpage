@@ -119,29 +119,25 @@ const Navbar = (props: Props) => {
                             <SolutionNav/>
                             
                             <li id='myLi'  onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} >
-            <button onClick={handleOnclick} type='button' className={`flex items-center p-1 transition ease-in duration-150 max-lg:justify-between max-lg:font-semibold max-lg:w-full ${show ? "lg:text-neutral-300": ""}`}>
-            <Link
-              href="/contato"
-            >
-                Contato
-            </Link>
-            </button>
-        </li>
+                            <button onClick={handleOnclick} type='button' className={`flex items-center p-1 transition ease-in duration-150 max-lg:justify-between max-lg:font-semibold max-lg:w-full ${show ? "lg:text-neutral-300": ""}`}>
+                            <Link href="/contato">Contato</Link>
+                            </button>
+                          </li>
                             <li><ModeToggle /></li>
                         </ul>
                     </nav>
                     <div className='lg:flex items-center max-lg:flex-col lg:px-0 px-3 mb-3 lg:mb-0 text-left lg:space-x-4'>
                         <div className='lg:flex mb-2 lg:mb-0 relative max-lg:mr-4'>
-                        <Link href="https://github.com/noorjsdivs" target="_blank">
-        <motion.button
-          initial={{ y: 10, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.9 }}
-          className="w-52 h-14 text-sm font-titleFont border border-textGreen rounded-md text-textGreen tracking-wide hover:bg-hoverColor duration-300"
-        >
-          (61) 9 8669-2775
-        </motion.button>
-      </Link>
+                            <Link href="https://github.com/noorjsdivs" target="_blank">
+                              <motion.button
+                                initial={{ y: 10, opacity: 0 }}
+                                animate={{ y: 0, opacity: 1 }}
+                                transition={{ duration: 0.5, delay: 0.9 }}
+                                className="w-52 h-14 text-sm font-titleFont border border-textGreen rounded-md text-textGreen tracking-wide hover:bg-hoverColor duration-300"
+                              >
+                                (61) 9 8669-2775
+                              </motion.button>
+                            </Link>
                         </div>
                         <Button className="w-max shadow-button" onClick= {handleContact}>
                             Orçamento

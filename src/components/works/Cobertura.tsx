@@ -1,3 +1,5 @@
+'use client'
+
 import { TiArrowForward } from "react-icons/ti";
 import { motion } from "framer-motion";
 import NextImage from "../ui/NextImage";

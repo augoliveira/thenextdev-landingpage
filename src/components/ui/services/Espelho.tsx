@@ -54,7 +54,7 @@ const Espelho = () => {
             //   ease: "easeIn",
             //   duration: 1,
             // }}
-            className="text-2xl font-medium tracking-tight"
+            className="col-start-1 row-start-2 mt-4 max-w-[36rem] text-4xl font-extrabold tracking-tight text-slate-400 sm:text-5xl xl:max-w-[43.5rem]"
           >
             ESPELHOS<span className="text-lime-600 ml-3">PARA BANHEIRO</span>
           </h3>

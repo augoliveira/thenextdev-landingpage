@@ -1,7 +1,9 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/no-require-imports */
 /* eslint-disable import-helpers/order-imports */
 /* eslint-disable no-dupe-keys */
 const { fontFamily } = require("tailwindcss/defaultTheme");
+const withMT = require("@material-tailwind/react/utils/withMT");
 
 import colors from "tailwindcss/colors";
 
@@ -39,7 +41,7 @@ module.exports = {
         "hero-image": "url('/grid.svg')",
         "hero-card": "url('/bg-box.png')",
         "hero-page": "url('/bg-vidracaria-2.jpg')",
-        "contato-page": "url('/Bg-contato.jpg')",
+        "contato-page": "url('/bg-esquadria.jpg')",
         bgOne: "url('/assets/bg-home1.webp')",
         bgTwo: "url('/assets/bgTwo.webp')",
         bgThree: "url('/assets/bgThree.webp')",
