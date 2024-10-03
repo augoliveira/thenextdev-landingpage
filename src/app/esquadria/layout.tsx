@@ -1,4 +1,4 @@
-const title = 'Snippets';
+const title = 'ESQUADRIA DE ALUMÍNIO';
 
 export const metadata = {
   title,

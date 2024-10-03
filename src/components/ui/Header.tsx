@@ -17,7 +17,7 @@ const navigation = [
   { title: "Serviços", link: "/serviços" },
   { title: "Faq", link: "/faq" },
   { title: "Blog", link: "/blog" },
-  { title: "Contact", link: "/contact" },
+  { title: "Contato", link: "/contato" },
 ];
 
 const Header = () => {
@@ -89,7 +89,7 @@ const Header = () => {
                 ))}
               </div>
               {/* ================== Header Small Icon start here ================== */}
-
+              
               <div
                 onCanPlay={() => setToggleNav(!toggleNav)}
                 className="relative text-2xl w-11 h-11 lgl:hidden flex flex-col gap-[6px] border-b-[1px] border-b-secondaryColor border-t-[1px] text-white border-t-secondaryColor items-center justify-center group hover:cursor-pointer overflow-hidden"

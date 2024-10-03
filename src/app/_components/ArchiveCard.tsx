@@ -13,7 +13,7 @@ interface Props {
 
 const ArchiveCard = ({ title, img, des, listItem, link }: Props) => {
   return (
-    <Link href={link} target="_blank">
+    <Link href={link}>
       <div className="w-full overflow-hidden relative h-80 rounded-lg shadow-shadowOne group flex cursor-pointer hover:shadow-xl hover:shadow-black/30 flex-col bg-gradient-to-r from-bodyColor to-[#125a0c] p-4 transition-transform duration-200 ease-out hover:scale-105 hover:bg-gradient-to-b hover:from-gray-900 xl:px-12 xl:py-10 justify-center gap-6 hover:-translate-y-2 group">
         <Image 
         src={img}

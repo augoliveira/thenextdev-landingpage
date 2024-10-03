@@ -36,7 +36,7 @@ const ContactForm = ({ setSuccessMessage }: any) => {
   return (
     <>
       <div className="flex justify-between gap-1">
-        <h4 className="text-secondaryColor text-lg mdl:text-xl mb-2">
+        <h4 className="text-sky-400 text-lg mdl:text-xl mb-2">
           Preencha o Formulários
         </h4>
       </div>
@@ -44,7 +44,7 @@ const ContactForm = ({ setSuccessMessage }: any) => {
         <input
           onChange={(e) => setUsername(e.target.value)}
           value={username}
-          className="w-full outline-none rounded-sm px-4 pt-5 pb-2 placeholder:text-sm bg-transparent border-b-[1px] border-b-borderColor focus:border-b-secondaryColor placeholder:translate-y-0 focus:placeholder:-translate-y-5 placeholder:transition-transform duration-500 placeholder:uppercase"
+          className="w-full outline-none rounded-sm px-4 pt-5 pb-2 placeholder:text-sm bg-transparent border-b-[1px] border-b-borderColor focus:border-b-lime-600 placeholder:translate-y-0 focus:placeholder:-translate-y-5 placeholder:transition-transform duration-500 placeholder:uppercase"
           type="text"
           placeholder="Qual seu Nome"
         />
@@ -52,7 +52,7 @@ const ContactForm = ({ setSuccessMessage }: any) => {
         <input
           onChange={(e) => setEmail(e.target.value)}
           value={email}
-          className="w-full outline-none rounded-sm px-4 pt-5 pb-2 placeholder:text-sm bg-transparent border-b-[1px] border-b-borderColor focus:border-b-secondaryColor placeholder:translate-y-0 focus:placeholder:-translate-y-5 placeholder:transition-transform duration-500 placeholder:uppercase"
+          className="w-full outline-none rounded-sm px-4 pt-5 pb-2 placeholder:text-sm bg-transparent border-b-[1px] border-b-borderColor focus:border-b-lime-600 placeholder:translate-y-0 focus:placeholder:-translate-y-5 placeholder:transition-transform duration-500 placeholder:uppercase"
           type="email"
           placeholder="Qual seu E-mail"
         />
@@ -60,7 +60,7 @@ const ContactForm = ({ setSuccessMessage }: any) => {
         <textarea
           onChange={(e) => setMessage(e.target.value)}
           value={message}
-          className="w-full outline-none rounded-sm px-4 pt-5 pb-2 placeholder:text-sm bg-transparent border-b-[1px] border-b-borderColor focus:border-b-secondaryColor placeholder:translate-y-0 focus:placeholder:-translate-y-5 placeholder:transition-transform duration-500 resize-none placeholder:uppercase"
+          className="w-full outline-none rounded-sm px-4 pt-5 pb-2 placeholder:text-sm bg-transparent border-b-[1px] border-b-borderColor focus:border-b-lime-600 placeholder:translate-y-0 focus:placeholder:-translate-y-5 placeholder:transition-transform duration-500 resize-none placeholder:uppercase"
           id=""
           cols={30}
           rows={5}
@@ -68,19 +68,19 @@ const ContactForm = ({ setSuccessMessage }: any) => {
         />
       </div>
       {errMessage && (
-        <h4 className="text-red-500 text-base text-center mt-10 py-1 rounded-sm bg-white px-4 font-semibold">
+        <h4 className="text-lime-600 text-base text-center mt-10 py-1 rounded-sm bg-white px-4 font-semibold">
           {errMessage} !
         </h4>
       )}
       <button
         onClick={handleSendDetails}
-        className="relative w-full text-lg font-semibold uppercase font-titleFont active:bg-secondaryColor tracking-[4px] border p-2 border-gray-800 mt-8 overflow-hidden group"
+        className="relative w-full text-lg font-semibold uppercase font-titleFont active:bg-sky-400 tracking-[4px] border p-2 border-gray-800 mt-8 overflow-hidden group"
       >
         Enviar
-        <span className="absolute w-full h-[1px] bg-secondaryColor left-0 top-0 -translate-x-[100%] group-hover:translate-x-0 transition-transform duration-500"></span>
-        <span className="absolute w-full h-[1px] bg-secondaryColor left-0 bottom-0 translate-x-[100%] group-hover:translate-x-0 transition-transform duration-500"></span>
-        <span className="absolute w-[1px] h-full bg-secondaryColor left-0 bottom-0 translate-y-[100%] group-hover:translate-y-0 transition-transform duration-500"></span>
-        <span className="absolute w-[1px] h-full bg-secondaryColor right-0 bottom-0 -translate-y-[100%] group-hover:translate-y-0 transition-transform duration-500"></span>
+        <span className="absolute w-full h-[1px] bg-sky-400 left-0 top-0 -translate-x-[100%] group-hover:translate-x-0 transition-transform duration-500"></span>
+        <span className="absolute w-full h-[1px] bg-sky-400 left-0 bottom-0 translate-x-[100%] group-hover:translate-x-0 transition-transform duration-500"></span>
+        <span className="absolute w-[1px] h-full bg-sky-400 left-0 bottom-0 translate-y-[100%] group-hover:translate-y-0 transition-transform duration-500"></span>
+        <span className="absolute w-[1px] h-full bg-sky-400 right-0 bottom-0 -translate-y-[100%] group-hover:translate-y-0 transition-transform duration-500"></span>
       </button>
     </>
   );

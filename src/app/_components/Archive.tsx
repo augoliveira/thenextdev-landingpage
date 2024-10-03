@@ -38,7 +38,7 @@ const Archive = () => {
           des=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
             laudantium velit qui sint non, voluptates quo a veritatis."
           listItem={["Economia de energia", "Proteção", "Pouca manutenção"]}
-          link="https://reactbd.com/"
+          link="/cobertura"
         />
         <ArchiveCard
           title="Esquadrias em alumínio."

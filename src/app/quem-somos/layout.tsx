@@ -1,7 +1,7 @@
 import { TabGroup } from '@/components/ui/tab-group';
 import React from 'react';
 
-const title = 'Dynamic Data';
+const title = 'Glazing | Sobre-nós';
 
 export const metadata = {
   title,

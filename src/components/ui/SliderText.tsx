@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import ContactUs from "./ContactUs";
 
+
 const SliderText = ({ title, subtitle, desTitle, des }: any) => {
   return (
     <div className="flex flex-col gap-6 xl:gap-8 h-[560px] justify-center">
@@ -56,7 +57,7 @@ const SliderText = ({ title, subtitle, desTitle, des }: any) => {
           duration: 1,
         }}
       >
-        <Link href="/contact">
+        <Link href="/contato">
           <ContactUs buttonData="Contato" />
         </Link>
       </motion.div>

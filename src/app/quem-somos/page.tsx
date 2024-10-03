@@ -1,6 +1,8 @@
 "use client";
 
 import { ExternalLink } from '@/components/ui/external-link';
+import { NextLink } from 'next/link';
+import NextImage from './../../components/ui/NextImage';
 import Img1 from '../../../public/beach-house.9b9ee168.jpg'
 import Img2 from '../../../public/beach-house-interior-1.f151eb56.jpg'
 import Img3 from '../../../public/beach-house-interior-2.3672af98.jpg'
@@ -11,17 +13,20 @@ import { AnimatePresence, motion } from "framer-motion";
 import { cn } from "@/utils/cn";
 import { DirectionAwareHover } from "@/components/ui/direction-aware-hover";
 import { AnimatedText } from './AnimatedText/index';
+import { PageIntroduction } from './page-introduction';
 
 
 export default function Page() {
   return (  
     <>
+    <PageIntroduction />
   <div className="py-6 px-4 sm:p-6 md:py-10 md:px-8 bg-muted">
   <div className="max-w-4xl mx-auto grid grid-cols-1 lg:max-w-7xl lg:gap-x-20 lg:grid-cols-2">
-    <div className="relative p-3 col-start-1 row-start-1 flex flex-col-reverse z-40 rounded-lg bg-gradient-to-t from-black/75 via-black/0 sm:bg-none sm:row-start-2 sm:p-0 lg:row-start-1">
-    <AnimatedText text='Sobre Nós' />
+  <div className="relative p-3 col-start-1 row-start-1 flex flex-col-reverse rounded-lg bg-gradient-to-t from-black/75 via-black/0 sm:bg-none sm:row-start-2 sm:p-0 lg:row-start-1">
+      <h1 className="mt-1 text-lg font-semibold text-white sm:text-slate-900 md:text-2xl dark:sm:text-white">Beach House in Collingwood</h1>
+      <p className="text-sm leading-4 font-medium text-white sm:text-slate-500 dark:sm:text-slate-400">Entire house</p>
     </div>
-    <div className="grid gap-4 col-start-1 col-end-3 row-start-1 sm:mb-6 sm:grid-cols-4 lg:gap-6 lg:col-start-2 lg:row-end-6 lg:row-span-6 lg:mb-0">
+    <div class="grid gap-4 col-start-1 col-end-3 row-start-1 sm:mb-6 sm:grid-cols-4 lg:gap-6 lg:col-start-2 lg:row-end-6 lg:row-span-6 lg:mb-0">
       <Image 
       src={Img1} 
       alt="" 
@@ -72,7 +77,7 @@ export default function Page() {
     Uma empresa especializada na concepção e instalação de projetos inteligentes e modernos. Hoje em dia são virtualmente impossíveis não olhar ao redor e perceber a importância que o vidro tem em nossas vidas. Nossa missão é ajudar você quando o assunto é este material tão presente e arrojado. Adicione beleza e praticidade aos seus projetos de engenharia ou decoração! Glazing Design está aqui para você! É uma empresa que atua no mercado de vidros desde o ano 2000, atendendo todo DF e  entorno. Com experiência e tradição, a Start Vidros vem se destacando em seu segmento de vidro a sua alta qualidade e competência.
     </p>
   </div>
-</div>
+  </div>
 </>
   );
 }

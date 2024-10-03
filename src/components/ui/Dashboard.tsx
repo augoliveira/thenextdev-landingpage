@@ -121,7 +121,7 @@ export default function Dashboard() {
               <CardHeader className="p-2 pt-0 md:p-4">
                 <CardTitle>Solicitar Reparo</CardTitle>
                 <CardDescription>
-                  Agende uma visita tecnica e previna gastos antes que quebre seu vidro.
+                  Agende uma visita tecnica!
                 </CardDescription>
               </CardHeader>
               <CardContent className="p-2 pt-0 md:p-4 md:pt-0">

@@ -33,7 +33,7 @@ export const PageIntroduction = () => {
         
         <div className="flex w-56 mt-6 rounded-lg backdrop-blur-sm bg-white/30 shadow-xl shadow-black/5 ring-1 ring-slate-700/10">
           <div className="flex items-center space-x-4 px-6 py-2">
-            <NextLink href="#" className="opacity-60 cursor-pointer hover-green">
+            <NextLink href="/" className="opacity-60 cursor-pointer hover-green">
               <HouseLine size={36} weight="fill" className="text-slate-950 py-1" />
             </NextLink>
           </div>

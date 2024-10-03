@@ -20,6 +20,7 @@ import { siteConfig } from '../config';
 import { ThemeProvider } from './_components/theme-provider';
 
 import './globals.css';
+import './style.css';
 import Layout from "./../components/ui/Layout";
 import ScrollBtn from "@/components/ui/ScrollBtn";
 

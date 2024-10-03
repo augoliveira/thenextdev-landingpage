@@ -3,6 +3,8 @@ import Link from 'next/link';
 import { PageIntroduction } from './page-introduction';
 import Projects from "./Projects";
 
+import BgOverview from "../../../public/beach-house-interior-1.f151eb56.jpg"
+
 const items = [
   {
     name: 'Active links',
@@ -28,7 +30,7 @@ export default function Page() {
     <PageIntroduction />
     <div className="space-y-6">
       <Projects />
-      <div className="grid grid-cols-1 gap-5 lg:grid-cols-2">
+      <div className="grid grid-cols-1 gap-5 lg:grid-cols-2 py-28 px-28">
         {items.map((item) => {
           return (
             <Link

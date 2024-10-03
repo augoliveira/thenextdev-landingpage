@@ -15,8 +15,8 @@ const SideNav = () => {
       Box e Vidro com problema? Resolvemos!
         </PageHeaderHeading>
         <p className="text-gray-400">
-      Chame a <span className="p-2 text-bold text-slate-300">Glazing design:</span> 
-      somos a primeira empresa do DF especializada em manutenção e reparo de box e esquadrias de vidro em geral!
+      A <span className="p-2 text-4xl font-extrabold tracking-tight text-slate-400 sm:text-2xl xl:max-w-[43.5rem]">Glazing design:</span> 
+      Especialistas em manutenção e reparo de box e esquadrias de vidro em geral!
       </p>
       <div>
       <Dashboard />
