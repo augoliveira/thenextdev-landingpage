@@ -14,7 +14,7 @@ import { MdClose } from "react-icons/md";
 const navigation = [
   { title: "Home", link: "/" },
   { title: "Quem Somos", link: "/quem-somos" },
-  { title: "Serviços", link: "/serviços" },
+  { title: "Produtos", link: "/produto" },
   { title: "Faq", link: "/faq" },
   { title: "Blog", link: "/blog" },
   { title: "Contato", link: "/contato" },

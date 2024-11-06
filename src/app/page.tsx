@@ -1,8 +1,5 @@
 
 import { data } from "@/lib/_data";
-import React, { Suspense } from 'react';
-import dynamic from 'next/dynamic';   
-  
 import Portifolio from '../components/works/CardBox';
 import ProjectsSection from "../components/ProjectsSection/ProjectsSection";
 import SecondFeatureSection from "../components/sections/SecondFeatureSection";
@@ -22,7 +19,7 @@ import PickServices from "./../components/ui/services/PickServices";
 import Service from './../components/service';
 
 export default function Home() {
-  return (
+      return (
     <>
       <div className='rouded-ms'>
         <Banner />
@@ -33,7 +30,7 @@ export default function Home() {
           <div className="w-full h-full p-4 bg-slate-400">
             <Service />
           </div>
-        <Portifolio />
+        
         <SecondFeatureSection />
         <Categoria />
         <InvestmentSection />

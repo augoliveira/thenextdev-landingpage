@@ -30,13 +30,19 @@ import aboutUsImgTwo from "./pages/aboutUs/aboutUsImgTwo.webp";
 import aboutUsImgThree from "./pages/aboutUs/aboutUsImgThree.webp";
 // ================ Porject Images Start here ====================
 
-import eCommerceProImg from "@/assets/project/eCommercePro.png";
-import movieStudioImg from "@/assets/project/movieStudio.png";
-import cyberBlogImg from "@/assets/project/cyberBlog.webp";
-import amazonCloneImg from "@/assets/project/amazonClone.png";
-import portfolioImg from "@/assets/project/portfolio.png";
-import portfolioImgTwo from "@/assets/project/portfolioTwo.png";
+import eCommerceProImg from "./project/eCommercePro.png";
+import movieStudioImg from "./project/movieStudio.png";
+import cyberBlogImg from "./project/cyberBlog.webp";
+import amazonCloneImg from "./project/amazonClone.png";
+import portfolioImg from "./project/portfolio.png";
+import portfolioImgTwo from "./project/portfolioTwo.png";
 // ================ Porject Images End here ======================
+
+import featureDeal from "./features/featureDeal.webp";
+import featureOne from "./features/featureOne.webp";
+import featureTwo from "./features/featureTwo.jpg";
+import featureThree from "./features/featureThree.webp";
+import featureFour from "./features/featureFour.webp";
 
 export {
   reactBdLogo,
@@ -73,4 +79,9 @@ export {
   amazonCloneImg,
   portfolioImg,
   portfolioImgTwo,
+  featureDeal,
+  featureOne,
+  featureTwo,
+  featureThree,
+  featureFour,
 };

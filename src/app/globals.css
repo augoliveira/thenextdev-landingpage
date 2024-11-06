@@ -184,7 +184,7 @@ body {
 background: linear-gradient(to right, #057f60, #70d6ff, #eab308, #02a4f5, #4cc9f0, #00f5d4, #eab308);
   background-size: 300% 300%;
   background-clip: text;
-};
+}
 
 @keyframes scroll {
   0% {
@@ -201,4 +201,12 @@ background: linear-gradient(to right, #057f60, #70d6ff, #eab308, #02a4f5, #4cc9f
   100% {
     transform: translateX(0px);
   }
+}
+
+.gradient {
+  background: conic-gradient(from 230.29deg at 51.63% 52.16%, rgb(36, 0, 255) 0deg, rgb(0, 135, 255) 67.5deg, rgb(108, 39, 157) 198.75deg, rgb(24, 38, 163) 251.25deg, rgb(54, 103, 196) 301.88deg, rgb(105, 30, 255) 360deg);
+}
+
+.not-found {
+  box-shadow: rgba(150, 18, 226, 0.3) 5px 5px;
 }

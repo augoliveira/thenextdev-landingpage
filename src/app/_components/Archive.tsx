@@ -70,12 +70,11 @@ const Archive = () => {
               transition={{ delay: 0.1 }}
             >
               <ArchiveCard
-                title="OREBI e-commerce Shopping store"
-                img="/ProdutoPele.jpg"
-                des=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
-            laudantium velit qui sint non, voluptates quo a veritatis."
+                title="Espelhos"
+                img="/bg-espelho.svg"
+                des=" Os espelhos são um elemento muito versátil e útil na decoração de interiores e oferecem várias vantagens para uma casa."
                 listItem={["Reactjs", "Tailwind CSS", "getform.io"]}
-                link="https://orebishopping.reactbd.com/"
+                link="/espelho"
               />
             </motion.div>
             <motion.div
@@ -199,14 +198,14 @@ const Archive = () => {
             onClick={() => setShowMore(false)}
             className="w-36 h-12 rounded-md text-textGreen text-[13px] border border-textGreen hover:bg-hoverColor duration-300"
           >
-            Show Less
+            Mostrar menos
           </button>
         ) : (
           <button
             onClick={() => setShowMore(true)}
             className="w-36 h-12 rounded-md text-textGreen text-[13px] border border-textGreen hover:bg-hoverColor duration-300"
           >
-            Show More
+            Mostrar mais
           </button>
         )}
       </div>

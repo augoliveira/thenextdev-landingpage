@@ -3,6 +3,7 @@ import bannerOne from "../../../public/Corbertura1.png";
 import bannerTwo from "../../../public/Corbertura2.png";
 import bannerThree from "../../../public/Corbertura.jpg";
 import Image from "next/image";
+import NextImage from "../../components/ui/NextImage";
 import { motion } from "framer-motion";
 import FadeIn from "./componentes/FadeIn";
 
@@ -153,15 +154,6 @@ export default function Page() {
         </div>
       </Container>
       <Section />
-      <div className="flex min-h-screen w-full bg-light-blue md:items-center justify-center p-5  pt-32 md:pt-5">
-        <MobileSidebar activeStep={activeStep} />
-          <main className="bg-white h-[600px] z-20 w-full max-w-[900px] flex gap-10  p-4 rounded-2xl flex-col md:flex-row   ">
-            <Sidebar activeStep={activeStep} />
-            <div className=" pt-10    ">
-              <RenderStep />
-            </div>
-          </main>
-      </div>
     <Unitereg />
     <Navigation />
     <nav>
@@ -201,6 +193,62 @@ export default function Page() {
       </li>
     </ul>
   </nav>
+  <section class="relative md:py-24 py-16">
+    <div class="container relative">
+      <div class="grid md:grid-cols-12 grid-cols-1 gap-6">
+        <div class="lg:col-span-5 md:col-span-6">
+          <div class="grid grid-cols-1 gap-6">
+            <NextImage src={bannerThree} class="rounded-xl" alt="" />
+            <NextImage src={bannerThree} class="rounded-xl" alt="" />
+            <NextImage src={bannerThree} class="rounded-xl" alt="" />
+            </div>
+            </div>
+            <div class="lg:col-span-7 md:col-span-6">
+              <div class="sticky top-20">
+                <div class="grid lg:grid-cols-12 grid-cols-1 gap-6">
+                  <div class="lg:col-span-12">
+                    <div class="work-details">
+                      <h4 class="text-xl font-semibold mb-3 border-b border-gray-100 dark:border-gray-700 pb-3">Project Name :</h4>
+                      <p class="text-slate-400 dark:text-white/60">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit totam atque dignissimos porro, exercitationem, neque alias ea aliquid quibusdam voluptates impedit maxime aut asperiores consequatur iste. Corporis fuga ducimus dignissimos. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci non dolorem consequatur vitae hic.</p>
+                      <p class="text-slate-400 dark:text-white/60 mt-2">Suscipit totam atque dignissimos porro, exercitationem, neque alias ea aliquid quibusdam voluptates impedit maxime aut asperiores consequatur iste. Corporis fuga ducimus dignissimos.</p>
+                      </div>
+                      </div>
+                      <div class="lg:col-span-7">
+                        <div class="bg-gray-50 dark:bg-slate-800 shadow dark:shadow-gray-800 p-6 rounded-xl">
+                          <h5 class="text-lg font-semibold border-b border-gray-100 dark:border-gray-700 pb-3 mb-3">Project Info :</h5>
+                          <dl class="grid grid-cols-12 mb-0">
+                            <dt class="md:col-span-4 col-span-5 mt-2">Client :</dt>
+                            <dd class="md:col-span-8 col-span-7 mt-2 text-slate-400">Calvin Carlo</dd>
+                            <dt class="md:col-span-4 col-span-5 mt-2">Category :</dt>
+                            <dd class="md:col-span-8 col-span-7 mt-2 text-slate-400">Web Design</dd>
+                            <dt class="md:col-span-4 col-span-5 mt-2">Date :</dt>
+                            <dd class="md:col-span-8 col-span-7 mt-2 text-slate-400">23rd Sep, 2021</dd>
+                            <dt class="md:col-span-4 col-span-5 mt-2">Website :</dt>
+                            <dd class="md:col-span-8 col-span-7 mt-2 text-slate-400">www.yourdomain.com</dd>
+                            <dt class="md:col-span-4 col-span-5 mt-2">Location :</dt>
+                            <dd class="md:col-span-8 col-span-7 mt-2 text-slate-400">3/2/64 Mongus Street, UK</dd>
+                            </dl>
+                            </div>
+                            </div>
+                            </div>
+                            </div>
+                            </div>
+                            </div>
+                            </div>
+                            <div class="container relative md:mt-24 mt-16">
+                              <div class="grid grid-cols-1 text-center">
+                                <span class="text-slate-400 dark:text-white/60 mb-4">Available for freelance projects</span>
+                                <h3 class="md:text-3xl text-2xl md:leading-normal leading-normal font-semibold">Do you have designing project? <br /> Let's talk.</h3>
+                                <div class="mt-6">
+                                  <a class="py-2 px-5 inline-flex items-center font-medium tracking-wide border align-middle duration-500 text-[15px] text-center bg-orange-500 hover:bg-orange-600 border-orange-500 hover:border-orange-600 text-white rounded-xl" href="/contactus">
+                                  <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="h-[15px] w-[15px] me-2" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                    </path>
+                                    </svg> Contact us</a>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    </section>
     </div>
     </>
   );

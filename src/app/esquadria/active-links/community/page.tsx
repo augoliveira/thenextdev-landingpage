@@ -1,3 +1,8 @@
+import { HoverImageLinks } from '../../../_components/HoverImageLinks';
+
 export default function Page() {
-  return <h1 className="text-xl font-bold">Community</h1>;
+
+  return (
+    <HoverImageLinks />
+  )
 }

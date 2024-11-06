@@ -1,9 +1,15 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable @typescript-eslint/no-require-imports */
 /* eslint-disable import-helpers/order-imports */
-/* eslint-disable no-dupe-keys */
+/* eslint-disable @typescript-eslint/no-require-imports */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+
 const { fontFamily } = require("tailwindcss/defaultTheme");
+
 const withMT = require("@material-tailwind/react/utils/withMT");
+
+const svgToDataUri = require("mini-svg-data-uri");
+const {
+  default: flattenColorPalette
+} = require("tailwindcss/lib/util/flattenColorPalette");
 
 import colors from "tailwindcss/colors";
 
@@ -71,6 +77,12 @@ module.exports = {
         "2xl": "1400px"
       },
       colors: {
+        whiteText: "#FFFFFF",
+        blackText: "#000000",
+        darkBg: "#151515",
+        lightDarkBg: "#1e1e1e",
+        redBg: "#b90807",
+        buttonBg: "#9B4D45",
         primaryColor: "#161616",
         secondaryColor: "#f57d05",
         darkText: "#737373",
@@ -122,7 +134,6 @@ module.exports = {
         clr_boxes1: "rgba(26, 77, 190, 0.05)",
         clr_cborder: "#d9d9d9",
         "violet-550": "#8257e6",
-        white: "#FFFF",
 
         "gray-900": "#121214",
         "gray-800": "#202024",
@@ -137,11 +148,6 @@ module.exports = {
         customBlue: "#299EF3",
         lightGray: "#272D4E",
         lightGrayAlt: "#94A2B3",
-        bodyColor: "#0A192F",
-        textGreen: "#64ffda",
-        textLight: "#ccd6f6",
-        textDark: "#8892b0",
-        hoverColor: "rgba(100,255,218,0.3)",
         link: "#f72585",
         vercel: {
           pink: "#FF0080",
@@ -189,10 +195,6 @@ module.exports = {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)"
       },
-      fontFamily: {
-        sans: ["var(--font-sans)", ...fontFamily.sans],
-        heading: ["var(--font-heading)", ...fontFamily.sans]
-      },
       keyframes: {
         "accordion-down": {
           from: { height: 0 },
@@ -206,6 +208,10 @@ module.exports = {
         gradient: {
           "0%": { backgroundPosition: "0% 50%" },
           "100%": { backgroundPosition: "100% 50%" }
+        },
+        grid: {
+          "0%": { transform: "translateY(-50%)" },
+          "100%": { transform: "translateY(0)" }
         },
         "accordion-up": {
           from: { height: "var(--radix-accordion-content-height)" },
@@ -236,10 +242,21 @@ module.exports = {
         "scale-in-content": "scale-in-content 0.2s ease",
         "scale-out-content": "scale-out-content 0.2s ease",
         // Accordion
-        "accordion-down": "accordion-down 300ms cubic-bezier(0.87, 0, 0.13, 1)",
-        "accordion-up": "accordion-up 300ms cubic-bezier(0.87, 0, 0.13, 1)",
-        // Custom wiggle animation
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
+        grid: "grid 15s linear infinite",
         wiggle: "wiggle 0.75s infinite",
+        spinner: "spinner 1.2s linear infinite",
+        blink: "blink 1.4s infinite both",
+        shimmer: "shimmer 5s infinite",
+        "border-beam": "border-beam calc(var(--duration)*1s) infinite linear",
+        "image-glow": "image-glow 4s ease-out 0.6s forwards",
+        marquee: "marquee var(--duration) linear infinite",
+        flip: "flip 6s infinite steps(2, end)",
+        rotate: "rotate 3s linear infinite both",
+        "caret-blink": "caret-blink 1.25s ease-out infinite",
+        loading: "loading 0.5s linear infinite",
+        // Custom wiggle animation
         scroll:
           "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite"
       }
@@ -253,7 +270,42 @@ module.exports = {
     require("@tailwindcss/forms"),
     require("tailwind-scrollbar-hide"),
     require("tailwindcss-animate"),
+    require("tailwindcss-motion"),
     require("@tailwindcss/aspect-ratio"),
-    require("tailwindcss-radix")()
+    require("tailwindcss-radix")(),
+    addVariablesForColors,
+    function ({ matchUtilities, theme }) {
+      matchUtilities(
+        {
+          "bg-grid": (value) => ({
+            backgroundImage: `url("${svgToDataUri(
+              `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="${value}"><path d="M0 .5H31.5V32"/></svg>`
+            )}")`
+          }),
+          "bg-grid-small": (value) => ({
+            backgroundImage: `url("${svgToDataUri(
+              `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="8" height="8" fill="none" stroke="${value}"><path d="M0 .5H31.5V32"/></svg>`
+            )}")`
+          }),
+          "bg-dot": (value) => ({
+            backgroundImage: `url("${svgToDataUri(
+              `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="16" height="16" fill="none"><circle fill="${value}" id="pattern-circle" cx="10" cy="10" r="1.6257413380501518"></circle></svg>`
+            )}")`
+          })
+        },
+        { values: flattenColorPalette(theme("backgroundColor")), type: "color" }
+      );
+    }
   ]
 };
+
+export default function addVariablesForColors({ addBase, theme }) {
+  let allColors = flattenColorPalette(theme("colors"));
+  let newVars = Object.fromEntries(
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+  );
+
+  addBase({
+    ":root": newVars
+  });
+}

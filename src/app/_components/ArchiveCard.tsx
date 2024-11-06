@@ -24,8 +24,7 @@ const ArchiveCard = ({ title, img, des, listItem, link }: Props) => {
         className="w-full h-full inset-0 m-0 absolute bg-cover bg-center -z-20 object-cover group-hover:scale-110 duration-500 transition-all"
         />
         <div className="flex justify-between items-center">
-          <FaRegFolder className="text-4xl text-textGreen" />
-          <RxOpenInNewWindow className="text-2xl hover:text-textGreen" />
+          <RxOpenInNewWindow className="text-2xl hover:text-textGreen group-hover:text-lime-600 group-hover:rotate-45 duration-100" />
         </div>
         <div>
           <h2 className="text-4xl font-extrabold tracking-tight text-white group-hover:text-textGreen">

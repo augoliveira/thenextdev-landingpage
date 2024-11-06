@@ -5,6 +5,7 @@ import React, { useState, useEffect } from 'react'
 import Image from "next/image";
 import Link from 'next/link';
 import { Github, LinkedIn, Twitter } from '@/components/shared/icons';
+import { TextHoverEffect } from "@/components/ui/text-hover-effect"
 
 import {
   FacebookLogo,
@@ -110,6 +111,9 @@ export function Footer() {
       <div className="text-center py-1 text-gray-400 bg-[#09245b] w-full">
       © 2018 – 2020 <strong>GlAZING DESIGN, VIDROS TEMPERADO</strong>. Todos Direitos Reservado.
       </div>
+      <div className="h-[20rem] lg:h-[20rem] hidden md:flex items-center justify-center">
+                <TextHoverEffect text="GLAZING" />
+            </div>
     </div>
   )
 }
