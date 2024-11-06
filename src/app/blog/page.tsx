@@ -1,4 +1,4 @@
-import Container from "@/components/ui/Container";
+import Container from "@/components/ui/Container1";
 import TitleBanner from "@/components/ui/TitleBanner";
 import React from "react";
 
