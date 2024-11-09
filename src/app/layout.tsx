@@ -99,37 +99,30 @@ export default function RootLayout({
       <body
         className={`${inter.className} w-full bg-gradient-to-r from-bodyColor to-[#107a39]`}
       >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <div className="space-y-8 pt-20 lg:py-20">
-            <Header />
-            <div className="max-w-8xl mx-auto space-y-8 px-2 pt-8 lg:mb-8 lg:px-8 lg:pt-4">
-              <div className="bg-vc-border-gradient rounded-lg p-px shadow-lg shadow-black/20">
-                <div className="bg-vc-border-gradient rounded-t-lg p-px shadow-lg shadow-black/20">
-                  <div className="rounded-t-lg bg-gradient-to-r from-bodyColor to-[#66a900]">
-                    <AddressBar />
-                  </div>
+        <div className="space-y-8 pt-20 lg:py-20">
+          <Header />
+          <div className="max-w-8xl mx-auto space-y-8 px-2 pt-8 lg:mb-8 lg:px-8 lg:pt-4">
+            <div className="bg-vc-border-gradient rounded-lg p-px shadow-lg shadow-black/20">
+              <div className="bg-vc-border-gradient rounded-t-lg p-px shadow-lg shadow-black/20">
+                <div className="rounded-t-lg bg-gradient-to-r from-bodyColor to-[#66a900]">
+                  <AddressBar />
                 </div>
-                <div className="rounded-b-lg bg-black/30 p-3.5 backdrop-blur-sm lg:p-6">
-                  <>
-                    {children}
-                    <SpeedInsights />
-                  </>
-                </div>
+              </div>
+              <div className="rounded-b-lg bg-black/30 p-3.5 backdrop-blur-sm lg:p-6">
+                <>
+                  {children}
+                  <SpeedInsights />
+                </>
               </div>
             </div>
           </div>
-          <div className="bg-vc-border-gradient rounded-lg p-px shadow-lg shadow-black/20">
-            <div className="rounded-lg bg-black/30 backdrop-blur-xl">
-              <Footer />
-            </div>
+        </div>
+        <div className="bg-vc-border-gradient rounded-lg p-px shadow-lg shadow-black/20">
+          <div className="rounded-lg bg-black/30 backdrop-blur-xl">
+            <Footer />
           </div>
-          <Analytics />
-        </ThemeProvider>
+        </div>
+        <Analytics />
       </body>
     </html>
   );
