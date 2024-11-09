@@ -2,13 +2,12 @@
 /** @type {import('next').NextConfig} */
 
 import bundleAnalyzer from "@next/bundle-analyzer";
-import createMDX from "@next/mdx";
 
 const withBundleAnalyzer = bundleAnalyzer({
   enabled: process.env.ANALYZE === "true"
 });
 
-let nextConfig = {
+const nextConfig = {
   compress: false,
   httpAgentOptions: {
     keepAlive: false
@@ -53,7 +52,5 @@ let nextConfig = {
     }
   }
 };
-
-nextConfig = withBundleAnalyzer(nextConfig);
 
 export default nextConfig;
