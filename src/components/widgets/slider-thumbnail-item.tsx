@@ -1,7 +1,6 @@
-import Image from "next/image";
 
 import { cn } from "@/lib/utils";
-import BlurImage from "../ui/blur-image";
+import NextImage from "../ui/NextImage";
 
 interface SliderThumbnailItemProps {
   itemActive: number;
@@ -30,10 +29,11 @@ const SliderThumbnailItem = ({
       )}
     >
       <div className="relative h-full w-full rounded-lg">
-        <BlurImage
+        <NextImage
           src={image}
           alt="Image"
           fill
+          sizes="100vw"
           className="rounded-lg object-cover"
         />
       </div>

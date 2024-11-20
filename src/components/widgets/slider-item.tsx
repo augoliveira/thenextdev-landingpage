@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 import { motion } from "framer-motion";
@@ -6,7 +5,7 @@ import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 import ContactUs from "./../ui/ContactUs";
-import BlurImage from "../ui/blur-image";
+import NextImage from "../ui/NextImage";
 
 interface SliderItemProps {
   itemActive: number;
@@ -37,10 +36,11 @@ const SliderItem = ({
       )}
     >
       <div className="relative h-full w-full">
-        <BlurImage
+        <NextImage
           src={image}
           alt="Image"
           fill
+          sizes="100vw"
           className="h-full w-full object-cover"
         />
       </div>
