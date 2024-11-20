@@ -12,7 +12,7 @@ const ProjectTag = ({ name, onClick, isSelected }: Props) => {
     : "text-[#ADB7BE] border-slate-600 hover:border-white";
   return (
     <button
-      className={`${buttonStyles} tablink bg-[#18181c] hover:shadow-md hover:bg-gradient-to-r from-slate-800 to-indigo-900 text-clr_ratting rounded-[5px] lg:text-lg text-sm uppercase font-semibold border-none lg:py-4 lg:px-[30px] py-[10px] px-5 text-center`}
+      className={`${buttonStyles} tablink rounded-[5px] border-none bg-[#18181c] from-slate-800 to-indigo-900 px-5 py-[10px] text-center text-sm font-semibold uppercase text-clr_ratting hover:bg-gradient-to-r hover:shadow-md lg:px-[30px] lg:py-4 lg:text-lg`}
       onClick={() => onClick(name)}
     >
       {name}

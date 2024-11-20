@@ -10,13 +10,13 @@ const ContactUs = ({ buttonData }: Props) => {
   return (
     <div
       onClick={() => router.push("/contact")}
-      className="relative text-white w-44 h-12 border-t-[1px] border-t-secondaryColor border-b-[1px] border-b-secondaryColor group overflow-hidden"
+      className="group relative h-12 w-44 overflow-hidden border-b-[1px] border-t-[1px] border-b-secondaryColor border-t-secondaryColor text-white"
     >
-      <button className="w-full h-full font-titleFont tracking-[2px] uppercase text-sm font-normal">
+      <button className="font-titleFont h-full w-full text-sm font-normal uppercase tracking-[2px]">
         {buttonData}
       </button>
-      <span className="h-full w-[1px] bg-secondaryColor inline-block absolute right-0 -translate-y-8 group-hover:translate-y-0 transition-transform duration-300"></span>
-      <span className="h-full w-[1px] bg-secondaryColor inline-block absolute left-0 translate-y-8 group-hover:translate-y-0 transition-transform duration-300"></span>
+      <span className="absolute right-0 inline-block h-full w-[1px] -translate-y-8 bg-secondaryColor transition-transform duration-300 group-hover:translate-y-0"></span>
+      <span className="absolute left-0 inline-block h-full w-[1px] translate-y-8 bg-secondaryColor transition-transform duration-300 group-hover:translate-y-0"></span>
     </div>
   );
 };

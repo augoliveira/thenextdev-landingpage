@@ -1,12 +1,11 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-'use client';
-import React from 'react';
+"use client";
+import React from "react";
 
 interface Props {
   text: string;
 }
 
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
 const quote = {
   initial: {
@@ -34,24 +33,24 @@ const singelword = {
   }
 };
 
-import { Container } from './styles';
+import { Container } from "./styles";
 
 export function AnimatedText({ text }: Props) {
   return (
     <Container>
-      <div className='mx-auto flex w-full items-start justify-start overflow-hidden text-start lg:py-2'>
+      <div className="mx-auto flex w-full items-start justify-start overflow-hidden text-start lg:py-2">
         <motion.h1
           className={
-            '${}className} pl-8 flex text-4xl font-extrabold leading-7 text-slate-900 border-b border-slate-600/30'
+            "${}className} flex border-b border-slate-600/30 pl-8 text-4xl font-extrabold leading-7 text-slate-900"
           }
           variants={quote}
-          initial='initial'
-          animate='animate'
+          initial="initial"
+          animate="animate"
         >
-          {text.split(' ').map((word, index) => (
+          {text.split(" ").map((word, index) => (
             <motion.span
-              key={word + '_' + index}
-              className='inline-block -mb-px py-2 border-b border-b-current'
+              key={word + "_" + index}
+              className="-mb-px inline-block border-b border-b-current py-2"
               variants={singelword}
             >
               {word}&nbsp;

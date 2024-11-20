@@ -1,8 +1,9 @@
+/* eslint-disable @typescript-eslint/no-unused-expressions */
 "use client";
 
-import NextImage from "../ui/NextImage";
 import { useEffect, useState } from "react";
 
+import NextImage from "../ui/NextImage";
 import { images } from "./constants";
 import Description from "./Description";
 
@@ -27,19 +28,19 @@ const SlideBox = () => {
     return () => {
       clearTimeout(timer);
     };
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activeImage]);
   return (
-    <main className="grid place-items-center md:grid-cols-2 grid-cols-1 w-full mx-auto max-w-5xl shadow-2xl rounded-2xl">
+    <main className="mx-auto grid w-full max-w-5xl grid-cols-1 place-items-center rounded-2xl shadow-2xl md:grid-cols-2">
       <div
-        className={`w-full flex justify-center items-center gap-4 transition-transform ease-in-out duration-500 md:rounded-2xl p-6 md:p-0`}
+        className={`flex w-full items-center justify-center gap-4 p-6 transition-transform duration-500 ease-in-out md:rounded-2xl md:p-0`}
       >
         {images.map((elem, idx) => (
           <div
             key={idx}
             className={`${
               idx === activeImage
-                ? "block w-full h-[80vh] object-cover transition-all duration-500 ease-in-out"
+                ? "block h-[80vh] w-full object-cover transition-all duration-500 ease-in-out"
                 : "hidden"
             }`}
           >
@@ -48,7 +49,7 @@ const SlideBox = () => {
               alt=""
               width={400}
               height={400}
-              className="w-full h-full object-cover md:rounded-tl-3xl md:rounded-bl-3xl"
+              className="h-full w-full object-cover md:rounded-bl-3xl md:rounded-tl-3xl"
             />
           </div>
         ))}

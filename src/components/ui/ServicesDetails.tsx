@@ -1,9 +1,11 @@
 "use client";
 
-import { GiCheckMark } from "react-icons/gi";
-import ContactUs from "./ContactUs";
-import { Button, Dialog, DialogPanel, DialogTitle } from "@headlessui/react";
 import { useState } from "react";
+import { GiCheckMark } from "react-icons/gi";
+
+import { Button, Dialog, DialogPanel, DialogTitle } from "@headlessui/react";
+
+import ContactUs from "./ContactUs";
 
 const ServicesDetails = ({
   no,
@@ -13,17 +15,17 @@ const ServicesDetails = ({
   detailsTwo,
   detailsThree,
   detailsFour,
-  detailsFive,
+  detailsFive
 }: any) => {
-  let servicesDetailsData = [
+  const servicesDetailsData = [
     { id: 1001, title: detailsOne },
     { id: 1002, title: detailsTwo },
     { id: 1003, title: detailsThree },
     { id: 1004, title: detailsFour },
-    { id: 1005, title: detailsFive },
+    { id: 1005, title: detailsFive }
   ];
 
-  let [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   function close() {
     setIsOpen(false);
@@ -35,20 +37,20 @@ const ServicesDetails = ({
   };
   return (
     <>
-      <div className="flex w-80 flex-col gap-8 border border-borderColor px-4 py-6 border-opacity-40 hover:border-transparent hover:shadow-customShadowOne hover:shadow-gray-600 transition-hover duration-500">
+      <div className="hover:shadow-customShadowOne transition-hover flex w-80 flex-col gap-8 border border-borderColor border-opacity-40 px-4 py-6 duration-500 hover:border-transparent hover:shadow-gray-600">
         <div>
-          <p className="relative w-full h-auto px-3 group text-borderColor font-titleFont text-base">
+          <p className="font-titleFont group relative h-auto w-full px-3 text-base text-borderColor">
             {no}
-            <span className="w-full h-[.5px] bg-borderColor absolute left-0 bottom-0"></span>
-            <span className="w-[1px] h-[10px] bg-borderColor absolute left-0 bottom-0"></span>
+            <span className="absolute bottom-0 left-0 h-[.5px] w-full bg-borderColor"></span>
+            <span className="absolute bottom-0 left-0 h-[10px] w-[1px] bg-borderColor"></span>
           </p>
         </div>
         <div>
           <h3 className="text-2xl font-semibold uppercase">{title}</h3>
-          <p className="text-sm text-secondaryColor underline underline-offset-4 decoration-[1px] mt-1">
+          <p className="mt-1 text-sm text-secondaryColor underline decoration-[1px] underline-offset-4">
             Starting from:
           </p>
-          <h2 className="text-4xl font-bodyFont mt-1 font-semibold">
+          <h2 className="font-bodyFont mt-1 text-4xl font-semibold">
             USD {startingAmt}
           </h2>
         </div>
@@ -57,7 +59,7 @@ const ServicesDetails = ({
             {servicesDetailsData.map((item) => (
               <li
                 key={item.id}
-                className="flex items-center gap-4 text-base text-darkText hover:text-white transition-hover duration-300 hover:cursor-pointer"
+                className="transition-hover flex items-center gap-4 text-base text-darkText duration-300 hover:cursor-pointer hover:text-white"
               >
                 <span className="text-secondaryColor">
                   <GiCheckMark />
@@ -81,11 +83,11 @@ const ServicesDetails = ({
           <div className="flex min-h-full items-center justify-center p-4">
             <DialogPanel
               transition
-              className="w-full max-w-md rounded-xl bg-secondaryColor/5 p-6 backdrop-blur-2xl duration-300 ease-out data-[closed]:transform-[scale(95%)] data-[closed]:opacity-0"
+              className="data-[closed]:transform-[scale(95%)] w-full max-w-md rounded-xl bg-secondaryColor/5 p-6 backdrop-blur-2xl duration-300 ease-out data-[closed]:opacity-0"
             >
               <DialogTitle
                 as="h3"
-                className="text-base/7 font-medium text-white uppercase tracking-wide"
+                className="text-base/7 font-medium uppercase tracking-wide text-white"
               >
                 {title}
               </DialogTitle>
@@ -97,7 +99,7 @@ const ServicesDetails = ({
               </p>
               <div className="mt-4">
                 <Button
-                  className="inline-flex items-center gap-2 rounded-md bg-secondaryColor/50 py-1.5 px-3 text-sm/6 font-semibold text-white shadow-inner shadow-secondaryColor/10 focus:outline-none data-[hover]:bg-secondaryColor data-[focus]:outline-1 data-[focus]:outline-white data-[open]:bg-gray-700"
+                  className="inline-flex items-center gap-2 rounded-md bg-secondaryColor/50 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-inner shadow-secondaryColor/10 focus:outline-none data-[hover]:bg-secondaryColor data-[open]:bg-gray-700 data-[focus]:outline-1 data-[focus]:outline-white"
                   onClick={close}
                 >
                   Got it, thanks!

@@ -11,7 +11,7 @@ function FirstFeatureSection() {
       description:
         "Add WooCommerce plugin to any WordPress site and set up a new store in minutes.",
       link: "/",
-      linkText: "Ecommerce for Wordpress",
+      linkText: "Ecommerce for Wordpress"
     },
     {
       image: "/images/customize_and_extend.png",
@@ -19,7 +19,7 @@ function FirstFeatureSection() {
       description:
         "From subscriptions to gym classes to luxury cars, WooCommerce is fully customizable.",
       link: "/",
-      linkText: "Browse Extensions",
+      linkText: "Browse Extensions"
     },
     {
       image: "/images/active_community.png",
@@ -27,15 +27,15 @@ function FirstFeatureSection() {
       description:
         "From subscriptions to gym classes to luxury cars, WooCommerce is fully customizable.",
       link: "/",
-      linkText: "Browse Extensions",
-    },
+      linkText: "Browse Extensions"
+    }
   ];
   return (
     <section className="md:mx-16">
       <div className="mb-8">
         <Header title="Your eCommerce made simple" />
       </div>
-      <div className="flex flex-col md:flex-row gap-8">
+      <div className="flex flex-col gap-8 md:flex-row">
         {data.map((feature) => (
           <FirstFeatureCard {...feature} key={feature.title} />
         ))}

@@ -1,8 +1,9 @@
+/* eslint-disable @typescript-eslint/no-unused-expressions */
 "use client";
 
-import NextImage from "../ui/NextImage";
 import { useEffect, useState } from "react";
 
+import NextImage from "../ui/NextImage";
 import { images } from "./constants";
 import Description from "./Description";
 
@@ -27,7 +28,7 @@ const SliderProduto = () => {
     return () => {
       clearTimeout(timer);
     };
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activeImage]);
   return (
     <main className="mx-auto grid w-full max-w-5xl grid-cols-1 place-items-center rounded-2xl shadow-2xl md:grid-cols-2">

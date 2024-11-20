@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { useState } from "react";
 
@@ -11,13 +11,17 @@ const Archive = () => {
 
   return (
     <div className="max-w-contentContainer mx-auto px-4 py-24">
-      <div className="w-full flex flex-col items-center">
-      <div className='pr-4 flex col-start-1 row-start-2 mt-4 max-w-[36rem] text-4xl font-extrabold tracking-tight sm:text-4xl xl:max-w-[43.5rem] text-[#fff] border-b pe-4 border-slate-300/30'><span className="-mb-px py-2 border-b border-b-current">Todos projetos</span></div>
-        <p className="text-sm font-titleFont text-textGreen">
+      <div className="flex w-full flex-col items-center">
+        <div className="col-start-1 row-start-2 mt-4 flex max-w-[36rem] border-b border-slate-300/30 pe-4 pr-4 text-4xl font-extrabold tracking-tight text-[#fff] sm:text-4xl xl:max-w-[43.5rem]">
+          <span className="-mb-px border-b border-b-current py-2">
+            Todos projetos
+          </span>
+        </div>
+        <p className="font-titleFont text-sm text-textGreen">
           Veja mais detalhe
         </p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 mt-10 lgl:px-10">
+      <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 lgl:px-10 xl:grid-cols-3">
         <ArchiveCard
           title="Box para banheiro"
           img="/ProdutoBoxFlex.jpg"
@@ -29,7 +33,11 @@ const Archive = () => {
           title="Portas e janelas"
           img="/ProdutoJanela.jpg"
           des=" Fabricação e instalação de portas de vidro elegantes e funcionais para residências e estabelecimentos comerciais."
-          listItem={["Porta de abrir", "Porta de correr", "Porta de vidro light holder"]}
+          listItem={[
+            "Porta de abrir",
+            "Porta de correr",
+            "Porta de vidro light holder"
+          ]}
           link="/portas-e-janelas"
         />
         <ArchiveCard
@@ -196,14 +204,14 @@ const Archive = () => {
         {showMore ? (
           <button
             onClick={() => setShowMore(false)}
-            className="w-36 h-12 rounded-md text-textGreen text-[13px] border border-textGreen hover:bg-hoverColor duration-300"
+            className="h-12 w-36 rounded-md border border-textGreen text-[13px] text-textGreen duration-300 hover:bg-hoverColor"
           >
             Mostrar menos
           </button>
         ) : (
           <button
             onClick={() => setShowMore(true)}
-            className="w-36 h-12 rounded-md text-textGreen text-[13px] border border-textGreen hover:bg-hoverColor duration-300"
+            className="h-12 w-36 rounded-md border border-textGreen text-[13px] text-textGreen duration-300 hover:bg-hoverColor"
           >
             Mostrar mais
           </button>

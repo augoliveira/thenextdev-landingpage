@@ -1,0 +1,52 @@
+import Image from "next/image";
+
+import { cn } from "@/lib/utils";
+import BlurImage from "../ui/blur-image";
+
+interface SliderThumbnailItemProps {
+  itemActive: number;
+  id: number;
+  image: string;
+  name: string;
+  onClick: () => void;
+}
+
+const SliderThumbnailItem = ({
+  itemActive,
+  id,
+  image,
+  name,
+  onClick
+}: SliderThumbnailItemProps) => {
+  return (
+    <div
+      role="button"
+      onClick={onClick}
+      className={cn(
+        "relative h-[250px] shrink-0 overflow-hidden transition-all duration-300 after:absolute after:bottom-0 after:left-0 after:h-full after:w-full after:bg-thumbnails hover:brightness-150",
+        itemActive === id
+          ? "w-[200px] brightness-150"
+          : "w-[50px] brightness-50"
+      )}
+    >
+      <div className="relative h-full w-full rounded-lg">
+        <BlurImage
+          src={image}
+          alt="Image"
+          fill
+          className="rounded-lg object-cover"
+        />
+      </div>
+      <div
+        className={cn(
+          "animation-delay-75 absolute bottom-[40px] left-[10px] right-[10px] top-auto z-10 translate-y-[30px]",
+          itemActive === id && "animate-show-content"
+        )}
+      >
+        <h2 className="line-clamp-1 text-start font-bold">{name}</h2>
+      </div>
+    </div>
+  );
+};
+
+export default SliderThumbnailItem;

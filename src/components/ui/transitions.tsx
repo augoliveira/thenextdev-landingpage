@@ -4,7 +4,7 @@ import { HTMLMotionProps, motion } from "framer-motion";
 
 import { cn } from "@/utils/cn";
 
-interface Props extends HTMLMotionProps<"span"> {}
+type Props = HTMLMotionProps<"span">;
 
 export const SlideIn = ({
   className,
@@ -30,7 +30,7 @@ export const SlideIn = ({
   );
 };
 
-interface TransitionProps extends HTMLMotionProps<"div"> {}
+type TransitionProps = HTMLMotionProps<"div">;
 export const Transition = ({
   initial,
   whileInView,

@@ -1,16 +1,18 @@
 "use client";
- 
-import { useRef, useState } from "react";
+
 import Image from "next/image";
+import { useRef, useState } from "react";
+
 import { AnimatePresence, motion } from "framer-motion";
+
 import { cn } from "@/utils/cn";
- 
+
 export const DirectionAwareHover = ({
   imageUrl,
   children,
   childrenClassName,
   imageClassName,
-  className,
+  className
 }: {
   imageUrl: string;
   children: React.ReactNode | string;
@@ -19,16 +21,16 @@ export const DirectionAwareHover = ({
   className?: string;
 }) => {
   const ref = useRef<HTMLDivElement>(null);
- 
+
   const [direction, setDirection] = useState<
     "top" | "bottom" | "left" | "right" | string
   >("left");
- 
+
   const handleMouseEnter = (
     event: React.MouseEvent<HTMLDivElement, MouseEvent>
   ) => {
     if (!ref.current) return;
- 
+
     const direction = getDirection(event, ref.current);
     console.log("direction", direction);
     switch (direction) {
@@ -49,7 +51,7 @@ export const DirectionAwareHover = ({
         break;
     }
   };
- 
+
   const getDirection = (
     ev: React.MouseEvent<HTMLDivElement, MouseEvent>,
     obj: HTMLElement
@@ -60,13 +62,13 @@ export const DirectionAwareHover = ({
     const d = Math.round(Math.atan2(y, x) / 1.57079633 + 5) % 4;
     return d;
   };
- 
+
   return (
     <motion.div
       onMouseEnter={handleMouseEnter}
       ref={ref}
       className={cn(
-        "md:h-96 w-60 h-60 md:w-96 bg-transparent rounded-lg overflow-hidden group/card relative",
+        "group/card relative h-60 w-60 overflow-hidden rounded-lg bg-transparent md:h-96 md:w-96",
         className
       )}
     >
@@ -77,19 +79,19 @@ export const DirectionAwareHover = ({
           whileHover={direction}
           exit="exit"
         >
-          <motion.div className="group-hover/card:block hidden absolute inset-0 w-full h-full bg-black/40 z-10 transition duration-500" />
+          <motion.div className="absolute inset-0 z-10 hidden h-full w-full bg-black/40 transition duration-500 group-hover/card:block" />
           <motion.div
             variants={variants}
-            className="h-full w-full relative bg-gray-50 dark:bg-black"
+            className="relative h-full w-full bg-gray-50 dark:bg-black"
             transition={{
               duration: 0.2,
-              ease: "easeOut",
+              ease: "easeOut"
             }}
           >
             <Image
               alt="image"
               className={cn(
-                "h-full w-full object-cover scale-[1.15]",
+                "h-full w-full scale-[1.15] object-cover",
                 imageClassName
               )}
               width="1000"
@@ -101,10 +103,10 @@ export const DirectionAwareHover = ({
             variants={textVariants}
             transition={{
               duration: 0.5,
-              ease: "easeOut",
+              ease: "easeOut"
             }}
             className={cn(
-              "text-white absolute bottom-4 left-4 z-40",
+              "absolute bottom-4 left-4 z-40 text-white",
               childrenClassName
             )}
           >
@@ -115,55 +117,55 @@ export const DirectionAwareHover = ({
     </motion.div>
   );
 };
- 
+
 const variants = {
   initial: {
-    x: 0,
+    x: 0
   },
- 
+
   exit: {
     x: 0,
-    y: 0,
+    y: 0
   },
   top: {
-    y: 20,
+    y: 20
   },
   bottom: {
-    y: -20,
+    y: -20
   },
   left: {
-    x: 20,
+    x: 20
   },
   right: {
-    x: -20,
-  },
+    x: -20
+  }
 };
- 
+
 const textVariants = {
   initial: {
     y: 0,
     x: 0,
-    opacity: 0,
+    opacity: 0
   },
   exit: {
     y: 0,
     x: 0,
-    opacity: 0,
+    opacity: 0
   },
   top: {
     y: -20,
-    opacity: 1,
+    opacity: 1
   },
   bottom: {
     y: 2,
-    opacity: 1,
+    opacity: 1
   },
   left: {
     x: -2,
-    opacity: 1,
+    opacity: 1
   },
   right: {
     x: 20,
-    opacity: 1,
-  },
+    opacity: 1
+  }
 };

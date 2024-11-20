@@ -1,8 +1,8 @@
 "use client";
 
 import Link, { LinkProps } from "next/link";
-import React, { PropsWithChildren, useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
+import React, { PropsWithChildren, useEffect, useState } from "react";
 
 const getLinkUrl = (href: LinkProps["href"], as?: LinkProps["as"]): string => {
   // Dynamic route will be matched via props.as
@@ -47,7 +47,7 @@ const ActiveLink = ({
     props.href,
     activeClassName,
     className,
-    computedClassName,
+    computedClassName
   ]);
 
   return (

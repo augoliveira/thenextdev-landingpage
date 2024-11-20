@@ -2,10 +2,10 @@
 import React, { useState } from "react";
 
 const ContactForm = ({ setSuccessMessage }: any) => {
-  let [username, setUsername] = useState("");
-  let [email, setEmail] = useState("");
-  let [message, setMessage] = useState("");
-  let [errMessage, setErrMessage] = useState("");
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [errMessage, setErrMessage] = useState("");
 
   const emailValidation = (email: string) => {
     return String(email)
@@ -29,22 +29,22 @@ const ContactForm = ({ setSuccessMessage }: any) => {
       setEmail("");
       setMessage("");
       setSuccessMessage(
-        `Olá querido ${username}. Recebemos sua mensagem com sucesso. Detalhes adicionais serão enviados a você por e-mail em ${email} e nosso pessoal responsável entrará em contato com você em breve. Obrigado pelo seu tempo.`,
+        `Olá querido ${username}. Recebemos sua mensagem com sucesso. Detalhes adicionais serão enviados a você por e-mail em ${email} e nosso pessoal responsável entrará em contato com você em breve. Obrigado pelo seu tempo.`
       );
     }
   };
   return (
     <>
       <div className="flex justify-between gap-1">
-        <h4 className="text-sky-400 text-lg mdl:text-xl mb-2">
+        <h4 className="mb-2 text-lg text-sky-400 mdl:text-xl">
           Preencha o Formulários
         </h4>
       </div>
-      <div className="flex flex-col gap-1 text-base text-gray-100 font-titleFont">
+      <div className="font-titleFont flex flex-col gap-1 text-base text-gray-100">
         <input
           onChange={(e) => setUsername(e.target.value)}
           value={username}
-          className="w-full outline-none rounded-sm px-4 pt-5 pb-2 placeholder:text-sm bg-transparent border-b-[1px] border-b-borderColor focus:border-b-lime-600 placeholder:translate-y-0 focus:placeholder:-translate-y-5 placeholder:transition-transform duration-500 placeholder:uppercase"
+          className="w-full rounded-sm border-b-[1px] border-b-borderColor bg-transparent px-4 pb-2 pt-5 outline-none duration-500 placeholder:translate-y-0 placeholder:text-sm placeholder:uppercase placeholder:transition-transform focus:border-b-lime-600 focus:placeholder:-translate-y-5"
           type="text"
           placeholder="Qual seu Nome"
         />
@@ -52,7 +52,7 @@ const ContactForm = ({ setSuccessMessage }: any) => {
         <input
           onChange={(e) => setEmail(e.target.value)}
           value={email}
-          className="w-full outline-none rounded-sm px-4 pt-5 pb-2 placeholder:text-sm bg-transparent border-b-[1px] border-b-borderColor focus:border-b-lime-600 placeholder:translate-y-0 focus:placeholder:-translate-y-5 placeholder:transition-transform duration-500 placeholder:uppercase"
+          className="w-full rounded-sm border-b-[1px] border-b-borderColor bg-transparent px-4 pb-2 pt-5 outline-none duration-500 placeholder:translate-y-0 placeholder:text-sm placeholder:uppercase placeholder:transition-transform focus:border-b-lime-600 focus:placeholder:-translate-y-5"
           type="email"
           placeholder="Qual seu E-mail"
         />
@@ -60,7 +60,7 @@ const ContactForm = ({ setSuccessMessage }: any) => {
         <textarea
           onChange={(e) => setMessage(e.target.value)}
           value={message}
-          className="w-full outline-none rounded-sm px-4 pt-5 pb-2 placeholder:text-sm bg-transparent border-b-[1px] border-b-borderColor focus:border-b-lime-600 placeholder:translate-y-0 focus:placeholder:-translate-y-5 placeholder:transition-transform duration-500 resize-none placeholder:uppercase"
+          className="w-full resize-none rounded-sm border-b-[1px] border-b-borderColor bg-transparent px-4 pb-2 pt-5 outline-none duration-500 placeholder:translate-y-0 placeholder:text-sm placeholder:uppercase placeholder:transition-transform focus:border-b-lime-600 focus:placeholder:-translate-y-5"
           id=""
           cols={30}
           rows={5}
@@ -68,19 +68,19 @@ const ContactForm = ({ setSuccessMessage }: any) => {
         />
       </div>
       {errMessage && (
-        <h4 className="text-lime-600 text-base text-center mt-10 py-1 rounded-sm bg-white px-4 font-semibold">
+        <h4 className="mt-10 rounded-sm bg-white px-4 py-1 text-center text-base font-semibold text-lime-600">
           {errMessage} !
         </h4>
       )}
       <button
         onClick={handleSendDetails}
-        className="relative w-full text-lg font-semibold uppercase font-titleFont active:bg-sky-400 tracking-[4px] border p-2 border-gray-800 mt-8 overflow-hidden group"
+        className="font-titleFont group relative mt-8 w-full overflow-hidden border border-gray-800 p-2 text-lg font-semibold uppercase tracking-[4px] active:bg-sky-400"
       >
         Enviar
-        <span className="absolute w-full h-[1px] bg-sky-400 left-0 top-0 -translate-x-[100%] group-hover:translate-x-0 transition-transform duration-500"></span>
-        <span className="absolute w-full h-[1px] bg-sky-400 left-0 bottom-0 translate-x-[100%] group-hover:translate-x-0 transition-transform duration-500"></span>
-        <span className="absolute w-[1px] h-full bg-sky-400 left-0 bottom-0 translate-y-[100%] group-hover:translate-y-0 transition-transform duration-500"></span>
-        <span className="absolute w-[1px] h-full bg-sky-400 right-0 bottom-0 -translate-y-[100%] group-hover:translate-y-0 transition-transform duration-500"></span>
+        <span className="absolute left-0 top-0 h-[1px] w-full -translate-x-[100%] bg-sky-400 transition-transform duration-500 group-hover:translate-x-0"></span>
+        <span className="absolute bottom-0 left-0 h-[1px] w-full translate-x-[100%] bg-sky-400 transition-transform duration-500 group-hover:translate-x-0"></span>
+        <span className="absolute bottom-0 left-0 h-full w-[1px] translate-y-[100%] bg-sky-400 transition-transform duration-500 group-hover:translate-y-0"></span>
+        <span className="absolute bottom-0 right-0 h-full w-[1px] -translate-y-[100%] bg-sky-400 transition-transform duration-500 group-hover:translate-y-0"></span>
       </button>
     </>
   );

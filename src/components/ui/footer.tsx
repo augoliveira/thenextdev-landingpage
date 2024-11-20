@@ -22,6 +22,7 @@ import payment from "../../../public/Forma-de-pagamento.webp";
 import { Wave } from '@/components/ui/wave';
 
 import Logo from "../../../public/logo-campanha.png";
+import NextImage from './NextImage';
 
 export function Footer() {
   const [loading, setLoading] = useState(true);
@@ -30,24 +31,12 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 lgl:px-2 grid grid-cols-1 md:grid-cols-3 lgl:grid-cols-3 gap-8 py-10 sm:flex-row justify-around pb-5">
         <div className="-mt-20 w-full max-w-96 flex-auto overflow-hidden rounded-sm bg-gradient-to-r from-bodyColor to-[#2c4606] text-sm leading-6 shadow-lg ring-1 ring-gray-900/5">
           <div className="flex flex-col px-4 py-4 mt-4 items-center"> 
-              <Image
-                width={300}
-                height={30}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                }}
-                src={Logo}
-                alt="Logo Glazing Design"
-                loading="eager"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  className={`w-72 h-32 object-cover group-hover:scale-110 duration-500 transition-all ${
-                    loading
-                      ? 'scale-110 blur-2xl grayscale'
-                      : 'scale-100 blur-0 grayscale-0'
-                  }}`}
-                  onLoad={() => setLoading(false)}
-              />
+          <NextImage
+                  priority
+                  className="w-36"
+                  src={Logo}
+                  alt="reactBdLogo"
+                />
             <div className="space-y-6">
             <p className='text-gray-400 text-sm max-w-[300px]'>Criatividade e compromisso: nossa receita para o sucesso.</p>
             <div className="max-2xl:text-left">

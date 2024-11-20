@@ -1,20 +1,21 @@
 "use client";
 import React, { useState } from "react";
-import Espelho from "./Espelho";
+
+import { DoorOpen, SquareHalf, Scroll, Copy } from "@phosphor-icons/react";
+
 import Box from "./Box";
 import Design from "./Design";
 import Development from "./Development";
-
-import { DoorOpen, SquareHalf, Scroll, Copy } from '@phosphor-icons/react'
+import Espelho from "./Espelho";
 
 const PickServices = () => {
-  let [espelho, setEspelho] = useState(true);
-  let [box, setBox] = useState(false);
-  let [design, setDesign] = useState(false);
-  let [development, setDevelopment] = useState(false);
+  const [espelho, setEspelho] = useState(true);
+  const [box, setBox] = useState(false);
+  const [design, setDesign] = useState(false);
+  const [development, setDevelopment] = useState(false);
   return (
-    <div className="max-w-screen-2xl mx-auto pt-32 pb-10">
-      <div className="grid grid-cols-1 md:grid-cols-2 lgl:grid-cols-4 font-titleFont font-semibold uppercase text-lg lgl:text-base xl:text-lg px-4">
+    <div className="mx-auto max-w-screen-2xl pb-10 pt-32">
+      <div className="font-titleFont grid grid-cols-1 px-4 text-lg font-semibold uppercase md:grid-cols-2 lgl:grid-cols-4 lgl:text-base xl:text-lg">
         <p
           onClick={() => {
             setEspelho(true);
@@ -24,12 +25,12 @@ const PickServices = () => {
           }}
           className={`${
             espelho
-              ? "bg-gradient-to-r from-bodyColor to-[#66a900] text-white after:bg-lime-800 after:w-5 after:h-5 z-10 after:inline-block after:absolute after:-bottom-2 after:rotate-45"
-              : " hover:bg-white hover:text-primaryColor border border-lime-900 xl:border-r-0 bg-opacity-50"
-          } flex items-center justify-center gap-3 w-full bg-primaryColor h-16 cursor-pointer relative`}
+              ? "z-10 bg-gradient-to-r from-bodyColor to-[#66a900] text-white after:absolute after:-bottom-2 after:inline-block after:h-5 after:w-5 after:rotate-45 after:bg-lime-800"
+              : "border border-lime-900 bg-opacity-50 hover:bg-white hover:text-primaryColor xl:border-r-0"
+          } relative flex h-16 w-full cursor-pointer items-center justify-center gap-3 bg-primaryColor`}
         >
           <span>
-          <Copy size={32} weight="fill" />
+            <Copy size={32} weight="fill" />
           </span>
           ESPELHOS
         </p>
@@ -42,12 +43,12 @@ const PickServices = () => {
           }}
           className={`${
             box
-              ? "bg-gradient-to-r from-bodyColor to-[#66a900] text-white after:bg-lime-800 after:w-5 after:h-5 z-10 after:inline-block after:absolute after:-bottom-2 after:rotate-45"
-              : " hover:bg-white hover:text-primaryColor border border-lime-900 xl:border-r-0 bg-opacity-50"
-          } flex items-center justify-center gap-3 w-full bg-primaryColor h-16 cursor-pointer relative`}
+              ? "z-10 bg-gradient-to-r from-bodyColor to-[#66a900] text-white after:absolute after:-bottom-2 after:inline-block after:h-5 after:w-5 after:rotate-45 after:bg-lime-800"
+              : "border border-lime-900 bg-opacity-50 hover:bg-white hover:text-primaryColor xl:border-r-0"
+          } relative flex h-16 w-full cursor-pointer items-center justify-center gap-3 bg-primaryColor`}
         >
           <span>
-          <SquareHalf size={32} weight="fill" />
+            <SquareHalf size={32} weight="fill" />
           </span>
           BOX PARA BANHEIRO
         </p>
@@ -60,12 +61,12 @@ const PickServices = () => {
           }}
           className={`${
             design
-              ? "bg-gradient-to-r from-bodyColor to-[#66a900] text-white after:bg-lime-800 after:w-5 after:h-5 z-10 after:inline-block after:absolute after:-bottom-2 after:rotate-45"
-              : " hover:bg-white hover:text-primaryColor border border-lime-900 xl:border-r-0 bg-opacity-50"
-          } flex items-center justify-center gap-3 w-full bg-primaryColor h-16 cursor-pointer relative`}
+              ? "z-10 bg-gradient-to-r from-bodyColor to-[#66a900] text-white after:absolute after:-bottom-2 after:inline-block after:h-5 after:w-5 after:rotate-45 after:bg-lime-800"
+              : "border border-lime-900 bg-opacity-50 hover:bg-white hover:text-primaryColor xl:border-r-0"
+          } relative flex h-16 w-full cursor-pointer items-center justify-center gap-3 bg-primaryColor`}
         >
           <span>
-          <DoorOpen size={32} weight="fill" />
+            <DoorOpen size={32} weight="fill" />
           </span>
           PORTAS ESPECIAIS
         </p>
@@ -78,12 +79,12 @@ const PickServices = () => {
           }}
           className={`${
             development
-              ? "bg-gradient-to-r from-bodyColor to-[#66a900] text-white after:bg-lime-800 after:w-5 after:h-5 z-10 after:inline-block after:absolute after:-bottom-2 after:rotate-45"
-              : " hover:bg-white hover:text-primaryColor border border-lime-900 xl:border-r-0 bg-opacity-50"
-          } flex items-center justify-center gap-3 w-full bg-primaryColor h-16 cursor-pointer relative`}
+              ? "z-10 bg-gradient-to-r from-bodyColor to-[#66a900] text-white after:absolute after:-bottom-2 after:inline-block after:h-5 after:w-5 after:rotate-45 after:bg-lime-800"
+              : "border border-lime-900 bg-opacity-50 hover:bg-white hover:text-primaryColor xl:border-r-0"
+          } relative flex h-16 w-full cursor-pointer items-center justify-center gap-3 bg-primaryColor`}
         >
           <span>
-          <Scroll size={32} weight="fill" />
+            <Scroll size={32} weight="fill" />
           </span>
           PELICULAS DE SEGURANÇA
         </p>

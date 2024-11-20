@@ -1,6 +1,7 @@
-import Link from 'next/link';
-import cn from 'clsx';
-import { ComponentProps } from 'react';
+import Link from "next/link";
+import { ComponentProps } from "react";
+
+import cn from "clsx";
 
 const NextLink = (props: ComponentProps<typeof Link>) => {
   return (
@@ -8,7 +9,7 @@ const NextLink = (props: ComponentProps<typeof Link>) => {
       {...props}
       className={cn(
         props.className,
-        `hover:underline font-medium text-black transition-all duration-200 rounded dark:text-gray-300`
+        `rounded font-medium text-black transition-all duration-200 hover:underline dark:text-gray-300`
       )}
       href={props.href}
       title={props.title}

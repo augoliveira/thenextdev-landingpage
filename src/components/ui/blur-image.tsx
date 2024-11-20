@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import Image, { ImageProps } from 'next/image';
-import { useEffect, useState } from 'react';
+import Image, { ImageProps } from "next/image";
+import { useEffect, useState } from "react";
 
 export default function BlurImage(props: ImageProps) {
   const [loading, setLoading] = useState(true);
@@ -13,7 +13,7 @@ export default function BlurImage(props: ImageProps) {
       {...props}
       src={src}
       alt={props.alt}
-      className={`${props.className} ${loading ? 'blur-[2px]' : 'blur-0'}`}
+      className={`${props.className} ${loading ? "blur-[2px]" : "blur-0"}`}
       onLoad={async () => {
         setLoading(false);
       }}

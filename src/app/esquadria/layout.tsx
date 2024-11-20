@@ -1,11 +1,11 @@
-const title = 'ESQUADRIA DE ALUMÍNIO';
+const title = "ESQUADRIA DE ALUMÍNIO";
 
 export const metadata = {
   title,
   openGraph: {
     title,
-    images: [`/api/og?title=${title}`],
-  },
+    images: [`/api/og?title=${title}`]
+  }
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

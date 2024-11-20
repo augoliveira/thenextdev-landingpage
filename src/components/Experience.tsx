@@ -1,10 +1,11 @@
-'use client';
+"use client";
 import { useState } from "react";
-import { AnimatedText } from './AnimatedText-page';
+
+import { AnimatedText } from "./AnimatedText-page";
 import Amazon from "./works/Amazon";
-import Espelho from "./works/Espelho";
-import Cobertura from "./works/Cobertura";
 import Box from "./works/Box";
+import Cobertura from "./works/Cobertura";
+import Espelho from "./works/Espelho";
 import Splash from "./works/Splash";
 
 const Experience = () => {
@@ -54,20 +55,20 @@ const Experience = () => {
   return (
     <section
       id="experience"
-      className="mx-auto max-w-max py-8 sm:py-8 lg:py-24 gap-20 md:px-8 md:py-8 lg:flex-row"
+      className="mx-auto max-w-max gap-20 py-8 sm:py-8 md:px-8 md:py-8 lg:flex-row lg:py-24"
     >
-      <div className="max-w-7xl py-12 gap-x-6 lg:justify-center">
-      <AnimatedText text='Ligue e peça uma visita: vamos até você' />
+      <div className="max-w-7xl gap-x-6 py-12 lg:justify-center">
+        <AnimatedText text="Ligue e peça uma visita: vamos até você" />
       </div>
-      <div className="w-full mt-10 flex flex-col md:flex-row gap-8">
-        <ul className="md:w-96 flex flex-col">
+      <div className="mt-10 flex w-full flex-col gap-8 md:flex-row">
+        <ul className="flex flex-col md:w-96">
           <li
             onClick={handleBox}
             className={`${
               workBox
-                ? "border-l-textGreen text-textGreen bg-gradient-to-r from-bodyColor to-[#66a900] text-white after:bg-lime-800 after:w-5 after:h-5 z-10 after:inline-block after:absolute after:-bottom-2 after:rotate-45"
+                ? "z-10 border-l-textGreen bg-gradient-to-r from-bodyColor to-[#66a900] text-textGreen after:absolute after:-bottom-2 after:inline-block after:h-5 after:w-5 after:rotate-45 after:bg-lime-800"
                 : "border-l-hoverColor text-textDark"
-            } border-l-2 bg-transparent hover:bg-[#112240] py-3 text-xl cursor-pointer duration-300 px-8 font-bold`}
+            } cursor-pointer border-l-2 bg-transparent px-8 py-3 text-xl font-bold duration-300 hover:bg-[#112240]`}
           >
             Box de Banheiro
           </li>
@@ -75,9 +76,9 @@ const Experience = () => {
             onClick={handleCobertura}
             className={`${
               workCobertura
-                ? "border-l-textGreen text-textGreen bg-gradient-to-r from-bodyColor to-[#66a900] text-white after:bg-lime-800 after:w-5 after:h-5 z-10 after:inline-block after:absolute after:-bottom-2 after:rotate-45"
+                ? "z-10 border-l-textGreen bg-gradient-to-r from-bodyColor to-[#66a900] text-textGreen after:absolute after:-bottom-2 after:inline-block after:h-5 after:w-5 after:rotate-45 after:bg-lime-800"
                 : "border-l-hoverColor text-textDark"
-            } border-l-2 bg-transparent hover:bg-[#112240] py-3 text-xl cursor-pointer duration-300 px-8 font-bold`}
+            } cursor-pointer border-l-2 bg-transparent px-8 py-3 text-xl font-bold duration-300 hover:bg-[#112240]`}
           >
             Cobertura de Vidro
           </li>
@@ -85,10 +86,9 @@ const Experience = () => {
             onClick={handleEspelho}
             className={`${
               workEspelho
-                ? "border-l-textGreen text-textGreen bg-gradient-to-r from-bodyColor to-[#66a900] text-white after:bg-lime-800 after:w-5 after:h-5 z-10 after:inline-block after:absolute after:-bottom-2 after:rotate-45"
+                ? "z-10 border-l-textGreen bg-gradient-to-r from-bodyColor to-[#66a900] text-textGreen after:absolute after:-bottom-2 after:inline-block after:h-5 after:w-5 after:rotate-45 after:bg-lime-800"
                 : "border-l-hoverColor text-textDark"
-                
-            } border-l-2 bg-transparent hover:bg-[#112240] py-3 text-xl cursor-pointer duration-300 px-8 font-bold`}
+            } cursor-pointer border-l-2 bg-transparent px-8 py-3 text-xl font-bold duration-300 hover:bg-[#112240]`}
           >
             Espelhos
           </li>
@@ -96,9 +96,9 @@ const Experience = () => {
             onClick={handleSplash}
             className={`${
               workSplash
-                ? "border-l-textGreen text-textGreen bg-gradient-to-r from-bodyColor to-[#66a900] text-white after:bg-lime-800 after:w-5 after:h-5 z-10 after:inline-block after:absolute after:-bottom-2 after:rotate-45"
+                ? "z-10 border-l-textGreen bg-gradient-to-r from-bodyColor to-[#66a900] text-textGreen after:absolute after:-bottom-2 after:inline-block after:h-5 after:w-5 after:rotate-45 after:bg-lime-800"
                 : "border-l-hoverColor text-textDark"
-            } border-l-2 bg-transparent hover:bg-[#112240] py-3 text-xl cursor-pointer duration-300 px-8 font-bold`}
+            } cursor-pointer border-l-2 bg-transparent px-8 py-3 text-xl font-bold duration-300 hover:bg-[#112240]`}
           >
             Fachadas
           </li>
@@ -106,9 +106,9 @@ const Experience = () => {
             onClick={handleAmazon}
             className={`${
               workAmazon
-                ? "border-l-textGreen text-textGreen bg-gradient-to-r from-bodyColor to-[#66a900] text-white after:bg-lime-800 after:w-5 after:h-5 z-10 after:inline-block after:absolute after:-bottom-2 after:rotate-45"
+                ? "z-10 border-l-textGreen bg-gradient-to-r from-bodyColor to-[#66a900] text-textGreen after:absolute after:-bottom-2 after:inline-block after:h-5 after:w-5 after:rotate-45 after:bg-lime-800"
                 : "border-l-hoverColor text-textDark"
-            } border-l-2 bg-transparent hover:bg-[#112240] py-3 text-xl cursor-pointer duration-300 px-8 font-bold`}
+            } cursor-pointer border-l-2 bg-transparent px-8 py-3 text-xl font-bold duration-300 hover:bg-[#112240]`}
           >
             Guarda-Corpo
           </li>

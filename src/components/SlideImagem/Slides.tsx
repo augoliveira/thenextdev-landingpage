@@ -1,7 +1,8 @@
-'use client';
+"use client";
+
+import React from "react";
 
 import { Data } from "./index";
-import React from "react";
 import SliderCard from "./SliderCard";
 
 type Props = {
@@ -10,7 +11,7 @@ type Props = {
 
 function Slides({ data }: Props) {
   return (
-    <div className=" flex w-full gap-6">
+    <div className="flex w-full gap-6">
       {data.map((data) => {
         return <SliderCard key={data.img} data={data} />;
       })}

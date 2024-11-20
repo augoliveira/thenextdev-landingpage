@@ -1,14 +1,11 @@
-
-interface ContainerProps{
-    children: React.ReactNode
+interface ContainerProps {
+  children: React.ReactNode;
 }
-const Container: React.FC<ContainerProps> = ({
-    children
-}) =>{
-    return (
-        <div className="max-w-[1440px] w-screen xl:px-20 md:px-8 sm:px-7 px-7 mx-auto"
-        >{children}
-        </div>
-    )
-}
-export default Container
+const Container: React.FC<ContainerProps> = ({ children }) => {
+  return (
+    <div className="mx-auto w-screen max-w-[1440px] px-7 sm:px-7 md:px-8 xl:px-20">
+      {children}
+    </div>
+  );
+};
+export default Container;

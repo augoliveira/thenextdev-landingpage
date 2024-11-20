@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import { twMerge } from "tailwind-merge";
 
@@ -12,15 +12,15 @@ const TitleBanner = ({ subtitle, title, className }: Props) => {
   return (
     <div
       className={twMerge(
-        "w-full mx-auto bg-reactBd-titleBg mt-20 bg-fill bg-center py-10 mdl:py-20",
-        className,
+        "bg-fill mx-auto mt-20 w-full bg-reactBd-titleBg bg-center py-10 mdl:py-20",
+        className
       )}
     >
-      <div className="max-w-screen-2xl mx-auto text-center flex flex-col items-center justify-center">
-        <h4 className="text-secondaryColor uppercase text-xs mdl:text-sm tracking-[4px] mb-2">
+      <div className="mx-auto flex max-w-screen-2xl flex-col items-center justify-center text-center">
+        <h4 className="mb-2 text-xs uppercase tracking-[4px] text-secondaryColor mdl:text-sm">
           {subtitle}
         </h4>
-        <h1 className="font-titleFont text-4xl mdl:text-6xl font-semibold">
+        <h1 className="font-titleFont text-4xl font-semibold mdl:text-6xl">
           {title}
         </h1>
       </div>

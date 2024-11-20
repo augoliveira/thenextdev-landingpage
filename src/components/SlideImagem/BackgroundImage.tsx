@@ -1,7 +1,9 @@
-'use client'
+"use client";
 
 import React from "react";
+
 import { motion } from "framer-motion";
+
 import { Data, CurrentSlideData } from "./index";
 
 type Props = {
@@ -12,7 +14,7 @@ type Props = {
 function BackgroundImage({ transitionData, currentSlideData }: Props) {
   return (
     <>
-    {/* Background Transition Animation  */}
+      {/* Background Transition Animation  */}
       {transitionData && (
         <motion.img
           key={transitionData.img}
@@ -20,7 +22,7 @@ function BackgroundImage({ transitionData, currentSlideData }: Props) {
           alt="Transition Image"
           transition={{
             opacity: { ease: "linear" },
-            layout: { duration: 0.6 },
+            layout: { duration: 0.6 }
           }}
           className="image-layer lazyload absolute left-0 top-0 z-10 h-full w-full object-cover brightness-50"
           src={transitionData.img}
@@ -32,7 +34,7 @@ function BackgroundImage({ transitionData, currentSlideData }: Props) {
         alt="Current Image"
         key={currentSlideData.data.img + "transition"}
         src={currentSlideData.data.img}
-        className=" absolute left-0 top-0 h-full w-full object-cover brightness-50"
+        className="absolute left-0 top-0 h-full w-full object-cover brightness-50"
       />
     </>
   );

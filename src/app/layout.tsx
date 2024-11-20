@@ -6,16 +6,15 @@ import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 
 import { Analytics } from "@vercel/analytics/react";
-import { AddressBar } from "./../components/ui/address-bar";
 
 import { WEBSITE_HOST_URL } from "@/lib/constants";
 
 import { siteConfig } from "../config";
-import { ThemeProvider } from "./_components/theme-provider";
 
 import "./globals.css";
-import Header from "@/components/ui/Header";
 import { Footer } from "@/components/ui/footer";
+import { AddressBar } from "@/components/ui/address-bar";
+import Header from "@/components/ui/Header";
 
 export const metadata: Metadata = {
   title: {
@@ -91,9 +90,9 @@ export const viewport: Viewport = {
 
 export default function RootLayout({
   children
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return (
     <html suppressHydrationWarning lang="Pt-BR" className="[color-scheme:dark]">
       <body

@@ -1,23 +1,23 @@
-import Image from 'next/image'
+import Image from "next/image";
 
 export function Photos() {
   return (
     <>
       <div>
-        <div className="flex flex-col justify-center items-center mt-5 px-2 md:px-24 lg:px-28 xl:px-36 2xl:px-56">
-          <div className="relative px-2 md:px-0 flex flex-col justify-center items-center h-full gap-2 w-full md:gap-4">
-            <div className="flex gap-2 w-full md:gap-4">
-              <div className="w-8/12 relative grayscale hover:grayscale-0 transition-all group duration-500 ease-in-out dark:ring-offset-slate-900">
+        <div className="mt-5 flex flex-col items-center justify-center px-2 md:px-24 lg:px-28 xl:px-36 2xl:px-56">
+          <div className="relative flex h-full w-full flex-col items-center justify-center gap-2 px-2 md:gap-4 md:px-0">
+            <div className="flex w-full gap-2 md:gap-4">
+              <div className="group relative w-8/12 grayscale transition-all duration-500 ease-in-out hover:grayscale-0 dark:ring-offset-slate-900">
                 <Image
-                  className="object-cover flex justify-center h-full items-center w-full rounded-2xl brightness-50 group-hover:brightness-100 transition-all group duration-500 ease-in-out "
+                  className="group flex h-full w-full items-center justify-center rounded-2xl object-cover brightness-50 transition-all duration-500 ease-in-out group-hover:brightness-100"
                   src="/tv.jpg"
                   alt="all"
                   layout="fill"
                 />
               </div>
-              <div className="w-4/12 relative grayscale hover:grayscale-0 transition-all group duration-500 ease-in-out dark:ring-offset-slate-900">
+              <div className="group relative w-4/12 grayscale transition-all duration-500 ease-in-out hover:grayscale-0 dark:ring-offset-slate-900">
                 <Image
-                  className="object-cover w-full rounded-2xl brightness-50 group-hover:brightness-100 transition-all group duration-500 ease-in-out"
+                  className="group w-full rounded-2xl object-cover brightness-50 transition-all duration-500 ease-in-out group-hover:brightness-100"
                   src="/videogame.jpg"
                   alt="kids"
                   width="0"
@@ -26,10 +26,10 @@ export function Photos() {
                 />
               </div>
             </div>
-            <div className="flex gap-2 w-full md:gap-4">
-              <div className="w-2/4 relative grayscale hover:grayscale-0 transition-all group duration-500 ease-in-out dark:ring-offset-slate-900">
+            <div className="flex w-full gap-2 md:gap-4">
+              <div className="group relative w-2/4 grayscale transition-all duration-500 ease-in-out hover:grayscale-0 dark:ring-offset-slate-900">
                 <Image
-                  className="object-cover w-full rounded-2xl brightness-50 group-hover:brightness-100 transition-all group duration-500 ease-in-out"
+                  className="group w-full rounded-2xl object-cover brightness-50 transition-all duration-500 ease-in-out group-hover:brightness-100"
                   src="/celular.jpg"
                   layout="responsive"
                   width="0"
@@ -37,9 +37,9 @@ export function Photos() {
                   height="0"
                 />
               </div>
-              <div className="w-2/4 relative grayscale hover:grayscale-0 transition-all group duration-500 ease-in-out dark:ring-offset-slate-900">
+              <div className="group relative w-2/4 grayscale transition-all duration-500 ease-in-out hover:grayscale-0 dark:ring-offset-slate-900">
                 <Image
-                  className="object-cover w-full rounded-2xl brightness-50 group-hover:brightness-100 transition-all group duration-500 ease-in-out"
+                  className="group w-full rounded-2xl object-cover brightness-50 transition-all duration-500 ease-in-out group-hover:brightness-100"
                   src="/fone.jpg"
                   layout="responsive"
                   width="0"
@@ -52,5 +52,5 @@ export function Photos() {
         </div>
       </div>
     </>
-  )
+  );
 }

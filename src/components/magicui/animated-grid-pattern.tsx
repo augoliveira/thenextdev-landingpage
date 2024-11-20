@@ -1,8 +1,11 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 
-import { cn } from "@/lib/utils";
-import { motion } from "framer-motion";
 import { useEffect, useId, useRef, useState } from "react";
+
+import { motion } from "framer-motion";
+
+import { cn } from "@/lib/utils";
 
 interface GridPatternProps {
   width?: number;
@@ -27,6 +30,7 @@ export function GridPattern({
   className,
   maxOpacity = 0.5,
   duration = 4,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   repeatDelay = 0.5,
   ...props
 }: GridPatternProps) {
@@ -38,7 +42,7 @@ export function GridPattern({
   function getPos() {
     return [
       Math.floor((Math.random() * dimensions.width) / width),
-      Math.floor((Math.random() * dimensions.height) / height),
+      Math.floor((Math.random() * dimensions.height) / height)
     ];
   }
 
@@ -46,7 +50,7 @@ export function GridPattern({
   function generateSquares(count: number) {
     return Array.from({ length: count }, (_, i) => ({
       id: i,
-      pos: getPos(),
+      pos: getPos()
     }));
   }
 
@@ -57,10 +61,10 @@ export function GridPattern({
         sq.id === id
           ? {
               ...sq,
-              pos: getPos(),
+              pos: getPos()
             }
-          : sq,
-      ),
+          : sq
+      )
     );
   };
 
@@ -74,10 +78,10 @@ export function GridPattern({
   // Resize observer to update container dimensions
   useEffect(() => {
     const resizeObserver = new ResizeObserver((entries) => {
-      for (let entry of entries) {
+      for (const entry of entries) {
         setDimensions({
           width: entry.contentRect.width,
-          height: entry.contentRect.height,
+          height: entry.contentRect.height
         });
       }
     });
@@ -99,7 +103,7 @@ export function GridPattern({
       aria-hidden="true"
       className={cn(
         "pointer-events-none absolute inset-0 h-full w-full fill-gray-400/30 stroke-gray-400/30",
-        className,
+        className
       )}
       {...props}
     >
@@ -129,7 +133,7 @@ export function GridPattern({
               duration,
               repeat: 1,
               delay: index * 0.1,
-              repeatType: "reverse",
+              repeatType: "reverse"
             }}
             onAnimationComplete={() => updateSquarePosition(id)}
             key={`${x}-${y}-${index}`}

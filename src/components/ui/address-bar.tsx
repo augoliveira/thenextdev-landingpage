@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import React, { Suspense } from 'react';
-import { usePathname, useSearchParams } from 'next/navigation';
+import { usePathname, useSearchParams } from "next/navigation";
+import React, { Suspense } from "react";
 
 function Params() {
   const searchParams = useSearchParams()!;
@@ -62,7 +62,7 @@ export function AddressBar() {
           <>
             <span className="text-gray-600">/</span>
             {pathname
-              .split('/')
+              .split("/")
               .slice(2)
               .map((segment) => {
                 return (

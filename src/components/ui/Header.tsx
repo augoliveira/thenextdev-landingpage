@@ -1,23 +1,26 @@
+/* eslint-disable react/no-unknown-property */
+/* eslint-disable @typescript-eslint/no-unused-expressions */
 "use client";
+import { usePathname } from "next/navigation";
 import React, { useEffect, useState } from "react";
-import { motion } from "framer-motion";
 import { AiOutlineClose } from "react-icons/ai";
 import { CgMenuRight } from "react-icons/cg";
-
-import NextLink from "./NextLink";
-import { reactBdLogo } from "@/assets";
-import SideNav from "./SideNav";
-import NextImage from "../ui/NextImage";
-import { usePathname } from "next/navigation";
 import { MdClose } from "react-icons/md";
+
+import { reactBdLogo } from "@/assets";
+import { motion } from "framer-motion";
+
+import NextImage from "../ui/NextImage";
+import NextLink from "./NextLink";
+import SideNav from "./SideNav";
 
 const navigation = [
   { title: "Home", link: "/" },
   { title: "Quem Somos", link: "/quem-somos" },
-  { title: "Produtos", link: "/produto" },
+  { title: "Serviços", link: "/servicos" },
   { title: "Faq", link: "/faq" },
   { title: "Blog", link: "/blog" },
-  { title: "Contato", link: "/contato" },
+  { title: "Contato", link: "/contato" }
 ];
 
 const Header = () => {
@@ -47,12 +50,12 @@ const Header = () => {
         style={{
           backgroundColor: navColor,
           height: navSize,
-          transition: "all 1s",
+          transition: "all 1s"
         }}
-        className="w-full h-[90px] bg-primaryColor fixed top-0 z-50 px-4 nav"
+        className="nav fixed left-0 top-0 z-50 h-[90px] w-full bg-primaryColor px-4"
       >
-        <div className="w-full h-[90px]">
-          <header className="max-w-screen-2xl mx-auto text-white flex items-center justify-between h-full overflow-hidden">
+        <div className="h-[90px] w-full">
+          <header className="mx-auto flex h-full max-w-screen-2xl items-center justify-between overflow-hidden text-white">
             {/* ================= Header logo start here ================= */}
             <NextLink href="/">
               <div>
@@ -67,21 +70,21 @@ const Header = () => {
             {/* ================= Header logo end here =================== */}
             {/* ================= Header Nav Link start here =================== */}
             <div className="relative">
-              <div className="hidden lgl:flex items-center gap-6 xl:gap-12 uppercase text-4xl tracking-tight text-[14px] font-semibold">
+              <div className="hidden items-center gap-6 text-4xl text-[14px] font-semibold uppercase tracking-tight lgl:flex xl:gap-12">
                 {navigation?.map((item) => (
                   <NextLink
                     key={item?.title}
                     href={item?.link}
-                    className="relative px-3 group hover:cursor-pointer overflow-hidden py-1"
+                    className="group relative overflow-hidden px-3 py-1 text-slate-300 hover:cursor-pointer"
                   >
                     {item?.title}
                     <span
-                      className={`w-full h-[2px] group-hover:bg-secondaryColor absolute left-0 bottom-0 translate-y-[1px] transition-hover duration-100 ${
+                      className={`transition-hover absolute bottom-0 left-0 h-[2px] w-full translate-y-[1px] duration-100 group-hover:bg-secondaryColor ${
                         item?.link === pathname && "bg-secondaryColor"
                       }`}
                     ></span>
                     <span
-                      className={`w-[2px] h-[10px] group-hover:bg-secondaryColor absolute left-0 bottom-0 -translate-x-[1px] transition-translate duration-100 ${
+                      className={`transition-translate absolute bottom-0 left-0 h-[10px] w-[2px] -translate-x-[1px] duration-100 group-hover:bg-secondaryColor ${
                         item?.link === pathname && "bg-secondaryColor"
                       }`}
                     ></span>
@@ -89,18 +92,18 @@ const Header = () => {
                 ))}
               </div>
               {/* ================== Header Small Icon start here ================== */}
-              
+
               <div
                 onCanPlay={() => setToggleNav(!toggleNav)}
-                className="relative text-2xl w-11 h-11 lgl:hidden flex flex-col gap-[6px] border-b-[1px] border-b-secondaryColor border-t-[1px] text-white border-t-secondaryColor items-center justify-center group hover:cursor-pointer overflow-hidden"
+                className="group relative flex h-11 w-11 flex-col items-center justify-center gap-[6px] overflow-hidden border-b-[1px] border-t-[1px] border-b-secondaryColor border-t-secondaryColor text-2xl text-white hover:cursor-pointer lgl:hidden"
               >
                 {toggleNav ? (
                   <AiOutlineClose onClick={() => setToggleNav(!toggleNav)} />
                 ) : (
                   <CgMenuRight onClick={() => setToggleNav(!toggleNav)} />
                 )}
-                <span className="h-full w-[1px] bg-secondaryColor inline-block absolute right-0 translate-y-8 group-hover:translate-y-0 transition-transform duration-300"></span>
-                <span className="h-full w-[1px] bg-secondaryColor inline-block absolute left-0 -translate-y-8 group-hover:translate-y-0 transition-transform duration-300"></span>
+                <span className="absolute right-0 inline-block h-full w-[1px] translate-y-8 bg-secondaryColor transition-transform duration-300 group-hover:translate-y-0"></span>
+                <span className="absolute left-0 inline-block h-full w-[1px] -translate-y-8 bg-secondaryColor transition-transform duration-300 group-hover:translate-y-0"></span>
               </div>
 
               {/* ================== Header Small Icon end here ==================== */}
@@ -110,20 +113,20 @@ const Header = () => {
 
             <div
               onClick={() => setShowSideNav(!showSideNav)}
-              className="relative hidden text-xl w-11 h-11 lgl:flex flex-col gap-[6px] border-b-[1px] border-b-gray-500 border-t-[1px] border-t-gray-500 items-center justify-center group hover:cursor-pointer overflow-hidden menuBtn"
+              className="menuBtn group relative hidden h-11 w-11 flex-col items-center justify-center gap-[6px] overflow-hidden border-b-[1px] border-t-[1px] border-b-gray-500 border-t-gray-500 text-xl hover:cursor-pointer lgl:flex"
             >
               {!showSideNav ? (
                 <>
-                  <span className="w-5 h-[1px] inline-flex bg-white"></span>
-                  <span className="w-5 h-[1px] inline-flex bg-white"></span>
-                  <span className="w-5 h-[1px] inline-flex bg-white"></span>
+                  <span className="inline-flex h-[1px] w-5 bg-white"></span>
+                  <span className="inline-flex h-[1px] w-5 bg-white"></span>
+                  <span className="inline-flex h-[1px] w-5 bg-white"></span>
                 </>
               ) : (
                 <MdClose className="text-xl text-red-500" />
               )}
 
-              <span className="h-full w-[1px] bg-gray-500 inline-block absolute right-0 translate-y-8 group-hover:translate-y-0 transition-transform duration-300"></span>
-              <span className="h-full w-[1px] bg-gray-500 inline-block absolute left-0 -translate-y-8 group-hover:translate-y-0 transition-transform duration-300"></span>
+              <span className="absolute right-0 inline-block h-full w-[1px] translate-y-8 bg-gray-500 transition-transform duration-300 group-hover:translate-y-0"></span>
+              <span className="absolute left-0 inline-block h-full w-[1px] -translate-y-8 bg-gray-500 transition-transform duration-300 group-hover:translate-y-0"></span>
             </div>
 
             {/* ================= Header Emergency end here ===================== */}
@@ -144,15 +147,15 @@ const Header = () => {
           transition={{
             y: { type: "spring", stiffness: 60 },
             opacity: { duration: 1 },
-            ease: "easeIn easeOut",
+            ease: "easeIn easeOut"
           }}
-          className="w-full py-6 px-4 top-0 mt-20 z-50 bg-black fixed inline-block lgl:hidden text-white/80"
+          className="fixed top-0 z-50 mt-20 inline-block w-full bg-black px-4 py-6 text-white/80 lgl:hidden"
         >
-          <ul className="w-full flex flex-col gap-2 font-titleFont uppercase text-sm">
+          <ul className="font-titleFont flex w-full flex-col gap-2 text-sm uppercase">
             <NextLink href="/">
               <li
                 onClick={() => setToggleNav(false)}
-                className=" w-full px-3 hover:cursor-pointer py-1 border-b-[1px] border-b-borderColor hover:text-secondaryColor hover:border-b-secondaryColor transition-hover duration-500"
+                className="transition-hover w-full border-b-[1px] border-b-borderColor px-3 py-1 duration-500 hover:cursor-pointer hover:border-b-secondaryColor hover:text-secondaryColor"
               >
                 Home
               </li>
@@ -160,28 +163,28 @@ const Header = () => {
             <NextLink href="/about">
               <li
                 onClick={() => setToggleNav(false)}
-                className="px-3 hover:cursor-pointer py-2 border-b-[1px] border-b-borderColor hover:text-secondaryColor hover:border-b-secondaryColor transition-hover duration-500"
+                className="transition-hover border-b-[1px] border-b-borderColor px-3 py-2 duration-500 hover:cursor-pointer hover:border-b-secondaryColor hover:text-secondaryColor"
               >
                 About Us
               </li>
             </NextLink>
             <NextLink onClick={() => setToggleNav(false)} href="/services">
-              <li className="px-3 hover:cursor-pointer flex items-center gap-1 py-2 border-b-[1px] border-b-borderColor hover:text-secondaryColor hover:border-b-secondaryColor transition-hover duration-500">
+              <li className="transition-hover flex items-center gap-1 border-b-[1px] border-b-borderColor px-3 py-2 duration-500 hover:cursor-pointer hover:border-b-secondaryColor hover:text-secondaryColor">
                 Services
               </li>
             </NextLink>
             <NextLink href="/faq">
-              <li className="px-3 hover:cursor-pointer py-2 border-b-[1px] border-b-borderColor hover:text-secondaryColor hover:border-b-secondaryColor transition-hover duration-500">
+              <li className="transition-hover border-b-[1px] border-b-borderColor px-3 py-2 duration-500 hover:cursor-pointer hover:border-b-secondaryColor hover:text-secondaryColor">
                 FAQ
               </li>
             </NextLink>
             <NextLink href="/blog">
-              <li className="px-3 hover:cursor-pointer py-2 border-b-[1px] border-b-borderColor hover:text-secondaryColor hover:border-b-secondaryColor transition-hover duration-500">
+              <li className="transition-hover border-b-[1px] border-b-borderColor px-3 py-2 duration-500 hover:cursor-pointer hover:border-b-secondaryColor hover:text-secondaryColor">
                 Blog
               </li>
             </NextLink>
             <NextLink onClick={() => setToggleNav(false)} href="/contact">
-              <li className="px-3 hover:cursor-pointer py-2 border-b-[1px] border-b-borderColor hover:text-secondaryColor hover:border-b-secondaryColor transition-hover duration-500">
+              <li className="transition-hover border-b-[1px] border-b-borderColor px-3 py-2 duration-500 hover:cursor-pointer hover:border-b-secondaryColor hover:text-secondaryColor">
                 Contact
               </li>
             </NextLink>

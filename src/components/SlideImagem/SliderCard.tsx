@@ -1,8 +1,10 @@
-'use client';
+"use client";
 
 import React from "react";
-import NextImage from "../ui/NextImage";
+
 import { motion } from "framer-motion";
+
+import NextImage from "../ui/NextImage";
 
 type Props = {
   data: any;
@@ -11,44 +13,43 @@ type Props = {
 function SliderCard({ data }: Props) {
   return (
     <motion.div
-      className=" relative h-52 min-w-[250px] rounded-2xl shadow-md md:h-80 md:min-w-[250px]"
+      className="relative h-52 min-w-[250px] rounded-2xl shadow-md md:h-80 md:min-w-[250px]"
       layout
       initial={{ scale: 0.8, opacity: 0 }}
       animate={{
         scale: 1,
         opacity: 1,
         transition: {
-          duration: 0.4,
-        },
+          duration: 0.4
+        }
       }}
       exit={{ scale: 0.8, opacity: 0 }}
       transition={{
         type: "spring",
         damping: 20,
-        stiffness: 100,
+        stiffness: 100
       }}
     >
       <motion.div>
         <NextImage
-        alt="Transition Image"
-        src={data.img}
-        placeholder='blur'
-        blurDataURL='data:image/png;base64,[IMAGE_CODE_FROM_PNG_PIXEL]'
-        quality={100}
-        fill
-        sizes="100vw"
-        style={{
-          objectFit: "cover",
-        }}
-        className="image-layer lazyload absolute h-full w-full  rounded-2xl  object-cover brightness-75 "
-      />
+          alt="Transition Image"
+          src={data.img}
+          placeholder="blur"
+          blurDataURL="data:image/png;base64,[IMAGE_CODE_FROM_PNG_PIXEL]"
+          quality={100}
+          fill
+          sizes="100vw"
+          style={{
+            objectFit: "cover"
+          }}
+          className="image-layer lazyload absolute h-full w-full rounded-2xl object-cover brightness-75"
+        />
       </motion.div>
-      <motion.div className=" absolute z-10 flex h-full items-end p-4">
+      <motion.div className="absolute z-10 flex h-full items-end p-4">
         <motion.div>
-          
           <motion.div
             layout
-            className=" mb-2 h-[2px] w-3 rounded-full bg-white"
+            className="mb-2 h-[2px] w-3 rounded-full bg-white"
           ></motion.div>
 
           <motion.p layoutId={data.location} className="text-xs text-[#D5D5D6]">

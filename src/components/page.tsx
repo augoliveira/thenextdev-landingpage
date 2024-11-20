@@ -1,6 +1,7 @@
+import React from "react";
+
 import BoldHeading from "@/components/BoldHeading";
 import { ShadModal } from "@/components/ShadModal";
-import React from "react";
 
 export default function page() {
   return (

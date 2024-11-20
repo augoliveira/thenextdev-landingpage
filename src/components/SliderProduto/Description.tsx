@@ -1,5 +1,4 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-'use client';
+"use client";
 
 import Image from "next/image";
 import React from "react";
@@ -11,9 +10,7 @@ import right from "../../../public/right.svg";
 import Button from "./Button";
 import { images } from "./constants";
 
-
 type Props = {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   activeImage: any;
   clickNext: any;
   clickPrev: any;
@@ -37,16 +34,16 @@ const Description = ({ activeImage, clickNext, clickPrev }: Props) => {
           <motion.div
             initial={{
               opacity: idx === activeImage ? 0 : 0.5,
-              scale: idx === activeImage ? 0.5 : 0.3,
+              scale: idx === activeImage ? 0.5 : 0.3
             }}
             animate={{
               opacity: idx === activeImage ? 1 : 0.5,
-              scale: idx === activeImage ? 1 : 0.3,
+              scale: idx === activeImage ? 1 : 0.3
             }}
             transition={{
               ease: "linear",
               duration: 2,
-              x: { duration: 1 },
+              x: { duration: 1 }
             }}
             className="w-full"
           >

@@ -32,7 +32,7 @@ interface Prop {
 const Services = ({ service }: Prop) => {
   return (
     <>
-      <div className="group z-40 flex h-[526px] cursor-pointer flex-col overflow-hidden rounded-lg border-2 border-gray-800 bg-gray-800 bg-gradient-to-r from-bodyColor to-[#66a900] p-4 opacity-100 transition-transform duration-200 ease-out hover:scale-105 hover:border-emerald-500 hover:bg-gradient-to-b hover:from-gray-900 hover:opacity-100">
+      <div className="group z-40 flex h-[526px] cursor-pointer flex-col overflow-hidden rounded-lg border-2 border-gray-800 bg-gray-800 bg-gradient-to-r from-clr_white to-[#d2d2d2] p-4 opacity-100 transition-transform duration-200 ease-out hover:scale-105 hover:border-emerald-500 hover:bg-gradient-to-b hover:from-gray-900 hover:opacity-100">
         <motion.div
           data-aos="fade-up"
           className=""
@@ -51,14 +51,14 @@ const Services = ({ service }: Prop) => {
           </div>
           <div className="flex flex-1 flex-col p-8">
             <div className="w-full"></div>
-            <strong className="mt-4 text-3xl font-extrabold tracking-tight text-gray-50/90 transition-all group-hover:text-emerald-500 dark:text-slate-50 sm:text-4xl">
+            <strong className="mt-4 text-3xl font-extrabold tracking-tight text-gray-900/90 transition-all group-hover:text-emerald-500 dark:text-slate-400 sm:text-4xl">
               {service.name}
             </strong>
             <p className="mt-2 line-clamp-4 text-gray-400">
               {service.description}
             </p>
             <span className="mt-8 block truncate text-sm font-medium text-gray-300">
-              <p className="-py-8 mt-4 inline-block rounded-full px-2 text-white lg:mt-2">
+              <p className="-py-8 mt-4 inline-block rounded-full px-2 text-slate-900 lg:mt-2">
                 <SliderButtons buttons={service.buttons} />
               </p>
             </span>

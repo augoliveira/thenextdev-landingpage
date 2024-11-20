@@ -1,12 +1,12 @@
-'use client';
+"use client";
 
-import React from 'react';
+import React from "react";
 
 interface Props {
   text: string;
 }
 
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
 const quote = {
   initial: {
@@ -40,15 +40,15 @@ export function AnimatedText({ text }: Props) {
       <div className="mx-auto flex w-full items-start justify-start overflow-hidden text-start lg:py-2">
         <motion.h1
           className={
-            '${}className} flex border-b border-slate-600/30 pl-8 text-4xl font-extrabold leading-7 text-slate-400'
+            "${}className} flex border-b border-slate-600/30 pl-8 text-4xl font-extrabold leading-7 text-slate-400"
           }
           variants={quote}
           initial="initial"
           animate="animate"
         >
-          {text.split(' ').map((word, index) => (
+          {text.split(" ").map((word, index) => (
             <motion.span
-              key={word + '_' + index}
+              key={word + "_" + index}
               className="-mb-px inline-block border-b border-b-current py-2"
               variants={singelword}
             >
