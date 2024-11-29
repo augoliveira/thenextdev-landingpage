@@ -1,4 +1,5 @@
 import { Suspense } from "react";
+import Loading from "./loading";
 
 import SliderCars from "@/components/sections/sliderCars";
 import Marketing from "@/components/ui/Marketing";
@@ -29,7 +30,9 @@ export default function Home() {
         <Service />
       </div>
       <SecondFeatureSection />
-      <Categoria />
+      <Suspense fallback={<p><Loading /></p>}>
+        <Categoria />
+      </Suspense>
       <InvestmentSection />
       <Archive />
       <FAQ />
