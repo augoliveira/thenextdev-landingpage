@@ -32,8 +32,11 @@ const SliderThumbnailItem = ({
         <NextImage
           src={image}
           alt="Image"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           fill
-          sizes="100vw"
+          style={{
+            objectFit: "cover",
+          }}
           className="rounded-lg object-cover"
         />
       </div>

@@ -7,6 +7,7 @@ import NextImage from "../ui/NextImage";
 import { images } from "./constants";
 import Description from "./Description";
 
+
 const SlideBox = () => {
   const [activeImage, setActiveImage] = useState(0);
 
@@ -49,6 +50,7 @@ const SlideBox = () => {
               alt=""
               width={400}
               height={400}
+              priority={true}
               className="h-full w-full object-cover md:rounded-bl-3xl md:rounded-tl-3xl"
             />
           </div>

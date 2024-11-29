@@ -38,10 +38,10 @@ module.exports = {
       "4/3": [4, 3], // or 4 / 3
       "21/9": [21, 9] // or 21 / 9
     },
-    fontFamily: {
-      permanent: ["Permanent Marker", "cursive"],
-      foldit: ["Foldit", "cursive"]
-    },
+    // fontFamily: {
+    // 	sans: ["var(--font-montserrat)", "sans-serif"],
+    // 	display: ["var(--font-freight-big-pro)", "serif"],
+    // },
     extend: {
       backgroundImage: {
         "hero-image": "url('/grid.svg')",

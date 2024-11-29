@@ -1,4 +1,3 @@
-import Link from "next/link";
 
 import { motion } from "framer-motion";
 
@@ -6,6 +5,7 @@ import { cn } from "@/lib/utils";
 
 import ContactUs from "./../ui/ContactUs";
 import NextImage from "../ui/NextImage";
+import NextLink from "../ui/NextLink";
 
 interface SliderItemProps {
   itemActive: number;
@@ -39,10 +39,11 @@ const SliderItem = ({
         <NextImage
           src={image}
           alt="Image"
-          fill
-          sizes="(max-width: 768px) 100vw,
-          (max-width: 1200px 50vw,
-          33vw"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        fill
+        style={{
+          objectFit: "cover",
+        }}
           className="h-full w-full object-cover"
         />
       </div>
@@ -90,9 +91,9 @@ const SliderItem = ({
               duration: 1
             }}
           >
-            <Link href="/contato">
+            <NextLink href="/contato">
               <ContactUs buttonData="Contato" />
-            </Link>
+            </NextLink>
           </motion.div>
         </div>
       </div>

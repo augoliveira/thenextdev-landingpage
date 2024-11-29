@@ -1,9 +1,32 @@
 /* eslint-disable import-helpers/order-imports */
 import type { Metadata, Viewport } from "next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { Inter } from "next/font/google";
+import clsx from "clsx";
+// import { Montserrat } from "next/font/google";
+// import localFont from "next/font/local";
 
-const inter = Inter({ subsets: ["latin"] });
+// export const montserrat = Montserrat({
+// 	weight: ["300", "400", "600", "900"],
+// 	style: ["normal", "italic"],
+// 	subsets: ["latin"],
+// 	variable: "--font-montserrat",
+// });
+
+// export const freightBigPro = localFont({
+// 	src: [
+// 		{
+// 			path: "../fonts/freight-big-pro-light.otf",
+// 			weight: "300",
+// 			style: "normal",
+// 		},
+// 		{
+// 			path: "../fonts/freight-big-pro-light-italic.otf",
+// 			weight: "300",
+// 			style: "italic",
+// 		},
+// 	],
+// 	variable: "--font-freight-big-pro",
+// });
 
 import { Analytics } from "@vercel/analytics/react";
 
@@ -96,8 +119,14 @@ export default function RootLayout({
   return (
     <html suppressHydrationWarning lang="Pt-BR" className="[color-scheme:dark]">
       <body
-        className={`${inter.className} w-full bg-gradient-to-r from-bodyColor to-[#107a39]`}
-      >
+        className={clsx(
+					// montserrat.variable,
+					// freightBigPro.variable,
+					"h-full",
+					"font-sans",
+          "bg-gradient-to-r from-bodyColor to-[#107a39]"
+				)}
+        >
         <div className="space-y-8 pt-20 lg:py-20">
           <Header />
           <div className="max-w-8xl mx-auto space-y-8 px-2 pt-8 lg:mb-8 lg:px-8 lg:pt-4">
