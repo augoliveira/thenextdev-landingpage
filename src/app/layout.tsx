@@ -41,6 +41,8 @@ import Header from "@/components/ui/Header";
 import { DemoBadge } from "./_components/DemoBadge";
 import FloatingWhatsappIcon from "./_components/FloatingWhatsappIcon";
 import { GoogleTagManager } from '@next/third-parties/google';
+import { Suspense } from "react";
+import CookieBanner from "@/components/cookie-banner";
 
 export const metadata: Metadata = {
   title: {
@@ -145,7 +147,10 @@ export default function RootLayout({
                 <>
                   {children}
                   <SpeedInsights />
+                  <CookieBanner />
+                  <Suspense fallback={null}>
                   <GoogleTagManager gtmId="GTM-NQ43J9D" />
+                  </Suspense>
                 </>
               </div>
             </div>
