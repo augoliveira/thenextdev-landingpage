@@ -1,6 +1,5 @@
 /* eslint-disable import-helpers/order-imports */
 import type { Metadata, Viewport } from "next";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 import clsx from "clsx";
 // import { Montserrat } from "next/font/google";
 // import localFont from "next/font/local";
@@ -40,8 +39,6 @@ import { AddressBar } from "@/components/ui/address-bar";
 import Header from "@/components/ui/Header";
 import { DemoBadge } from "./_components/DemoBadge";
 import FloatingWhatsappIcon from "./_components/FloatingWhatsappIcon";
-import { GoogleTagManager } from '@next/third-parties/google';
-import { Suspense } from "react";
 
 export const metadata: Metadata = {
   title: {
@@ -145,10 +142,6 @@ export default function RootLayout({
               <div className="rounded-b-lg bg-black/30 p-3.5 backdrop-blur-sm lg:p-6">
                 <>
                   {children}
-                  <SpeedInsights />
-                  <Suspense fallback={null}>
-                  <GoogleTagManager gtmId="GTM-NQ43J9D" />
-                  </Suspense>
                 </>
               </div>
             </div>
