@@ -27,8 +27,6 @@ import clsx from "clsx";
 // 	variable: "--font-freight-big-pro",
 // });
 
-import { Analytics } from "@vercel/analytics/react";
-
 import { WEBSITE_HOST_URL } from "@/lib/constants";
 
 import { siteConfig } from "../config";
@@ -152,7 +150,6 @@ export default function RootLayout({
             <Footer />
           </div>
         </div>
-        <Analytics />
       </body>
     </html>
   );
