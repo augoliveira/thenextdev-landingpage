@@ -4,8 +4,8 @@ import Loading from "./loading";
 import SliderCars from "@/components/sections/sliderCars";
 import Marketing from "@/components/ui/Marketing";
 import Projects from "@/components/ui/Projects";
+import FloatingWhatsappIcon from "./_components/FloatingWhatsappIcon";
 
-import { data } from "@/lib/_data";
 
 import SecondFeatureSection from "../components/sections/SecondFeatureSection";
 import Categoria from "../components/Slider/Categoria";
@@ -19,7 +19,9 @@ import PickServices from "./../components/ui/services/PickServices";
 
 export default function Home() {
   return (
+    <>
     <Suspense>
+      
       <SliderCars />
       <Marketing />
       <PickServices />
@@ -37,5 +39,6 @@ export default function Home() {
       <Archive />
       <FAQ />
     </Suspense>
+    </>
   );
 }

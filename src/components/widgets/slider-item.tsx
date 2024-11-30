@@ -1,5 +1,6 @@
 
 import { motion } from "framer-motion";
+import { sendGTMEvent } from '@next/third-parties/google'
 
 import { cn } from "@/lib/utils";
 
@@ -91,9 +92,11 @@ const SliderItem = ({
               duration: 1
             }}
           >
-            <NextLink href="/contato">
-              <ContactUs buttonData="Contato" />
-            </NextLink>
+            <button
+        onClick={() => sendGTMEvent({ event: 'buttonClicked', value: 'xyz' })}
+      >
+        Send Event
+      </button>
           </motion.div>
         </div>
       </div>

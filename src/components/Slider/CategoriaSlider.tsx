@@ -83,7 +83,7 @@ export default function CategoriaSlider() {
           <>
             <SwiperSlide
               className="flex w-full flex-col justify-end rounded-md bg-slate-300 px-2 py-32 shadow-md sm:pb-16 lg:h-[755px] lg:pb-[110px]"
-              key={id}
+              key={Categoria.id}
             >
               <div className="container flex flex-col-reverse items-start justify-between lg:flex-row">
                 <motion.div

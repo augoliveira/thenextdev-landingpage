@@ -1,18 +1,7 @@
 "use client";
 
-import { ExternalLink } from '@/components/ui/external-link';
-import { NextLink } from 'next/link';
 import NextImage from './../../components/ui/NextImage';
-import Img1 from '../../../public/beach-house.9b9ee168.jpg'
 import Img2 from '../../../public/Bg-sobre.jpg'
-import Img3 from '../../../public/beach-house-interior-2.3672af98.jpg'
-import HeroImg from '../../../public/beach-house-interior-2.3672af98.jpg'
-import { useRef, useState } from "react";
-import Image from "next/image";
-import { AnimatePresence, motion } from "framer-motion";
-import { cn } from "@/utils/cn";
-import { DirectionAwareHover } from "@/components/ui/direction-aware-hover";
-import { AnimatedText } from './AnimatedText/index';
 import { PageIntroduction } from './page-introduction';
 
 

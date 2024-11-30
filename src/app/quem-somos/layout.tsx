@@ -1,4 +1,5 @@
 import { TabGroup } from '@/components/ui/tab-group';
+import { GoogleAnalytics } from '@next/third-parties/google';
 import React from 'react';
 
 const title = 'Glazing | Sobre-nós';

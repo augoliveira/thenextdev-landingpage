@@ -38,6 +38,9 @@ import "./globals.css";
 import { Footer } from "@/components/ui/footer";
 import { AddressBar } from "@/components/ui/address-bar";
 import Header from "@/components/ui/Header";
+import { DemoBadge } from "./_components/DemoBadge";
+import FloatingWhatsappIcon from "./_components/FloatingWhatsappIcon";
+import { GoogleTagManager } from '@next/third-parties/google';
 
 export const metadata: Metadata = {
   title: {
@@ -129,6 +132,8 @@ export default function RootLayout({
         >
         <div className="space-y-8 pt-20 lg:py-20">
           <Header />
+          <DemoBadge />
+          <FloatingWhatsappIcon />
           <div className="max-w-8xl mx-auto space-y-8 px-2 pt-8 lg:mb-8 lg:px-8 lg:pt-4">
             <div className="bg-vc-border-gradient rounded-lg p-px shadow-lg shadow-black/20">
               <div className="bg-vc-border-gradient rounded-t-lg p-px shadow-lg shadow-black/20">
@@ -140,6 +145,7 @@ export default function RootLayout({
                 <>
                   {children}
                   <SpeedInsights />
+                  <GoogleTagManager gtmId="GTM-NQ43J9D" />
                 </>
               </div>
             </div>

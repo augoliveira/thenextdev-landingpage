@@ -5,7 +5,9 @@ export default function Categoria() {
   return (
     <section id="Categoria" className="min-h-[680px] bg-slate-200 p-8">
       <div className="container mx-auto lg:flex-row">
-        <AnimatedText text="PRODUTOS" />
+        <div className="mb-8">
+          <AnimatedText text="Nossos Projetos" />
+        </div>
         <CategoriaSlider />
       </div>
     </section>
