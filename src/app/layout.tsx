@@ -29,6 +29,8 @@ import clsx from "clsx";
 
 import { WEBSITE_HOST_URL } from "@/lib/constants";
 
+import CookieConsent from '../lib/CookieConsent';
+
 import { siteConfig } from "../config";
 
 import "./globals.css";
@@ -140,6 +142,7 @@ export default function RootLayout({
               <div className="rounded-b-lg bg-black/30 p-3.5 backdrop-blur-sm lg:p-6">
                 <>
                   {children}
+                  <CookieConsent />
                 </>
               </div>
             </div>
