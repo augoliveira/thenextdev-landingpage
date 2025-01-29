@@ -10,7 +10,7 @@ import { MdClose } from "react-icons/md";
 import { reactBdLogo } from "@/assets";
 import { motion } from "framer-motion";
 
-import NextImage from "../ui/NextImage";
+import Image from 'next/image'
 import NextLink from "./NextLink";
 import SideNav from "./SideNav";
 
@@ -26,6 +26,7 @@ const navigation = [
 const Header = () => {
   const [toggleNav, setToggleNav] = useState(false);
   const [showSideNav, setShowSideNav] = useState(false);
+  const [isImageLoading, setImageLoading] = React.useState(true)
 
   const pathname = usePathname();
 
@@ -59,11 +60,12 @@ const Header = () => {
             {/* ================= Header logo start here ================= */}
             <NextLink href="/">
               <div>
-                <NextImage
+              <Image
                   priority
-                  className="w-36"
                   src={reactBdLogo}
                   alt="reactBdLogo"
+                  onLoad={() => setImageLoading(false)}
+                  className={`${isImageLoading ? 'blur' : 'remove-blur'}`}
                 />
               </div>
             </NextLink>
@@ -149,7 +151,7 @@ const Header = () => {
             opacity: { duration: 1 },
             ease: "easeIn easeOut"
           }}
-          className="fixed top-0 z-50 mt-20 inline-block w-full bg-black px-4 py-6 text-white/80 lgl:hidden"
+          className="fixed top-0 z-50 mt-20 inline-block w-full bg-cyan-100 px-4 py-6 text-white/80 lgl:hidden"
         >
           <ul className="font-titleFont flex w-full flex-col gap-2 text-sm uppercase">
             <NextLink href="/">

@@ -25,8 +25,8 @@ const PickServices = () => {
           }}
           className={`${
             espelho
-              ? "z-10 bg-gradient-to-r from-bodyColor to-[#66a900] text-white after:absolute after:-bottom-2 after:inline-block after:h-5 after:w-5 after:rotate-45 after:bg-lime-800"
-              : "border border-lime-900 bg-opacity-50 hover:bg-white hover:text-primaryColor xl:border-r-0"
+              ? "z-10 bg-gradient-to-r from-[#0A192F] to-[#66a900] text-white after:absolute after:-bottom-2 after:inline-block after:h-5 after:w-5 after:rotate-45 after:bg-lime-800"
+              : "border border-lime-900 bg-opacity-50 hover:bg-white hover:text-[primaryColor] xl:border-r-0"
           } relative flex h-16 w-full cursor-pointer items-center justify-center gap-3 bg-primaryColor`}
         >
           <span>
@@ -43,7 +43,7 @@ const PickServices = () => {
           }}
           className={`${
             box
-              ? "z-10 bg-gradient-to-r from-bodyColor to-[#66a900] text-white after:absolute after:-bottom-2 after:inline-block after:h-5 after:w-5 after:rotate-45 after:bg-lime-800"
+              ? "z-10 bg-gradient-to-r from-[#0A192F] to-[#66a900] text-white after:absolute after:-bottom-2 after:inline-block after:h-5 after:w-5 after:rotate-45 after:bg-lime-800"
               : "border border-lime-900 bg-opacity-50 hover:bg-white hover:text-primaryColor xl:border-r-0"
           } relative flex h-16 w-full cursor-pointer items-center justify-center gap-3 bg-primaryColor`}
         >
@@ -61,7 +61,7 @@ const PickServices = () => {
           }}
           className={`${
             design
-              ? "z-10 bg-gradient-to-r from-bodyColor to-[#66a900] text-white after:absolute after:-bottom-2 after:inline-block after:h-5 after:w-5 after:rotate-45 after:bg-lime-800"
+              ? "z-10 bg-gradient-to-r from-[#0A192F] to-[#66a900] text-white after:absolute after:-bottom-2 after:inline-block after:h-5 after:w-5 after:rotate-45 after:bg-lime-800"
               : "border border-lime-900 bg-opacity-50 hover:bg-white hover:text-primaryColor xl:border-r-0"
           } relative flex h-16 w-full cursor-pointer items-center justify-center gap-3 bg-primaryColor`}
         >
@@ -79,7 +79,7 @@ const PickServices = () => {
           }}
           className={`${
             development
-              ? "z-10 bg-gradient-to-r from-bodyColor to-[#66a900] text-white after:absolute after:-bottom-2 after:inline-block after:h-5 after:w-5 after:rotate-45 after:bg-lime-800"
+              ? "z-10 bg-gradient-to-r from-[#0A192F] to-[#66a900] text-white after:absolute after:-bottom-2 after:inline-block after:h-5 after:w-5 after:rotate-45 after:bg-lime-800"
               : "border border-lime-900 bg-opacity-50 hover:bg-white hover:text-primaryColor xl:border-r-0"
           } relative flex h-16 w-full cursor-pointer items-center justify-center gap-3 bg-primaryColor`}
         >

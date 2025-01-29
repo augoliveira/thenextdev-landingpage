@@ -2,10 +2,13 @@
 
 import * as ScrollArea from '@radix-ui/react-scroll-area';
 import { cn } from '@/lib/utils'
-import { useState } from 'react'
+import { useState, type Dispatch } from 'react'
 import { Button } from '../button/index';
 import { HiHome, HiSearch } from 'react-icons/hi';
 import Box from '../ui/Box';
+import { Label } from '@radix-ui/react-label';
+import { Input, type InputProps } from './input';
+import type { SetStateAction } from 'jotai';
 
 const STAPE = ['Unit', 'address', 'Members', 'Terget']
 
@@ -30,7 +33,9 @@ export const Unitereg = () => {
           <div>
           <ScrollArea.Root className="h-96 ml-0 md:ml-8 w-full bg-slate-900 bg-opacity-10 mt-5 p-5 dark:bg-opacity-20 rounded-md mdl:bg-transparent">
           <ScrollArea.Viewport className="sm:col-span-2">
-              {stape === 0 && <Stape0 />}
+              {stape === 0 && <Stape0 setStape={function (value: SetStateAction<number>): void {
+                  throw new Error('Function not implemented.');
+                } } />}
               {stape === 1 && <Stape1 />}
               {stape === 2 && <Stape2 />}
               {stape === 3 && <Stape3 />}
@@ -113,10 +118,9 @@ const StapeButton = ({
     return (
       <div className="w-full px-3 space-y-1">
         <Label htmlFor="name">{title}</Label>
-        <Input 
-        className="w-full"
-        placeholder={placeholder ? placeholder : title} { ...props}
-        />
+        <Input
+          className="w-full"
+          placeholder={placeholder ? placeholder : title} {...props} />
       </div>
-    )
+    );
   }

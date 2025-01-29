@@ -1,12 +1,23 @@
+'use client'
+
+import { motion } from 'framer-motion'
+import NextImage from '@/components/ui/NextImage'
+import Img from '../../../public/Orçmento.png'
+import { Button } from '@/components/button'
+import { HiArrowNarrowRight } from 'react-icons/hi'
+
+type HeroSectionProps = {
+  homeInfo: HomePageInfo
+}
+
 import {
-  CheckBadgeIcon,
-  ChatBubbleBottomCenterTextIcon,
-  ShieldCheckIcon,
   ArrowPathIcon, 
   CloudArrowUpIcon, 
   FingerPrintIcon, 
   LockClosedIcon
 } from "@heroicons/react/24/outline";
+import type { HomePageInfo } from '@/types/page-info'
+import { TiArrowForward } from 'react-icons/ti'
 
 const features = [
   {
@@ -35,37 +46,83 @@ const features = [
   },
 ]
 
-export default function Marketing() {
+export default function Marketing({homeInfo}: HeroSectionProps) {
+  const handleContact = () => {
+    const contactSection = document.querySelector('#contact')
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
   return (
-    <><div className="bg-white py-24 sm:py-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-base/7 font-semibold text-indigo-600">Deploy faster</h2>
-          <p className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl lg:text-balance">
-            Everything you need to deploy your app
+    <><section className="w-full lg:h-[755px] bg-hero-image bg-cover bg-center bg-no-repeat flex flex-col justify-end pb-10 sm:pb-32 py-32 lg:pb-[110px]">
+      <div className="mx-auto max-w-max flex items-start justify-between flex-col-reverse lg:flex-row">
+        <motion.div
+          className="w-full lg:max-w-[530px]"
+          initial={{ opacity: 0, x: -100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: -100 }}
+          transition={{ duration: 0.5 }}
+        >
+          <p className="mt-4 px-4 text-3xl opacity-73 font-bold tracking-[-0.04em] text-gray-900 sm:text-5xl/[3rem]">Por que a VideGlass é o
+            <span className="font-extrabold text-black rounded-sm bg-linear-to-r/srgb from-amber-800 to-orange-400"> Parceiro Oficial </span> das Vidraçarias?
           </p>
-          <p className="mt-6 text-lg/8 text-gray-600">
-            Quis tellus eget adipiscing convallis sit sit eget aliquet quis. Suspendisse eget egestas a elementum
-            pulvinar et feugiat blandit at. In mi viverra elit nunc.
-          </p>
-        </div>
-        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
-          <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
-            {features.map((feature) => (
-              <div key={feature.name} className="relative pl-16">
-                <dt className="text-base/7 font-semibold text-gray-900">
-                  <div className="absolute left-0 top-0 flex size-10 items-center justify-center rounded-lg bg-indigo-600">
-                    <feature.icon aria-hidden="true" className="size-6 text-white" />
-                  </div>
-                  {feature.name}
-                </dt>
-                <dd className="mt-2 text-base/7 text-gray-600">{feature.description}</dd>
-              </div>
-            ))}
-          </dl>
-        </div>
+          <ul className="mt-6 flex flex-col gap-3">
+        <li className="text-base flex gap-2 text-gray-600">
+          <span className="text-gray-600 mt-1">
+            <TiArrowForward />
+          </span>
+          Tempera Própria
+        </li>
+        <li className="text-base flex gap-2 text-gray-600">
+          <span className="text-gray-600 mt-1">
+            <TiArrowForward />
+          </span>
+          Entrega com frota própria
+        </li>
+        <li className="text-base flex gap-2 text-gray-600">
+          <span className="text-gray-600 mt-1">
+            <TiArrowForward />
+          </span>
+          Orçamento Online
+        </li>
+        <li className="text-base flex gap-2 text-gray-600">
+          <span className="text-gray-600 mt-1">
+            <TiArrowForward />
+          </span>
+          Linha completa de Acessórios e Ferragens
+        </li>
+        <li className="text-base flex gap-2 text-gray-600">
+          <span className="text-gray-600 mt-1">
+            <TiArrowForward />
+          </span>
+          Atendemos exclusivamente Vidraçarias e Serralherias
+        </li>
+      </ul>
+      <div className="mt-6 lg:mt-10 flex sm:items-center sm:gap-5 flex-col sm:flex-row">
+            <Button className="w-max shadow-button" onClick={handleContact}>
+            Fale com a nossa Equipe de Atendimento
+              <HiArrowNarrowRight size={18} />
+            </Button>
+          </div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 200, scale: 0.5 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
+          exit={{ opacity: 0, y: 200, scale: 0.5 }}
+          transition={{ duration: 0.5 }}
+          className="origin-center"
+        >
+          <NextImage
+            className="w-[300px] h-[300px] lg:w-[420px] lg:h-[404px] mb-6 lg:mb-0 rounded-lg object-cover"
+            width={420}
+            height={404}
+            src={Img}
+            alt="Foto de perfil do Gabriel Borges" />
+        </motion.div>
       </div>
-    </div><div
+    </section>
+    <div
       aria-hidden="true"
       className="absolute left-1/2 top-0 -z-10 -translate-x-1/2 blur-3xl xl:-top-6"
     >

@@ -112,7 +112,7 @@ const Projects = () => {
                   </div>
                 ))}
               </div>
-              <div className="grid grid-cols-2 divide-x divide-gray-200/5 bg-gradient-to-r from-bodyColor to-[#66a900]">
+              <div className="grid grid-cols-2 divide-x divide-gray-200/5 bg-gradient-to-r from-[#0A192F] to-[#66a900]">
                 {callsToAction.map((item) => (
                   <Link
                     key={item.name}
@@ -132,7 +132,7 @@ const Projects = () => {
               Solicite um Orçamento.{" "}
               <Link
                 href="https://api.whatsapp.com/send?phone=5561986692775"
-                className="rounded-full bg-gradient-to-r from-bodyColor to-[#66a900]/90 px-3 py-1 font-semibold text-[#ffffff] backdrop-grayscale"
+                className="rounded-full bg-gradient-to-r from-[#0A192F] to-[#66a900]/90 px-3 py-1 font-semibold text-[#ffffff] backdrop-grayscale"
               >
                 <span className="absolute inset-0" aria-hidden="true" />
                 Whatsapp <span aria-hidden="true">&rarr;</span>

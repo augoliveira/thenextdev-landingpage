@@ -12,7 +12,7 @@ interface Props {
 const ArchiveCard = ({ title, img, des, listItem, link }: Props) => {
   return (
     <Link href={link}>
-      <div className="shadow-shadowOne group relative flex h-80 w-full cursor-pointer flex-col justify-center gap-6 overflow-hidden rounded-lg bg-gradient-to-r from-bodyColor to-[#125a0c] p-4 transition-transform duration-200 ease-out hover:-translate-y-2 hover:scale-105 hover:bg-gradient-to-b hover:from-gray-900 hover:shadow-xl hover:shadow-black/30 xl:px-12 xl:py-10">
+      <div className="shadow-shadowOne group relative flex h-80 w-full cursor-pointer flex-col justify-center gap-6 overflow-hidden rounded-lg bg-gradient-to-r from-[#0A192F] to-[#125a0c] p-4 transition-transform duration-200 ease-out hover:-translate-y-2 hover:scale-105 hover:bg-gradient-to-b hover:from-gray-900 hover:shadow-xl hover:shadow-black/30 xl:px-12 xl:py-10">
         <Image
           src={img}
           alt={title}

@@ -1,14 +1,12 @@
-import { fixupConfigRules, fixupPluginRules } from "@eslint/compat";
-import { FlatCompat } from "@eslint/eslintrc";
-import js from "@eslint/js";
-import typescriptEslint from "@typescript-eslint/eslint-plugin";
-import tsParser from "@typescript-eslint/parser";
-import importHelpers from "eslint-plugin-import-helpers";
-import react from "eslint-plugin-react";
-import reactHooks from "eslint-plugin-react-hooks";
-import globals from "globals";
+/* eslint-disable import/no-anonymous-default-export */
+
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+
+import { fixupConfigRules } from "@eslint/compat";
+import { FlatCompat } from "@eslint/eslintrc";
+import js from "@eslint/js";
+import simpleImportSort from "eslint-plugin-simple-import-sort";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -19,80 +17,46 @@ const compat = new FlatCompat({
 });
 
 export default [
-  {
-    ignores: ["**/*.css"]
-  },
   ...fixupConfigRules(
     compat.extends(
-      "eslint:recommended",
-      "plugin:react/recommended",
-      "plugin:@typescript-eslint/recommended",
+      "next/core-web-vitals",
+      "plugin:unicorn/recommended",
+      "plugin:import/recommended",
+      "plugin:playwright/recommended",
       "plugin:prettier/recommended"
     )
   ),
   {
     plugins: {
-      react: fixupPluginRules(react),
-      "@typescript-eslint": fixupPluginRules(typescriptEslint),
-      "react-hooks": fixupPluginRules(reactHooks),
-      "import-helpers": importHelpers
+      "simple-import-sort": simpleImportSort
     },
-
-    languageOptions: {
-      globals: {
-        ...globals.browser,
-        ...globals.node
-      },
-
-      parser: tsParser,
-      ecmaVersion: "latest",
-      sourceType: "module"
-    },
-
-    settings: {
-      react: {
-        version: "detect"
-      }
-    },
-
     rules: {
-      "react-hooks/rules-of-hooks": "error",
-      "react-hooks/exhaustive-deps": "warn",
-      "react/prop-types": "off",
-      "@typescript-eslint/no-explicit-any": "off",
-      "react/react-in-jsx-scope": "off",
-      "@typescript-eslint/explicit-module-boundary-types": "off",
+      "simple-import-sort/exports": "error",
+      "simple-import-sort/imports": "error",
+      "unicorn/no-array-callback-reference": "off",
+      "unicorn/no-array-for-each": "off",
+      "unicorn/no-array-reduce": "off",
 
-      "import-helpers/order-imports": [
-        "warn",
+      "unicorn/prevent-abbreviations": [
+        "error",
         {
-          newlinesBetween: "always",
-
-          groups: [
-            ["/^react/", "/^next/"],
-            "/^contentlayer/",
-            "module",
-            "/^@shared/",
-            "absolute",
-            "/^@/components/",
-            "/^@/hooks/",
-            "/^@/infra/",
-            "/^@/pages/",
-            "/utils/",
-            "/^@/models/",
-            "/^@/store/",
-            "/^@/lib/",
-            "/^@/styles/",
-            "/^@/templates/",
-            ["parent", "sibling", "index"]
-          ],
-
-          alphabetize: {
-            order: "asc",
-            ignoreCase: true
+          allowList: {
+            e2e: true
+          },
+          replacements: {
+            props: false,
+            ref: false,
+            params: false
           }
         }
       ]
+    }
+  },
+  {
+    files: ["**/*.js"],
+
+    rules: {
+      "unicorn/prefer-module": "off"
     }
   }
 ];

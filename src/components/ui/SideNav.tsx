@@ -10,7 +10,7 @@ import {
 
 const SideNav = () => {
   return (
-    <div className="w-[500px] h-screen px-10 absolute top-0 right-0 bg-gradient-to-r from-bodyColor to-[#66a900] text-white flex flex-col justify-center gap-4">
+    <div className="w-[500px] h-screen px-10 absolute top-0 right-0 bg-gradient-to-r from-emerald-900 to-[#66a900] text-white flex flex-col justify-center gap-4">
       <PageHeaderHeading className="hidden md:block">
       Box e Vidro com problema? Resolvemos!
         </PageHeaderHeading>

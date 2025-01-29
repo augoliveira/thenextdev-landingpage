@@ -66,12 +66,12 @@ export default function FAQ() {
             {faqs.map((faq, idx) => (
               <AccordionItem key={idx} value={idx.toString()}>
                 <AccordionTrigger className="py-2">
-                  <h2 className="text-left text-lg">{faq.question}</h2>
+                  <h1 className="text-left text-lg">{faq.question}</h1>
                 </AccordionTrigger>
                 <AccordionContent>
-                  <h3 className="text-md font-extrabold text-slate-900 dark:text-slate-200">
+                  <h2 className="text-md font-extrabold text-slate-900 dark:text-slate-200">
                     {faq.title}
-                  </h3>
+                  </h2>
                   <div className="py-3">{faq.answer}</div>
                   <div className="py-3">{faq.paragrafo1}</div>
                   <div className="py-3">{faq.paragrafo2}</div>

@@ -125,24 +125,25 @@ export default function RootLayout({
 					// freightBigPro.variable,
 					"h-full",
 					"font-sans",
-          "bg-gradient-to-r from-bodyColor to-[#107a39]"
+          "bg-gradient-to-r from-[#0A192F] to-[#107a39]"
 				)}
         >
         <div className="space-y-8 pt-20 lg:py-20">
           <Header />
           <DemoBadge />
           <FloatingWhatsappIcon />
+          <CookieConsent />
           <div className="max-w-8xl mx-auto space-y-8 px-2 pt-8 lg:mb-8 lg:px-8 lg:pt-4">
             <div className="bg-vc-border-gradient rounded-lg p-px shadow-lg shadow-black/20">
               <div className="bg-vc-border-gradient rounded-t-lg p-px shadow-lg shadow-black/20">
-                <div className="rounded-t-lg bg-gradient-to-r from-bodyColor to-[#66a900]">
+                <div className="rounded-t-lg bg-gradient-to-r from-[#0A192F] to-[#66a900]">
                   <AddressBar />
                 </div>
               </div>
               <div className="rounded-b-lg bg-black/30 p-3.5 backdrop-blur-sm lg:p-6">
                 <>
                   {children}
-                  <CookieConsent />
+                  
                 </>
               </div>
             </div>

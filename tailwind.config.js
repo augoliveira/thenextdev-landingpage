@@ -1,27 +1,7 @@
-/* eslint-disable import-helpers/order-imports */
-/* eslint-disable @typescript-eslint/no-require-imports */
-/* eslint-disable @typescript-eslint/no-unused-vars */
-
-const { fontFamily } = require("tailwindcss/defaultTheme");
-
-const withMT = require("@material-tailwind/react/utils/withMT");
-
-const svgToDataUri = require("mini-svg-data-uri");
-const {
-  default: flattenColorPalette
-} = require("tailwindcss/lib/util/flattenColorPalette");
-
 import colors from "tailwindcss/colors";
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: ["class"],
-  content: [
-    "./pages/**/*.{ts,tsx}",
-    "./components/**/*.{ts,tsx}",
-    "./app/**/*.{ts,tsx}",
-    "./src/**/*.{ts,tsx}"
-  ],
   theme: {
     container: {
       center: true,
@@ -43,8 +23,11 @@ module.exports = {
     // 	display: ["var(--font-freight-big-pro)", "serif"],
     // },
     extend: {
+      zIndex: {
+        100: "100"
+      },
       backgroundImage: {
-        "hero-image": "url('/grid.svg')",
+        "hero-image": "url('/hero-bg1.png')",
         "hero-card": "url('/bg-box.png')",
         "hero-page": "url('/bg-vidracaria-2.jpg')",
         "bg-contato": "url('/bg-contato.png')",
@@ -283,48 +266,5 @@ module.exports = {
   },
   variants: {
     aspectRatio: ["responsive"] // defaults to ['responsive']
-  },
-  plugins: [
-    require("@tailwindcss/typography"),
-    require("@tailwindcss/forms"),
-    require("tailwind-scrollbar-hide"),
-    require("tailwindcss-animate"),
-    require("tailwindcss-motion"),
-    require("@tailwindcss/aspect-ratio"),
-    require("tailwindcss-radix")(),
-    addVariablesForColors,
-    function ({ matchUtilities, theme }) {
-      matchUtilities(
-        {
-          "bg-grid": (value) => ({
-            backgroundImage: `url("${svgToDataUri(
-              `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="${value}"><path d="M0 .5H31.5V32"/></svg>`
-            )}")`
-          }),
-          "bg-grid-small": (value) => ({
-            backgroundImage: `url("${svgToDataUri(
-              `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="8" height="8" fill="none" stroke="${value}"><path d="M0 .5H31.5V32"/></svg>`
-            )}")`
-          }),
-          "bg-dot": (value) => ({
-            backgroundImage: `url("${svgToDataUri(
-              `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="16" height="16" fill="none"><circle fill="${value}" id="pattern-circle" cx="10" cy="10" r="1.6257413380501518"></circle></svg>`
-            )}")`
-          })
-        },
-        { values: flattenColorPalette(theme("backgroundColor")), type: "color" }
-      );
-    }
-  ]
+  }
 };
-
-export default function addVariablesForColors({ addBase, theme }) {
-  let allColors = flattenColorPalette(theme("colors"));
-  let newVars = Object.fromEntries(
-    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
-  );
-
-  addBase({
-    ":root": newVars
-  });
-}

@@ -16,18 +16,19 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true
   },
+  skipTrailingSlashRedirect: true,
   images: {
     formats: ["image/avif", "image/webp"],
+    contentDispositionType: 'inline',
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "res.cloudinary.com",
-        port: "",
-        pathname: "/image/upload/**"
+          hostname: "upload.wikimedia.org",
+          port: "",
+          pathname: "/**",
       }
     ],
     dangerouslyAllowSVG: true,
-    contentDispositionType: "attachment",
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;"
   },
   // Configure `pageExtensions` to include markdown and MDX files

@@ -1,17 +1,13 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 'use client'
 
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import Image from "next/image";
 import Link from 'next/link';
 import { Github, LinkedIn, Twitter } from '@/components/shared/icons';
 import { TextHoverEffect } from "@/components/ui/text-hover-effect"
 
 import {
-  FacebookLogo,
-  InstagramLogo,
-  TwitterLogo,
-  YoutubeLogo,
   PhoneList,
   MapPinArea,
   At
@@ -19,23 +15,22 @@ import {
 
 import payment from "../../../public/Forma-de-pagamento.webp";
 
-import { Wave } from '@/components/ui/wave';
 
 import Logo from "../../../public/logo-campanha.png";
-import NextImage from './NextImage';
 
 export function Footer() {
-  const [loading, setLoading] = useState(true);
+  const [isImageLoading, setImageLoading] = React.useState(true)
   return (
     <div className="lg:pt-3 flex flex-wrap flex-col justify-center w-full bg-[#1a1c20]">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 lgl:px-2 grid grid-cols-1 md:grid-cols-3 lgl:grid-cols-3 gap-8 py-10 sm:flex-row justify-around pb-5">
-        <div className="-mt-20 w-full max-w-96 flex-auto overflow-hidden rounded-sm bg-gradient-to-r from-bodyColor to-[#2c4606] text-sm leading-6 shadow-lg ring-1 ring-gray-900/5">
+        <div className="-mt-20 w-full max-w-96 flex-auto overflow-hidden rounded-sm bg-gradient-to-r from-emerald-950/90 to-[#2c4606] text-sm leading-6 shadow-lg ring-1 ring-gray-900/5">
           <div className="flex flex-col px-4 py-4 mt-4 items-center"> 
-          <NextImage
+          <Image
                   priority
-                  className="w-36"
                   src={Logo}
                   alt="reactBdLogo"
+                  onLoad={() => setImageLoading(false)}
+                  className={`${isImageLoading ? 'blur' : 'remove-blur'}`}
                 />
             <div className="space-y-6">
             <p className='text-gray-400 text-sm max-w-[300px]'>Criatividade e compromisso: nossa receita para o sucesso.</p>

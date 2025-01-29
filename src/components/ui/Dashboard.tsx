@@ -23,11 +23,11 @@ import Manutenção from "../../../public/Icone/iicon_fix.png";
 export default function Dashboard() {
   return (
     <div className="grid min-h-full w-full">
-      <div className="hidden border-r bg-muted/40 md:block">
+      <div className="hidden border-r bg-emerald-600/30 md:block">
         <div className="flex h-full max-h-full flex-col gap-2">
           <div className="flex h-14 items-center border-b px-4 lg:h-[60px] lg:px-6">
             <Link href="/" className="flex items-center gap-2 font-semibold">
-              <Image src={Manutenção} alt="Manutenção" className="h-87 w-87" />
+              <Image src={Manutenção} alt="Manutenção" className="h-10 w-10" />
               <span className="">Manutenção</span>
             </Link>
             <Button variant="outline" size="icon" className="ml-auto h-8 w-8">
@@ -39,7 +39,7 @@ export default function Dashboard() {
             <nav className="grid items-start px-2 text-sm font-medium lg:px-4">
               <Link
                 href="#"
-                className="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary"
+                className="flex items-center gap-3 rounded-lg px-3 py-2 text-slate-400 transition-all hover:text-primary"
               >
                 <Image
                   src={BoxVazamento}
@@ -50,7 +50,7 @@ export default function Dashboard() {
               </Link>
               <Link
                 href="#"
-                className="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary"
+                className="flex items-center gap-3 rounded-lg px-3 py-2 text-slate-400 transition-all hover:text-primary"
               >
                 <Image
                   src={BoxPorta}
@@ -75,7 +75,7 @@ export default function Dashboard() {
               </Link>
               <Link
                 href="#"
-                className="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary"
+                className="flex items-center gap-3 rounded-lg px-3 py-2 text-slate-400 transition-all hover:text-primary"
               >
                 <Image
                   src={Porta}
@@ -86,7 +86,7 @@ export default function Dashboard() {
               </Link>
               <Link
                 href="#"
-                className="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary"
+                className="flex items-center gap-3 rounded-lg px-3 py-2 text-slate-400 transition-all hover:text-primary"
               >
                 <Image
                   src={EsquadriaBox}

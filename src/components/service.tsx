@@ -63,7 +63,7 @@ const Service: React.FC = () => {
                 key={index}
                 className={`${
                   activeIndex === index
-                    ? "bg-backdrop-blur-sm z-10 border-l-textGreen bg-white/30 text-white after:absolute after:-bottom-2 after:inline-block after:h-5 after:w-5 after:rotate-45 after:bg-slate-400"
+                    ? "bg-backdrop-blur-sm z-10 border-l-textGreen bg-white/30 text-white after:absolute after:-bottom after:inline-block after:h-5 after:w-5 after:rotate-45 after:bg-slate-400"
                     : "border-l-hoverColor text-textDark"
                 } cursor-pointer border-l-2 bg-transparent px-8 py-3 text-xl font-bold duration-300 hover:bg-green-700`}
               >

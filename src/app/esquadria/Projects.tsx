@@ -41,12 +41,12 @@ const Projects = () => {
               </p>
           <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-slate-950 ring-1 ring-lime-950/10 hover:ring-gray-900/20">
           Solicite um Orçamento.{' '}
-              <NextLink href="https://api.whatsapp.com/send?phone=5561986692775" className="bg-gradient-to-r from-bodyColor to-[#5f960d] px-4 rounded-full font-semibold text-indigo-600">
-                <span className="absolute inset-0" aria-hidden="true" />
+              <NextLink href="https://api.whatsapp.com/send?phone=5561986692775" className="bg-gradient-to-r from-emerald-600 to-[#5f960d] px-4 rounded-full font-semibold text-indigo-600">
+                <span className="absolute inset-0 text-clr.title" aria-hidden="true" />
                 Whatsapp <span aria-hidden="true">&rarr;</span>
               </NextLink>
             </div>
-            <p className="bg-gradient-to-r from-bodyColor to-[#436909] text-sm tracking-tight md:text-base text-slate-400 p-2 md:p-6 rounded-md">
+            <p className="bg-gradient-to-r from-emerald-800 to-[#436909] text-sm tracking-tight md:text-base text-slate-400 p-2 md:p-6 rounded-md">
             Transforme sua casa em um verdadeiro refúgio de elegância e modernidade com nossas Esquadrias de alumínio são estruturas utilizadas em portas, janelas e fachadas, fabricadas a partir de perfis de alumínio. Essas esquadrias são conhecidas por sua durabilidade, leveza e resistência à corrosão, o que as torna ideais para ambientes internos e externos.{" "}
               <span className="text-lime-400 text-balance tracking-tight">Feitas sob medida para atender às suas necessidades, nossas esquadrias proporcionam não apenas beleza, mas também durabilidade e eficiência energética. </span> O alumínio permite acabamentos variados, como anodização ou pintura eletrostática, proporcionando diversas opções de cores e texturas. Além disso, as esquadrias de alumínio oferecem excelente isolamento térmico e acústico quando combinadas com vidros adequados, contribuindo para a eficiência energética e o conforto das edificações.
             </p>
